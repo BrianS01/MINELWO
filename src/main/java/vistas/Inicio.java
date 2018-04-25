@@ -21,6 +21,7 @@ import vistas.Login;
  */
 public class Inicio extends JFrame
 {
+    ImageIcon icono;
     /**
      * Creates new form Inicio
      */
@@ -29,10 +30,11 @@ public class Inicio extends JFrame
         initComponents();
         this.setTitle("Proyecto Tercer Corte");
         this.setMinimumSize(new Dimension(346, 204));
-        establecerIcono();
-        //setIconImage(Toolkit.getDefaultToolkit().getImage("/recursos/icono.png"));
-        //setIconImage(new ImageIcon("/recursos/icono.png").getImage());
-        //setIconImage(ImageIO.read(new FileInputStream("/recursos/icono.png")));
+        icono = new ImageIcon("recursos/icono.png");
+        setIconImage(icono.getImage());
+        //setIconImage(Toolkit.getDefaultToolkit().getImage("recursos/icono.png"));
+        //setIconImage(new ImageIcon("recursos/icono.png").getImage());
+        //setIconImage(ImageIO.read(new FileInputStream("recursos/icono.png")));
     }
 
     /**
@@ -131,9 +133,4 @@ public class Inicio extends JFrame
     private javax.swing.JLabel jLabel1;
     private javax.swing.JButton loginButtom;
     // End of variables declaration//GEN-END:variables
-
-    private void establecerIcono()
-    {
-        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/recursos/icono.png")));
-    }
 }
