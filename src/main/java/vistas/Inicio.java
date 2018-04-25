@@ -31,7 +31,6 @@ public class Inicio extends JFrame
         initComponents();
         this.setTitle("Proyecto Tercer Corte");
         this.setMinimumSize(new Dimension(346, 204));
-        this.setIconImage(icono.png);
         //setIconImage(Toolkit.getDefaultToolkit().getImage("recursos/icono.png"));
         //setIconImage(new ImageIcon("recursos/icono.png").getImage());
         //setIconImage(ImageIO.read(new FileInputStream("recursos/icono.png")));
