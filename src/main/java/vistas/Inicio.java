@@ -5,18 +5,21 @@
  */
 package vistas;
 
+import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import vistas.Login;
 
 /**
  *
  * @author BRIAN
  */
-public class Inicio extends javax.swing.JFrame
+public class Inicio extends JFrame
 {
     /**
      * Creates new form Inicio
@@ -24,6 +27,9 @@ public class Inicio extends javax.swing.JFrame
     public Inicio()
     {
         initComponents();
+        this.setTitle("Proyecto Tercer Corte");
+        this.setMinimumSize(new Dimension(346, 204));
+        establecerIcono();
         //setIconImage(Toolkit.getDefaultToolkit().getImage("/recursos/icono.png"));
         //setIconImage(new ImageIcon("/recursos/icono.png").getImage());
         //setIconImage(ImageIO.read(new FileInputStream("/recursos/icono.png")));
@@ -39,11 +45,19 @@ public class Inicio extends javax.swing.JFrame
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+        loginButtom = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         jLabel1.setText("Inicio Exitoso");
+
+        loginButtom.setText("LOGIN");
+        loginButtom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loginButtomActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -53,17 +67,29 @@ public class Inicio extends javax.swing.JFrame
                 .addGap(63, 63, 63)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(188, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(loginButtom)
+                .addGap(22, 22, 22))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(86, 86, 86)
+                .addContainerGap()
+                .addComponent(loginButtom)
+                .addGap(50, 50, 50)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(179, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void loginButtomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtomActionPerformed
+        Login ventanaLogin = new Login();
+        ventanaLogin.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_loginButtomActionPerformed
 
     /**
      * @param args the command line arguments
@@ -103,5 +129,11 @@ public class Inicio extends javax.swing.JFrame
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton loginButtom;
     // End of variables declaration//GEN-END:variables
+
+    private void establecerIcono()
+    {
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/recursos/icono.png")));
+    }
 }
