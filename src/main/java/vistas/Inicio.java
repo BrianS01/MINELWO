@@ -38,8 +38,7 @@ public class Inicio extends JFrame
     
     public void getFrame()
     {
-        icono = new ImageIcon("src\\\\main\\\\java\\recursos\\icono.png");
-        //cono = new ImageIcon("src\\main\\java/recursos/icono.png");
+        icono = new ImageIcon("src/main/java/recursos/icono.png");
         setIconImage(icono.getImage());
     }
 
