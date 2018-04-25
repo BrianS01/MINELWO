@@ -5,17 +5,28 @@
  */
 package vistas;
 
+import java.awt.Toolkit;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author BRIAN
  */
-public class Inicio extends javax.swing.JFrame {
-
+public class Inicio extends javax.swing.JFrame
+{
     /**
      * Creates new form Inicio
      */
-    public Inicio() {
+    public Inicio()
+    {
         initComponents();
+        //setIconImage(Toolkit.getDefaultToolkit().getImage("/recursos/icono.png"));
+        //setIconImage(new ImageIcon("/recursos/icono.png").getImage());
+        //setIconImage(ImageIO.read(new FileInputStream("/recursos/icono.png")));
     }
 
     /**
@@ -57,7 +68,8 @@ public class Inicio extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void main(String args[])
+    {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
