@@ -7,13 +7,14 @@ package vistas;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.awt.image.BufferedImage;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
-import vistas.Login;
 
 /**
  *
@@ -30,6 +31,7 @@ public class Inicio extends JFrame
         initComponents();
         this.setTitle("Proyecto Tercer Corte");
         this.setMinimumSize(new Dimension(346, 204));
+        this.setIconImage(icono.png);
         //setIconImage(Toolkit.getDefaultToolkit().getImage("recursos/icono.png"));
         //setIconImage(new ImageIcon("recursos/icono.png").getImage());
         //setIconImage(ImageIO.read(new FileInputStream("recursos/icono.png")));
@@ -102,8 +104,16 @@ public class Inicio extends JFrame
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[])
+    public static void main(String args[]) throws IOException
     {
+        Inicio ventanaInicio = new Inicio();
+        String imagePath = "recursos/icono.png";
+InputStream imgStream = Inicio.class.getResourceAsStream(imagePath );
+BufferedImage myImg = ImageIO.read(imgStream);
+// ImageIcon icon = new ImageIcon(myImg);
+
+// use icon here
+ventanaInicio.setIconImage(myImg);
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
