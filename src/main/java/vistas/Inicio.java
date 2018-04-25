@@ -32,7 +32,6 @@ public class Inicio extends JFrame
         initComponents();
         this.setTitle("Proyecto Tercer Corte");
         this.setMinimumSize(new Dimension(346, 204));
-        this.setIconImage (new ImageIcon(getClass().getResource("/recursos/icono.png")).getImage());
         //setIconImage(Toolkit.getDefaultToolkit().getImage("recursos/icono.png"));
         //setIconImage(new ImageIcon("recursos/icono.png").getImage());
         //setIconImage(ImageIO.read(new FileInputStream("recursos/icono.png")));
@@ -123,7 +122,6 @@ public class Inicio extends JFrame
      */
     public static void main(String args[])
     {
-        Image im = Toolkit.getDefaultToolkit().getImage("icono.png");
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
