@@ -6,6 +6,7 @@
 package vistas;
 
 import java.awt.Dimension;
+import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
 import java.io.FileInputStream;
@@ -55,6 +56,7 @@ public class Inicio extends JFrame
 
         jLabel1 = new javax.swing.JLabel();
         loginButtom = new javax.swing.JButton();
+        cerrarButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -68,6 +70,13 @@ public class Inicio extends JFrame
             }
         });
 
+        cerrarButton.setText("Cerrar");
+        cerrarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cerrarButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -77,7 +86,9 @@ public class Inicio extends JFrame
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(188, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(cerrarButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(loginButtom)
                 .addGap(22, 22, 22))
         );
@@ -85,7 +96,9 @@ public class Inicio extends JFrame
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(loginButtom)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(loginButtom)
+                    .addComponent(cerrarButton))
                 .addGap(50, 50, 50)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(179, Short.MAX_VALUE))
@@ -100,19 +113,16 @@ public class Inicio extends JFrame
         dispose();
     }//GEN-LAST:event_loginButtomActionPerformed
 
+    private void cerrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cerrarButtonActionPerformed
+        dispose();
+    }//GEN-LAST:event_cerrarButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) throws IOException
+    public static void main(String args[])
     {
-        Inicio ventanaInicio = new Inicio();
-        String imagePath = "recursos/icono.png";
-InputStream imgStream = Inicio.class.getResourceAsStream(imagePath );
-BufferedImage myImg = ImageIO.read(imgStream);
-// ImageIcon icon = new ImageIcon(myImg);
-
-// use icon here
-ventanaInicio.setIconImage(myImg);
+        Image im = Toolkit.getDefaultToolkit().getImage("icono.png");
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -145,6 +155,7 @@ ventanaInicio.setIconImage(myImg);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton cerrarButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JButton loginButtom;
     // End of variables declaration//GEN-END:variables
