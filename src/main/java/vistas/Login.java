@@ -9,7 +9,8 @@ package vistas;
  *
  * @author BRIAN
  */
-public class Login extends javax.swing.JFrame {
+public class Login extends javax.swing.JFrame
+{
 
     /**
      * Creates new form Login
@@ -28,30 +29,57 @@ public class Login extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        regresarButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Login");
+        jLabel1.setText("Usuario:");
+
+        jLabel2.setText("Contraseña:");
+
+        regresarButton.setText("Regresar");
+        regresarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                regresarButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(247, Short.MAX_VALUE)
-                .addComponent(jLabel1)
+                .addContainerGap(214, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel1))
                 .addGap(127, 127, 127))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(regresarButton)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(97, 97, 97)
+                .addContainerGap()
+                .addComponent(regresarButton)
+                .addGap(69, 69, 69)
                 .addComponent(jLabel1)
-                .addContainerGap(188, Short.MAX_VALUE))
+                .addGap(34, 34, 34)
+                .addComponent(jLabel2)
+                .addContainerGap(131, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void regresarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarButtonActionPerformed
+        Menu ventana = new Menu();
+        ventana.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_regresarButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -90,5 +118,7 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton regresarButton;
     // End of variables declaration//GEN-END:variables
 }
