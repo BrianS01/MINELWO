@@ -30,12 +30,19 @@ public class Inicio extends JFrame
         initComponents();
         this.setTitle("Proyecto Tercer Corte");
         this.setMinimumSize(new Dimension(346, 204));
-        icono = new ImageIcon("recursos/icono.png");
-        setIconImage(icono.getImage());
         //setIconImage(Toolkit.getDefaultToolkit().getImage("recursos/icono.png"));
         //setIconImage(new ImageIcon("recursos/icono.png").getImage());
         //setIconImage(ImageIO.read(new FileInputStream("recursos/icono.png")));
     }
+    
+    
+    public void getFrame()
+    {
+        icono = new ImageIcon("recursos\\icono.png");
+        //cono = new ImageIcon("src\\main\\java/recursos/icono.png");
+        setIconImage(icono.getImage());
+    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
