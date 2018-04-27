@@ -32,6 +32,7 @@ public class MenuEntrada extends javax.swing.JFrame {
         cancionButton = new javax.swing.JButton();
         interpreteButton = new javax.swing.JButton();
         sencilloButton = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -70,6 +71,8 @@ public class MenuEntrada extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setText("ENTRADAS");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -81,20 +84,25 @@ public class MenuEntrada extends javax.swing.JFrame {
                         .addComponent(regresarButton))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(161, 161, 161)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(interpreteButton)
-                            .addComponent(sencilloButton)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(albumButton)
-                                .addComponent(cancionButton)))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(interpreteButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cancionButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(albumButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(sencilloButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(159, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(171, 171, 171))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(regresarButton)
-                .addGap(18, 18, 18)
+                .addGap(11, 11, 11)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addComponent(albumButton)
                 .addGap(18, 18, 18)
                 .addComponent(cancionButton)
@@ -102,7 +110,7 @@ public class MenuEntrada extends javax.swing.JFrame {
                 .addComponent(interpreteButton)
                 .addGap(18, 18, 18)
                 .addComponent(sencilloButton)
-                .addContainerGap(92, Short.MAX_VALUE))
+                .addGap(54, 54, 54))
         );
 
         pack();
@@ -177,6 +185,7 @@ public class MenuEntrada extends javax.swing.JFrame {
     private javax.swing.JButton albumButton;
     private javax.swing.JButton cancionButton;
     private javax.swing.JButton interpreteButton;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JButton regresarButton;
     private javax.swing.JButton sencilloButton;
     // End of variables declaration//GEN-END:variables
