@@ -41,7 +41,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("jLabel1");
+        jLabel1.setText("MENU");
 
         entradaButton.setText("Nuevos Ingresos");
         entradaButton.addActionListener(new java.awt.event.ActionListener() {
@@ -62,7 +62,7 @@ public class Menu extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(185, Short.MAX_VALUE)
+                .addContainerGap(191, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(181, 181, 181))
             .addGroup(layout.createSequentialGroup()
