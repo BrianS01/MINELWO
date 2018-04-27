@@ -35,7 +35,7 @@ public class Login extends javax.swing.JFrame
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jPasswordField1 = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
+        ingresarButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -58,10 +58,10 @@ public class Login extends javax.swing.JFrame
 
         jPasswordField1.setText("jPasswordField1");
 
-        jButton1.setText("INGRESAR");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        ingresarButton.setText("INGRESAR");
+        ingresarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                ingresarButtonActionPerformed(evt);
             }
         });
 
@@ -88,7 +88,7 @@ public class Login extends javax.swing.JFrame
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 202, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(123, 123, 123)
-                        .addComponent(jButton1)))
+                        .addComponent(ingresarButton)))
                 .addContainerGap(127, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -110,7 +110,7 @@ public class Login extends javax.swing.JFrame
                         .addGap(50, 50, 50)
                         .addComponent(jLabel1)))
                 .addGap(34, 34, 34)
-                .addComponent(jButton1)
+                .addComponent(ingresarButton)
                 .addContainerGap(110, Short.MAX_VALUE))
         );
 
@@ -118,14 +118,16 @@ public class Login extends javax.swing.JFrame
     }// </editor-fold>//GEN-END:initComponents
 
     private void regresarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarButtonActionPerformed
-        Menu ventana = new Menu();
+        Inicio ventana = new Inicio();
         ventana.setVisible(true);
         dispose();
     }//GEN-LAST:event_regresarButtonActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void ingresarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ingresarButtonActionPerformed
+        Menu ventana = new Menu();
+        ventana.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_ingresarButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -163,7 +165,7 @@ public class Login extends javax.swing.JFrame
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton ingresarButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
