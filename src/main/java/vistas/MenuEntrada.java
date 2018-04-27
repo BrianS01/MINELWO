@@ -27,21 +27,98 @@ public class MenuEntrada extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        regresarButton = new javax.swing.JButton();
+        albumButton = new javax.swing.JButton();
+        cancionButton = new javax.swing.JButton();
+        interpreteButton = new javax.swing.JButton();
+        sencilloButton = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        regresarButton.setText("Regresar");
+        regresarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                regresarButtonActionPerformed(evt);
+            }
+        });
+
+        albumButton.setText("Album");
+        albumButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                albumButtonActionPerformed(evt);
+            }
+        });
+
+        cancionButton.setText("Canción");
+        cancionButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancionButtonActionPerformed(evt);
+            }
+        });
+
+        interpreteButton.setText("Interprete");
+        interpreteButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                interpreteButtonActionPerformed(evt);
+            }
+        });
+
+        sencilloButton.setText("Sencillo");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(regresarButton))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(161, 161, 161)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cancionButton)
+                            .addComponent(albumButton)
+                            .addComponent(interpreteButton)
+                            .addComponent(sencilloButton))))
+                .addContainerGap(159, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(regresarButton)
+                .addGap(18, 18, 18)
+                .addComponent(albumButton)
+                .addGap(18, 18, 18)
+                .addComponent(cancionButton)
+                .addGap(18, 18, 18)
+                .addComponent(interpreteButton)
+                .addGap(18, 18, 18)
+                .addComponent(sencilloButton)
+                .addContainerGap(92, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void regresarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarButtonActionPerformed
+        Inicio ventana = new Inicio();
+        ventana.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_regresarButtonActionPerformed
+
+    private void albumButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_albumButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_albumButtonActionPerformed
+
+    private void cancionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancionButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cancionButtonActionPerformed
+
+    private void interpreteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_interpreteButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_interpreteButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +156,10 @@ public class MenuEntrada extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton albumButton;
+    private javax.swing.JButton cancionButton;
+    private javax.swing.JButton interpreteButton;
+    private javax.swing.JButton regresarButton;
+    private javax.swing.JButton sencilloButton;
     // End of variables declaration//GEN-END:variables
 }
