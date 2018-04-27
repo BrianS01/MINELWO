@@ -5,7 +5,9 @@
  */
 package vistas;
 
+import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
@@ -16,7 +18,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 /**
  *
@@ -24,26 +28,29 @@ import javax.swing.JFrame;
  */
 public class Inicio extends JFrame
 {
+    JButton b1;
+JLabel l1;
     ImageIcon icono;
     /**
      * Creates new form Inicio
      */
-    public Inicio() throws IOException
+    public Inicio()
     {
         initComponents();
         this.setTitle("Proyecto Tercer Corte");
         this.setMinimumSize(new Dimension(346, 204));
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        getFrame();
         //setIconImage(Toolkit.getDefaultToolkit().getImage("recursos/icono.png"));
         //setIconImage(new ImageIcon("recursos/icono.png").getImage());
         //setIconImage(ImageIO.read(new FileInputStream("recursos/icono.png")));
     }
-    
-    
+
     public void getFrame()
     {
-        icono = new ImageIcon("recursos/icono.png");
+        icono = new ImageIcon("icono.jpg");
         setIconImage(icono.getImage());
+        System.out.println("hey hey oe IN HERE");
     }
 
 
@@ -151,6 +158,7 @@ public class Inicio extends JFrame
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Inicio().setVisible(true);
+                
             }
         });
     }
