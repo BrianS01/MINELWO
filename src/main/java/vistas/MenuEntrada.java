@@ -64,6 +64,11 @@ public class MenuEntrada extends javax.swing.JFrame {
         });
 
         sencilloButton.setText("Sencillo");
+        sencilloButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sencilloButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -77,10 +82,11 @@ public class MenuEntrada extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(161, 161, 161)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cancionButton)
-                            .addComponent(albumButton)
                             .addComponent(interpreteButton)
-                            .addComponent(sencilloButton))))
+                            .addComponent(sencilloButton)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(albumButton)
+                                .addComponent(cancionButton)))))
                 .addContainerGap(159, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -103,22 +109,34 @@ public class MenuEntrada extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void regresarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarButtonActionPerformed
-        Inicio ventana = new Inicio();
+        Menu ventana = new Menu();
         ventana.setVisible(true);
         dispose();
     }//GEN-LAST:event_regresarButtonActionPerformed
 
     private void albumButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_albumButtonActionPerformed
-        // TODO add your handling code here:
+        EntradaAlbum ventana = new EntradaAlbum();
+        ventana.setVisible(true);
+        dispose();
     }//GEN-LAST:event_albumButtonActionPerformed
 
     private void cancionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancionButtonActionPerformed
-        // TODO add your handling code here:
+        EntradaCancion ventana = new EntradaCancion();
+        ventana.setVisible(true);
+        dispose();
     }//GEN-LAST:event_cancionButtonActionPerformed
 
     private void interpreteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_interpreteButtonActionPerformed
-        // TODO add your handling code here:
+        EntradaInterprete ventana = new EntradaInterprete();
+        ventana.setVisible(true);
+        dispose();
     }//GEN-LAST:event_interpreteButtonActionPerformed
+
+    private void sencilloButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sencilloButtonActionPerformed
+        EntradaSencillo ventana = new EntradaSencillo();
+        ventana.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_sencilloButtonActionPerformed
 
     /**
      * @param args the command line arguments
