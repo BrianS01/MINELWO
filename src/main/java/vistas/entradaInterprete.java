@@ -5,17 +5,13 @@
  */
 package vistas;
 
-/**
- *
- * @author BRIAN
- */
-public class EntradaInterprete extends javax.swing.JFrame {
-
-    /**
-     * Creates new form entradaInterprete
-     */
-    public EntradaInterprete() {
+public class EntradaInterprete extends javax.swing.JFrame
+{
+    public EntradaInterprete()
+    {
         initComponents();
+        this.setTitle("MUNDULERY ~ Entrada Interprete");
+        setLocationRelativeTo(null);
     }
 
     /**

@@ -27,9 +27,10 @@ public class Inicio extends JFrame
     public Inicio()
     {
         initComponents();
-        this.setTitle("Proyecto Tercer Corte");
+        this.setTitle("MUNDULERY");
         this.setMinimumSize(new Dimension(346, 204));
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        this.setIconImage(Toolkit.getDefaultToolkit().getImage("icono.png"));
         //this.setIconImage("icono.png");
         //setIconImage(Toolkit.getDefaultToolkit().getImage("recursos/icono.png"));
         //setIconImage(new ImageIcon("recursos/icono.png").getImage());
@@ -136,12 +137,13 @@ public class Inicio extends JFrame
             java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        
+        
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
+        java.awt.EventQueue.invokeLater(new Runnable()
+        {
             public void run() {
                 new Inicio().setVisible(true);
-                
             }
         });
     }

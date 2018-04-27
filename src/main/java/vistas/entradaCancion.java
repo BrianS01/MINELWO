@@ -5,17 +5,13 @@
  */
 package vistas;
 
-/**
- *
- * @author BRIAN
- */
-public class EntradaCancion extends javax.swing.JFrame {
-
-    /**
-     * Creates new form entradaCancion
-     */
-    public EntradaCancion() {
+public class EntradaCancion extends javax.swing.JFrame
+{
+    public EntradaCancion()
+    {
         initComponents();
+        setLocationRelativeTo(null);
+        this.setTitle("MUNDULERY ~ Entrada Cancion");
     }
 
     /**

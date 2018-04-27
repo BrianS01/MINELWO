@@ -15,8 +15,10 @@ public class Login extends javax.swing.JFrame
     /**
      * Creates new form Login
      */
-    public Login() {
+    public Login()
+    {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -60,7 +62,12 @@ public class Login extends javax.swing.JFrame
             }
         });
 
-        jTextField1.setText("jTextField1");
+        jTextField1.setText("Usuario");
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -126,6 +133,10 @@ public class Login extends javax.swing.JFrame
         ventana.setVisible(true);
         dispose();
     }//GEN-LAST:event_ingresarButtonActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments

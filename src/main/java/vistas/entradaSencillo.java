@@ -5,17 +5,13 @@
  */
 package vistas;
 
-/**
- *
- * @author BRIAN
- */
-public class EntradaSencillo extends javax.swing.JFrame {
-
-    /**
-     * Creates new form entradaSencillo
-     */
-    public EntradaSencillo() {
+public class EntradaSencillo extends javax.swing.JFrame
+{
+    public EntradaSencillo()
+    {
         initComponents();
+        this.setTitle("MUNDULERY ~ Entrada Sencillo");
+        setLocationRelativeTo(null);
     }
 
     /**

@@ -5,17 +5,13 @@
  */
 package vistas;
 
-/**
- *
- * @author BRIAN
- */
-public class MenuVista extends javax.swing.JFrame {
-
-    /**
-     * Creates new form MenuVista
-     */
-    public MenuVista() {
+public class MenuVista extends javax.swing.JFrame
+{
+    public MenuVista()
+    {
         initComponents();
+        this.setTitle("MUNDULERY ~ Vistas");
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -59,7 +55,7 @@ public class MenuVista extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void regresarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarButtonActionPerformed
-        Inicio ventana = new Inicio();
+        Menu ventana = new Menu();
         ventana.setVisible(true);
         dispose();
     }//GEN-LAST:event_regresarButtonActionPerformed

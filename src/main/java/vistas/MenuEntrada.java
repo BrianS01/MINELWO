@@ -5,17 +5,13 @@
  */
 package vistas;
 
-/**
- *
- * @author BRIAN
- */
-public class MenuEntrada extends javax.swing.JFrame {
-
-    /**
-     * Creates new form MenuEntrada
-     */
-    public MenuEntrada() {
+public class MenuEntrada extends javax.swing.JFrame
+{
+    public MenuEntrada()
+    {
         initComponents();
+        this.setTitle("MUNDULERY ~ Entradas");
+        setLocationRelativeTo(null);
     }
 
     /**

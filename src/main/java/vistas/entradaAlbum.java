@@ -5,17 +5,13 @@
  */
 package vistas;
 
-/**
- *
- * @author BRIAN
- */
-public class EntradaAlbum extends javax.swing.JFrame {
-
-    /**
-     * Creates new form entradaAlbum
-     */
-    public EntradaAlbum() {
+public class EntradaAlbum extends javax.swing.JFrame
+{
+    public EntradaAlbum()
+    {
         initComponents();
+        this.setTitle("MUNDULERY ~ Entrada Album");
+        setLocationRelativeTo(null);
     }
 
     /**
