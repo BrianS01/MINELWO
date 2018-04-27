@@ -29,6 +29,8 @@ public class Menu extends javax.swing.JFrame {
 
         regresarButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        entradaButton = new javax.swing.JButton();
+        vistaButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -41,18 +43,40 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel1.setText("jLabel1");
 
+        entradaButton.setText("Nuevos Ingresos");
+        entradaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                entradaButtonActionPerformed(evt);
+            }
+        });
+
+        vistaButton.setText("Historiales");
+        vistaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                vistaButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(regresarButton)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(185, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(181, 181, 181))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(regresarButton))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(142, 142, 142)
+                        .addComponent(entradaButton))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(155, 155, 155)
+                        .addComponent(vistaButton)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -61,7 +85,11 @@ public class Menu extends javax.swing.JFrame {
                 .addComponent(regresarButton)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)
-                .addContainerGap(223, Short.MAX_VALUE))
+                .addGap(35, 35, 35)
+                .addComponent(entradaButton)
+                .addGap(39, 39, 39)
+                .addComponent(vistaButton)
+                .addContainerGap(99, Short.MAX_VALUE))
         );
 
         pack();
@@ -72,6 +100,18 @@ public class Menu extends javax.swing.JFrame {
         ventana.setVisible(true);
         dispose();
     }//GEN-LAST:event_regresarButtonActionPerformed
+
+    private void entradaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entradaButtonActionPerformed
+        MenuEntrada ventana = new MenuEntrada();
+        ventana.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_entradaButtonActionPerformed
+
+    private void vistaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vistaButtonActionPerformed
+        MenuVista ventana = new MenuVista();
+        ventana.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_vistaButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -109,7 +149,9 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton entradaButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JButton regresarButton;
+    private javax.swing.JButton vistaButton;
     // End of variables declaration//GEN-END:variables
 }
