@@ -59,7 +59,7 @@ public class EntradaSencillo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void regresarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarButtonActionPerformed
-        Inicio ventana = new Inicio();
+        MenuEntrada ventana = new MenuEntrada();
         ventana.setVisible(true);
         dispose();
     }//GEN-LAST:event_regresarButtonActionPerformed
