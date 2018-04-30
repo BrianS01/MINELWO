@@ -27,19 +27,21 @@ import javax.swing.JPanel;
 
 public class Inicio extends JFrame
 {
-    public Inicio()
+    public Inicio() throws IOException
     {
         initComponents();
         this.setTitle("MUNDULERY");
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         //Inicio frame = new Inicio();
         //frame.setIconImage(Toolkit.getDefaultToolkit().getImage("icono.png"));
-        Image img = Toolkit.getDefaultToolkit().createImage("icono.jpg");
+        //Image img = Toolkit.getDefaultToolkit().createImage("icono.jpg");
+        Image img = ImageIO.read(new File("icono.jpg"));
         //setIconImage(new ImageIcon(getClass().getResource("/recursos/icono.png").getImage());
         //this.setIconImage("icono.png");
         //setIconImage(Toolkit.getDefaultToolkit().getImage("recursos/icono.png"));
         //setIconImage(new ImageIcon("recursos/icono.png").getImage());
         //setIconImage(ImageIO.read(new FileInputStream("recursos/icono.png")));
+        
     }
 
     /**
