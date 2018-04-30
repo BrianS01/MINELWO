@@ -29,6 +29,8 @@ public class MenuEntrada extends javax.swing.JFrame
         interpreteButton = new javax.swing.JButton();
         sencilloButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -69,6 +71,12 @@ public class MenuEntrada extends javax.swing.JFrame
 
         jLabel1.setText("ENTRADAS");
 
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Copyright © 2018 by MUNDULERY");
+
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("All rights reserved");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -90,6 +98,8 @@ public class MenuEntrada extends javax.swing.JFrame
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(171, 171, 171))
+            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -98,7 +108,7 @@ public class MenuEntrada extends javax.swing.JFrame
                 .addComponent(regresarButton)
                 .addGap(11, 11, 11)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addGap(31, 31, 31)
                 .addComponent(albumButton)
                 .addGap(18, 18, 18)
                 .addComponent(cancionButton)
@@ -106,7 +116,11 @@ public class MenuEntrada extends javax.swing.JFrame
                 .addComponent(interpreteButton)
                 .addGap(18, 18, 18)
                 .addComponent(sencilloButton)
-                .addGap(54, 54, 54))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3)
+                .addGap(21, 21, 21))
         );
 
         pack();
@@ -182,6 +196,8 @@ public class MenuEntrada extends javax.swing.JFrame
     private javax.swing.JButton cancionButton;
     private javax.swing.JButton interpreteButton;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JButton regresarButton;
     private javax.swing.JButton sencilloButton;
     // End of variables declaration//GEN-END:variables
