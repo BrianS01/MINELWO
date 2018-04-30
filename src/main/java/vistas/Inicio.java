@@ -16,6 +16,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -30,13 +31,23 @@ public class Inicio extends JFrame
         this.setTitle("MUNDULERY");
         this.setMinimumSize(new Dimension(346, 204));
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        this.setIconImage(Toolkit.getDefaultToolkit().getImage("icono.png"));
+        setIconImage(new ImageIcon(getClass().getResource("/recursos/icono.png").getImage());
         //this.setIconImage("icono.png");
         //setIconImage(Toolkit.getDefaultToolkit().getImage("recursos/icono.png"));
         //setIconImage(new ImageIcon("recursos/icono.png").getImage());
         //setIconImage(ImageIO.read(new FileInputStream("recursos/icono.png")));
     }
-
+    
+    @Override
+    public void setIconImage(Image image)
+{
+  ArrayList<Image> imageList = new ArrayList<>();
+  if (image != null)
+  {
+    imageList.add(image);
+  }
+  setIconImages(imageList);
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
