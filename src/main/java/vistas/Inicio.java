@@ -37,27 +37,12 @@ public class Inicio extends JFrame
         //Inicio frame = new Inicio();
         //frame.setIconImage(Toolkit.getDefaultToolkit().getImage("icono.png"));
         //Image img = Toolkit.getDefaultToolkit().createImage("icono.jpg");
-        //Fondo();
-        try {
-            Image img = ImageIO.read(new File("icono.png"));
-        } catch (IOException ex) {
-            Logger.getLogger(Inicio.class.getName()).log(Level.SEVERE, null, ex);
-        }
         //setIconImage(new ImageIcon(getClass().getResource("/recursos/icono.png").getImage());
         //this.setIconImage("icono.png");
         //setIconImage(Toolkit.getDefaultToolkit().getImage("recursos/icono.png"));
         //setIconImage(new ImageIcon("recursos/icono.png").getImage());
         //setIconImage(ImageIO.read(new FileInputStream("recursos/icono.png")));
         
-    }
-    
-    public void Fondo()
-    {
-        try {
-            Image img = ImageIO.read(new File("icono.jpg"));
-        } catch (IOException ex) {
-            Logger.getLogger(Inicio.class.getName()).log(Level.SEVERE, null, ex);
-        }
     }
 
     /**
@@ -160,11 +145,11 @@ public class Inicio extends JFrame
         }
         //</editor-fold>
         
-        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable()
         {
-            public void run() {
+            public void run()
+            {
                 new Inicio().setVisible(true);
             }
         });
