@@ -22,6 +22,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JLayeredPane;
+import javax.swing.JPanel;
 
 public class Inicio extends JFrame
 {
@@ -30,13 +32,9 @@ public class Inicio extends JFrame
         initComponents();
         this.setTitle("MUNDULERY");
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        Inicio frame = new Inicio();
-        frame.setIconImage(Toolkit.getDefaultToolkit().getImage("icono.png"));
-        ((JPanel)getContentPane()).setOpaque(false);
-        ImageIcon uno=new ImageIcon(this.getClass().getResource("/imagenes/fon.jpg"));
-        JLabel fondo= new JLabel();
-        fondo.setIcon(uno); getLayeredPane().add(fondo,JLayeredPane.FRAME_CONTENT_LAYER);
-        fondo.setBounds(0,0,uno.getIconWidth(),uno.getIconHeight());
+        //Inicio frame = new Inicio();
+        //frame.setIconImage(Toolkit.getDefaultToolkit().getImage("icono.png"));
+        Image img = Toolkit.getDefaultToolkit().createImage("icono.jpg");
         //setIconImage(new ImageIcon(getClass().getResource("/recursos/icono.png").getImage());
         //this.setIconImage("icono.png");
         //setIconImage(Toolkit.getDefaultToolkit().getImage("recursos/icono.png"));
