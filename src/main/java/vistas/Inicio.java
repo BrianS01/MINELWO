@@ -32,6 +32,11 @@ public class Inicio extends JFrame
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         Inicio frame = new Inicio();
         frame.setIconImage(Toolkit.getDefaultToolkit().getImage("icono.png"));
+        ((JPanel)getContentPane()).setOpaque(false);
+        ImageIcon uno=new ImageIcon(this.getClass().getResource("/imagenes/fon.jpg"));
+        JLabel fondo= new JLabel();
+        fondo.setIcon(uno); getLayeredPane().add(fondo,JLayeredPane.FRAME_CONTENT_LAYER);
+        fondo.setBounds(0,0,uno.getIconWidth(),uno.getIconHeight());
         //setIconImage(new ImageIcon(getClass().getResource("/recursos/icono.png").getImage());
         //this.setIconImage("icono.png");
         //setIconImage(Toolkit.getDefaultToolkit().getImage("recursos/icono.png"));
