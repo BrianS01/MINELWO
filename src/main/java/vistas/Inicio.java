@@ -31,23 +31,12 @@ public class Inicio extends JFrame
         this.setTitle("MUNDULERY");
         this.setMinimumSize(new Dimension(346, 204));
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        setIconImage(new ImageIcon(getClass().getResource("/recursos/icono.png").getImage());
+        //setIconImage(new ImageIcon(getClass().getResource("/recursos/icono.png").getImage());
         //this.setIconImage("icono.png");
         //setIconImage(Toolkit.getDefaultToolkit().getImage("recursos/icono.png"));
         //setIconImage(new ImageIcon("recursos/icono.png").getImage());
         //setIconImage(ImageIO.read(new FileInputStream("recursos/icono.png")));
     }
-    
-    @Override
-    public void setIconImage(Image image)
-{
-  ArrayList<Image> imageList = new ArrayList<>();
-  if (image != null)
-  {
-    imageList.add(image);
-  }
-  setIconImages(imageList);
-}
 
     /**
      * This method is called from within the constructor to initialize the form.
