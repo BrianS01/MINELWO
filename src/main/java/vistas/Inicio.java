@@ -39,7 +39,7 @@ public class Inicio extends JFrame
         //Image img = Toolkit.getDefaultToolkit().createImage("icono.jpg");
         //Fondo();
         try {
-            Image img = ImageIO.read(new File("icono.jpg"));
+            Image img = ImageIO.read(new File("icono.png"));
         } catch (IOException ex) {
             Logger.getLogger(Inicio.class.getName()).log(Level.SEVERE, null, ex);
         }
