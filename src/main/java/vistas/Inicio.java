@@ -31,6 +31,8 @@ public class Inicio extends JFrame
         this.setTitle("MUNDULERY");
         this.setMinimumSize(new Dimension(346, 204));
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        Inicio frame = new Inicio();
+        frame.setIconImage(Toolkit.getDefaultToolkit().getImage("icono.png"));
         //setIconImage(new ImageIcon(getClass().getResource("/recursos/icono.png").getImage());
         //this.setIconImage("icono.png");
         //setIconImage(Toolkit.getDefaultToolkit().getImage("recursos/icono.png"));
