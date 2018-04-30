@@ -42,6 +42,9 @@ public class Inicio extends JFrame
         //setIconImage(Toolkit.getDefaultToolkit().getImage("recursos/icono.png"));
         //setIconImage(new ImageIcon("recursos/icono.png").getImage());
         //setIconImage(ImageIO.read(new FileInputStream("recursos/icono.png")));
+        Inicio frame = new Inicio();
+        frame.setIconImage(Toolkit.getDefaultToolkit().getImage("cuadro.ico"));
+        
         
     }
 
