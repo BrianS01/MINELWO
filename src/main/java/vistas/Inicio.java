@@ -17,6 +17,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -27,7 +29,7 @@ import javax.swing.JPanel;
 
 public class Inicio extends JFrame
 {
-    public Inicio() throws IOException
+    public Inicio()
     {
         initComponents();
         this.setTitle("MUNDULERY");
@@ -35,13 +37,22 @@ public class Inicio extends JFrame
         //Inicio frame = new Inicio();
         //frame.setIconImage(Toolkit.getDefaultToolkit().getImage("icono.png"));
         //Image img = Toolkit.getDefaultToolkit().createImage("icono.jpg");
-        Image img = ImageIO.read(new File("icono.jpg"));
+        Fondo();
         //setIconImage(new ImageIcon(getClass().getResource("/recursos/icono.png").getImage());
         //this.setIconImage("icono.png");
         //setIconImage(Toolkit.getDefaultToolkit().getImage("recursos/icono.png"));
         //setIconImage(new ImageIcon("recursos/icono.png").getImage());
         //setIconImage(ImageIO.read(new FileInputStream("recursos/icono.png")));
         
+    }
+    
+    public void Fondo()
+    {
+        try {
+            Image img = ImageIO.read(new File("icono.jpg"));
+        } catch (IOException ex) {
+            Logger.getLogger(Inicio.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
