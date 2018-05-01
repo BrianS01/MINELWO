@@ -5,6 +5,8 @@
  */
 package vistas;
 
+import javax.swing.ImageIcon;
+
 public class EntradaInterprete extends javax.swing.JFrame
 {
     public EntradaInterprete()
@@ -12,6 +14,7 @@ public class EntradaInterprete extends javax.swing.JFrame
         initComponents();
         this.setTitle("MUNDULERY ~ Entrada Interprete");
         setLocationRelativeTo(null);
+        this.setIconImage(new ImageIcon(getClass().getResource("/icono.png")).getImage());
     }
 
     /**
