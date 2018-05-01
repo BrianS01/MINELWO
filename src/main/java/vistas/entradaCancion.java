@@ -5,6 +5,8 @@
  */
 package vistas;
 
+import javax.swing.ImageIcon;
+
 public class EntradaCancion extends javax.swing.JFrame
 {
     public EntradaCancion()
@@ -12,6 +14,7 @@ public class EntradaCancion extends javax.swing.JFrame
         initComponents();
         setLocationRelativeTo(null);
         this.setTitle("MUNDULERY ~ Entrada Cancion");
+        this.setIconImage(new ImageIcon(getClass().getResource("/icono.png")).getImage());
     }
 
     /**
