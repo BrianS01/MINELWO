@@ -5,10 +5,8 @@
  */
 package vistas;
 
-import java.net.URL;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 
 public class Inicio extends JFrame
 {
@@ -17,10 +15,8 @@ public class Inicio extends JFrame
         initComponents();
         this.setTitle("MUNDULERY");
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        //this.setIconImage(new ImageIcon(getClass().getResource("icono.png")).getImage());
-        System.out.println(getClass().getResource("icono.png"));
-
-        
+        this.setIconImage(new ImageIcon(getClass().getResource("/icono.png")).getImage());
+        System.out.println(getClass().getResource("/icono.png"));   
     }
 
     /**
