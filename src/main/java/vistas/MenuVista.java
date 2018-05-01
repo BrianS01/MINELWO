@@ -5,6 +5,8 @@
  */
 package vistas;
 
+import javax.swing.ImageIcon;
+
 public class MenuVista extends javax.swing.JFrame
 {
     public MenuVista()
@@ -12,6 +14,7 @@ public class MenuVista extends javax.swing.JFrame
         initComponents();
         this.setTitle("MUNDULERY ~ Vistas");
         setLocationRelativeTo(null);
+        this.setIconImage(new ImageIcon(getClass().getResource("/icono.png")).getImage());
     }
 
     /**
