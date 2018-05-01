@@ -5,6 +5,8 @@
  */
 package vistas;
 
+import javax.swing.ImageIcon;
+
 public class MenuEntrada extends javax.swing.JFrame
 {
     public MenuEntrada()
@@ -12,6 +14,7 @@ public class MenuEntrada extends javax.swing.JFrame
         initComponents();
         this.setTitle("MUNDULERY ~ Entradas");
         setLocationRelativeTo(null);
+        this.setIconImage(new ImageIcon(getClass().getResource("/icono.png")).getImage());
     }
 
     /**
