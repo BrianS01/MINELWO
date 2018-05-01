@@ -5,13 +5,16 @@
  */
 package vistas;
 
+import javax.swing.ImageIcon;
+
 public class EntradaAlbum extends javax.swing.JFrame
 {
     public EntradaAlbum()
     {
         initComponents();
-        this.setTitle("MUNDULERY ~ Entrada Album");
         setLocationRelativeTo(null);
+        this.setTitle("MUNDULERY ~ Entrada Album");
+        this.setIconImage(new ImageIcon(getClass().getResource("/icono.png")).getImage());
     }
 
     /**
