@@ -16,6 +16,8 @@ public class Inicio extends JFrame
         this.setTitle("MUNDULERY");
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         this.setIconImage(new ImageIcon(getClass().getResource("/icono.png")).getImage());
+        System.out.println(getClass().getResource("/icono.png"));
+        System.out.println(getClass().getResource("/target/classes/cuadro.png"));
         System.out.println(getClass().getResource("/recursos/icono.png"));
         System.out.println(getClass().getResource("/src/main/java/recursos/icono.png"));
         System.out.println(getClass().getResource("\\src\\main\\java\\recursos\\icono.png"));
