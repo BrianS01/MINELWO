@@ -15,7 +15,8 @@ public class Inicio extends JFrame
         initComponents();
         this.setTitle("MUNDULERY");
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        this.setIconImage(new ImageIcon(getClass().getResource("/recursos" + "/icono.png")).getImage());
+        this.setIconImage(new ImageIcon(getClass().getResource("icono.png")).getImage());
+        
     }
 
     /**
