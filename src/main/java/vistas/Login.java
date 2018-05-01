@@ -5,6 +5,8 @@
  */
 package vistas;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author BRIAN
@@ -19,6 +21,7 @@ public class Login extends javax.swing.JFrame
     {
         initComponents();
         setLocationRelativeTo(null);
+        this.setIconImage(new ImageIcon(getClass().getResource("/icono.png")).getImage());
     }
 
     /**
