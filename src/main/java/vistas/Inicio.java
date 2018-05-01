@@ -5,27 +5,8 @@
  */
 package vistas;
 
-import java.awt.BorderLayout;
-import java.awt.Dimension;
-import java.awt.FlowLayout;
-import java.awt.Image;
-import java.awt.Toolkit;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
-import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JLayeredPane;
-import javax.swing.JPanel;
 
 public class Inicio extends JFrame
 {
@@ -34,16 +15,7 @@ public class Inicio extends JFrame
         initComponents();
         this.setTitle("MUNDULERY");
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        //Inicio frame = new Inicio();
-        //frame.setIconImage(Toolkit.getDefaultToolkit().getImage("icono.png"));
-        //Image img = Toolkit.getDefaultToolkit().createImage("icono.jpg");
-        //setIconImage(new ImageIcon(getClass().getResource("/recursos/icono.png").getImage());
-        //this.setIconImage("icono.png");
-        //setIconImage(Toolkit.getDefaultToolkit().getImage("recursos/icono.png"));
-        //setIconImage(new ImageIcon("recursos/icono.png").getImage());
-        //setIconImage(ImageIO.read(new FileInputStream("recursos/icono.png")));
-        //Inicio frame = new Inicio();
-        //frame.setIconImage(Toolkit.getDefaultToolkit().getImage("cuadro.ico"));
+        this.setIconImage(new ImageIcon(getClass().getResource("/recursos" + "/icono.png")).getImage());
     }
 
     /**
