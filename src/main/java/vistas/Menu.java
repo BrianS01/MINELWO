@@ -31,11 +31,15 @@ public class Menu extends javax.swing.JFrame
     private void initComponents() {
 
         regresarButton = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         entradaButton = new javax.swing.JButton();
         vistaButton = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
         regresarButton.setText("Regresar");
         regresarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -43,8 +47,8 @@ public class Menu extends javax.swing.JFrame
                 regresarButtonActionPerformed(evt);
             }
         });
-
-        jLabel1.setText("MENU");
+        getContentPane().add(regresarButton);
+        regresarButton.setBounds(12, 19, 79, 25);
 
         entradaButton.setText("Nuevos Ingresos");
         entradaButton.addActionListener(new java.awt.event.ActionListener() {
@@ -52,6 +56,8 @@ public class Menu extends javax.swing.JFrame
                 entradaButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(entradaButton);
+        entradaButton.setBounds(142, 112, 116, 25);
 
         vistaButton.setText("Historiales");
         vistaButton.addActionListener(new java.awt.event.ActionListener() {
@@ -59,41 +65,28 @@ public class Menu extends javax.swing.JFrame
                 vistaButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(vistaButton);
+        vistaButton.setBounds(155, 176, 84, 25);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(191, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(181, 181, 181))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(regresarButton))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(142, 142, 142)
-                        .addComponent(entradaButton))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(155, 155, 155)
-                        .addComponent(vistaButton)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(regresarButton)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel1)
-                .addGap(35, 35, 35)
-                .addComponent(entradaButton)
-                .addGap(39, 39, 39)
-                .addComponent(vistaButton)
-                .addContainerGap(99, Short.MAX_VALUE))
-        );
+        jLabel4.setText("MENU");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(191, 62, 28, 15);
+
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Copyright © 2018 by MUNDULERY");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(0, 460, 730, 15);
+
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("All rights reserved");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(-1, 470, 730, 15);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fondo.jpg"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 730, 500);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -154,6 +147,9 @@ public class Menu extends javax.swing.JFrame
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton entradaButton;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JButton regresarButton;
     private javax.swing.JButton vistaButton;
     // End of variables declaration//GEN-END:variables
