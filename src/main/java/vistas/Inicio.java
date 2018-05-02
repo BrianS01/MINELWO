@@ -6,6 +6,7 @@
 package vistas;
 
 import java.awt.Dimension;
+import java.awt.Toolkit;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
@@ -15,9 +16,10 @@ public class Inicio extends JFrame
     {
         initComponents();
         this.setTitle("MUNDULERY");
-        //setLocationRelativeTo(null);
         this.setMinimumSize(new Dimension(748, 540));
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setIconImage(new ImageIcon(getClass().getResource("/icono.png")).getImage());
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     }
 
     /**
@@ -76,9 +78,9 @@ public class Inicio extends JFrame
         getContentPane().add(jLabel3);
         jLabel3.setBounds(-1, 470, 730, 15);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fondo.jpg"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/base.jpg"))); // NOI18N
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(0, 0, 731, 500);
+        jLabel4.setBounds(0, 0, 750, 500);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
