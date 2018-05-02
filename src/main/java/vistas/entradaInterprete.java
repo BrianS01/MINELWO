@@ -31,6 +31,7 @@ public class EntradaInterprete extends javax.swing.JFrame
     private void initComponents() {
 
         regresarButton = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -46,6 +47,13 @@ public class EntradaInterprete extends javax.swing.JFrame
         });
         getContentPane().add(regresarButton);
         regresarButton.setBounds(12, 11, 79, 25);
+
+        jLabel4.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Entrada Nuevo INTERPRETE");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(0, 70, 730, 30);
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -112,6 +120,7 @@ public class EntradaInterprete extends javax.swing.JFrame
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JButton regresarButton;
     // End of variables declaration//GEN-END:variables
 }

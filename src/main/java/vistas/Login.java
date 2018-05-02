@@ -44,13 +44,15 @@ public class Login extends javax.swing.JFrame
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Usuario:");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(290, 150, 40, 15);
+        jLabel1.setBounds(290, 160, 60, 15);
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Contraseña:");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(270, 200, 59, 15);
+        jLabel2.setBounds(270, 220, 70, 15);
 
         regresarButton.setText("Regresar");
         regresarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -61,13 +63,20 @@ public class Login extends javax.swing.JFrame
         getContentPane().add(regresarButton);
         regresarButton.setBounds(12, 11, 79, 25);
 
+        jLabel3.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("LOGIN");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(330, 90, 31, 15);
+        jLabel3.setBounds(270, 100, 70, 30);
 
-        jPasswordField1.setText("jPasswordField1");
+        jPasswordField1.setText("jPasswordFñ");
+        jPasswordField1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPasswordField1MouseClicked(evt);
+            }
+        });
         getContentPane().add(jPasswordField1);
-        jPasswordField1.setBounds(350, 190, 120, 42);
+        jPasswordField1.setBounds(350, 210, 120, 42);
 
         ingresarButton.setText("INGRESAR");
         ingresarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -76,16 +85,21 @@ public class Login extends javax.swing.JFrame
             }
         });
         getContentPane().add(ingresarButton);
-        ingresarButton.setBounds(300, 250, 86, 25);
+        ingresarButton.setBounds(350, 280, 100, 30);
 
-        jTextField1.setText("Usuario");
+        jTextField1.setText("Ingrese Usuario");
+        jTextField1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField1MouseClicked(evt);
+            }
+        });
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
             }
         });
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(350, 140, 120, 39);
+        jTextField1.setBounds(350, 150, 120, 39);
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Copyright © 2018 by MUNDULERY");
@@ -119,6 +133,14 @@ public class Login extends javax.swing.JFrame
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jTextField1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField1MouseClicked
+        jTextField1.setText("");
+    }//GEN-LAST:event_jTextField1MouseClicked
+
+    private void jPasswordField1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPasswordField1MouseClicked
+        jPasswordField1.setText("");
+    }//GEN-LAST:event_jPasswordField1MouseClicked
 
     /**
      * @param args the command line arguments

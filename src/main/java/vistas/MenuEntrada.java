@@ -59,7 +59,7 @@ public class MenuEntrada extends javax.swing.JFrame
             }
         });
         getContentPane().add(albumButton);
-        albumButton.setBounds(161, 93, 80, 25);
+        albumButton.setBounds(240, 190, 80, 25);
 
         cancionButton.setText("Canción");
         cancionButton.addActionListener(new java.awt.event.ActionListener() {
@@ -68,7 +68,7 @@ public class MenuEntrada extends javax.swing.JFrame
             }
         });
         getContentPane().add(cancionButton);
-        cancionButton.setBounds(161, 136, 80, 25);
+        cancionButton.setBounds(410, 190, 80, 25);
 
         interpreteButton.setText("Interprete");
         interpreteButton.addActionListener(new java.awt.event.ActionListener() {
@@ -77,7 +77,7 @@ public class MenuEntrada extends javax.swing.JFrame
             }
         });
         getContentPane().add(interpreteButton);
-        interpreteButton.setBounds(161, 179, 80, 25);
+        interpreteButton.setBounds(240, 270, 80, 25);
 
         sencilloButton.setText("Sencillo");
         sencilloButton.addActionListener(new java.awt.event.ActionListener() {
@@ -86,11 +86,14 @@ public class MenuEntrada extends javax.swing.JFrame
             }
         });
         getContentPane().add(sencilloButton);
-        sencilloButton.setBounds(161, 222, 80, 25);
+        sencilloButton.setBounds(410, 270, 80, 25);
 
+        jLabel4.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("ENTRADAS");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(173, 47, 56, 15);
+        jLabel4.setBounds(0, 70, 730, 30);
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

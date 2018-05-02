@@ -34,6 +34,7 @@ public class Inicio extends JFrame
         jLabel1 = new javax.swing.JLabel();
         loginButtom = new javax.swing.JButton();
         cerrarButton = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -41,12 +42,12 @@ public class Inicio extends JFrame
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("MUNDULERY");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 60, 730, 47);
+        jLabel1.setBounds(0, 100, 730, 47);
 
         loginButtom.setText("LOGIN");
         loginButtom.addActionListener(new java.awt.event.ActionListener() {
@@ -64,7 +65,11 @@ public class Inicio extends JFrame
             }
         });
         getContentPane().add(cerrarButton);
-        cerrarButton.setBounds(12, 11, 65, 25);
+        cerrarButton.setBounds(10, 10, 65, 25);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo.png"))); // NOI18N
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(220, 160, 290, 110);
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -139,6 +144,7 @@ public class Inicio extends JFrame
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JButton loginButtom;
     // End of variables declaration//GEN-END:variables
 }
