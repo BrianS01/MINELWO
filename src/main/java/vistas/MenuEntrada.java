@@ -35,11 +35,13 @@ public class MenuEntrada extends javax.swing.JFrame
         cancionButton = new javax.swing.JButton();
         interpreteButton = new javax.swing.JButton();
         sencilloButton = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
         regresarButton.setText("Regresar");
         regresarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -47,6 +49,8 @@ public class MenuEntrada extends javax.swing.JFrame
                 regresarButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(regresarButton);
+        regresarButton.setBounds(12, 11, 79, 25);
 
         albumButton.setText("Album");
         albumButton.addActionListener(new java.awt.event.ActionListener() {
@@ -54,6 +58,8 @@ public class MenuEntrada extends javax.swing.JFrame
                 albumButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(albumButton);
+        albumButton.setBounds(161, 93, 80, 25);
 
         cancionButton.setText("Canción");
         cancionButton.addActionListener(new java.awt.event.ActionListener() {
@@ -61,6 +67,8 @@ public class MenuEntrada extends javax.swing.JFrame
                 cancionButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(cancionButton);
+        cancionButton.setBounds(161, 136, 80, 25);
 
         interpreteButton.setText("Interprete");
         interpreteButton.addActionListener(new java.awt.event.ActionListener() {
@@ -68,6 +76,8 @@ public class MenuEntrada extends javax.swing.JFrame
                 interpreteButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(interpreteButton);
+        interpreteButton.setBounds(161, 179, 80, 25);
 
         sencilloButton.setText("Sencillo");
         sencilloButton.addActionListener(new java.awt.event.ActionListener() {
@@ -75,60 +85,28 @@ public class MenuEntrada extends javax.swing.JFrame
                 sencilloButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(sencilloButton);
+        sencilloButton.setBounds(161, 222, 80, 25);
 
-        jLabel1.setText("ENTRADAS");
+        jLabel4.setText("ENTRADAS");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(173, 47, 56, 15);
 
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Copyright © 2018 by MUNDULERY");
-
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("All rights reserved");
+        jLabel3.setText("Copyright © 2018 by MUNDULERY");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(0, 460, 730, 15);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(regresarButton))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(161, 161, 161)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(interpreteButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(cancionButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(albumButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(sencilloButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(159, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(171, 171, 171))
-            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(regresarButton)
-                .addGap(11, 11, 11)
-                .addComponent(jLabel1)
-                .addGap(31, 31, 31)
-                .addComponent(albumButton)
-                .addGap(18, 18, 18)
-                .addComponent(cancionButton)
-                .addGap(18, 18, 18)
-                .addComponent(interpreteButton)
-                .addGap(18, 18, 18)
-                .addComponent(sencilloButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
-                .addGap(21, 21, 21))
-        );
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("All rights reserved");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(-1, 470, 730, 15);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fondo.jpg"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 730, 500);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -203,6 +181,7 @@ public class MenuEntrada extends javax.swing.JFrame
     private javax.swing.JButton cancionButton;
     private javax.swing.JButton interpreteButton;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JButton regresarButton;
