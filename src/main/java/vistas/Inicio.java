@@ -50,7 +50,7 @@ public class Inicio extends JFrame
             }
         });
         getContentPane().add(loginButtom);
-        loginButtom.setBounds(343, 11, 65, 25);
+        loginButtom.setBounds(650, 10, 65, 25);
 
         cerrarButton.setText("Cerrar");
         cerrarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -64,16 +64,16 @@ public class Inicio extends JFrame
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Copyright © 2018 by MUNDULERY");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 284, 419, 15);
+        jLabel2.setBounds(0, 460, 730, 15);
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("All rights reserved");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(0, 305, 419, 15);
+        jLabel3.setBounds(-1, 470, 730, 15);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fondo.jpg"))); // NOI18N
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(-7, -1, 731, 500);
+        jLabel4.setBounds(0, 0, 731, 500);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
