@@ -39,6 +39,7 @@ public class Inicio extends JFrame
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("MUNDULERY");
         getContentPane().add(jLabel1);
@@ -62,11 +63,13 @@ public class Inicio extends JFrame
         getContentPane().add(cerrarButton);
         cerrarButton.setBounds(12, 11, 65, 25);
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Copyright © 2018 by MUNDULERY");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(0, 460, 730, 15);
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("All rights reserved");
         getContentPane().add(jLabel3);
