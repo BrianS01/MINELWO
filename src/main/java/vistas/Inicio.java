@@ -5,6 +5,7 @@
  */
 package vistas;
 
+import java.awt.Dimension;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
@@ -14,7 +15,7 @@ public class Inicio extends JFrame
     {
         initComponents();
         this.setTitle("MUNDULERY");
-        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        this.setMinimumSize(new Dimension(748, 540));
         this.setIconImage(new ImageIcon(getClass().getResource("/icono.png")).getImage());
     }
 
@@ -37,11 +38,11 @@ public class Inicio extends JFrame
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("MUNDULERY");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 71, 419, 32);
+        jLabel1.setBounds(0, 60, 730, 47);
 
         loginButtom.setText("LOGIN");
         loginButtom.addActionListener(new java.awt.event.ActionListener() {
