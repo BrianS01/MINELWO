@@ -32,12 +32,16 @@ public class Inicio extends JFrame
         cerrarButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("MUNDULERY");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 71, 419, 32);
 
         loginButtom.setText("LOGIN");
         loginButtom.addActionListener(new java.awt.event.ActionListener() {
@@ -45,6 +49,8 @@ public class Inicio extends JFrame
                 loginButtomActionPerformed(evt);
             }
         });
+        getContentPane().add(loginButtom);
+        loginButtom.setBounds(343, 11, 65, 25);
 
         cerrarButton.setText("Cerrar");
         cerrarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -52,42 +58,22 @@ public class Inicio extends JFrame
                 cerrarButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(cerrarButton);
+        cerrarButton.setBounds(12, 11, 65, 25);
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Copyright © 2018 by MUNDULERY");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(0, 284, 419, 15);
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("All rights reserved");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(0, 305, 419, 15);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(cerrarButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(loginButtom)
-                .addContainerGap())
-            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 419, Short.MAX_VALUE)
-            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cerrarButton)
-                    .addComponent(loginButtom))
-                .addGap(35, 35, 35)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 181, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
-                .addContainerGap())
-        );
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fondo.jpg"))); // NOI18N
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(-7, -1, 430, 340);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -145,6 +131,7 @@ public class Inicio extends JFrame
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JButton loginButtom;
     // End of variables declaration//GEN-END:variables
 }
