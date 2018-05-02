@@ -73,7 +73,7 @@ public class Inicio extends JFrame
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fondo.jpg"))); // NOI18N
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(-7, -1, 430, 340);
+        jLabel4.setBounds(-7, -1, 731, 500);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
