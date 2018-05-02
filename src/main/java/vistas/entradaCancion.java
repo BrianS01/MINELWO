@@ -5,6 +5,8 @@
  */
 package vistas;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import javax.swing.ImageIcon;
 
 public class EntradaCancion extends javax.swing.JFrame
@@ -12,9 +14,11 @@ public class EntradaCancion extends javax.swing.JFrame
     public EntradaCancion()
     {
         initComponents();
-        setLocationRelativeTo(null);
         this.setTitle("MUNDULERY ~ Entrada Cancion");
+        this.setMinimumSize(new Dimension(748, 540));
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setIconImage(new ImageIcon(getClass().getResource("/icono.png")).getImage());
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     }
 
     /**
