@@ -32,6 +32,7 @@ public class EntradaCancion extends javax.swing.JFrame
 
         jLabel3 = new javax.swing.JLabel();
         regresarButton = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -51,6 +52,13 @@ public class EntradaCancion extends javax.swing.JFrame
         });
         getContentPane().add(regresarButton);
         regresarButton.setBounds(12, 11, 79, 25);
+
+        jLabel5.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("Entrada Nuevo CANCION");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(0, 70, 730, 30);
 
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -118,6 +126,7 @@ public class EntradaCancion extends javax.swing.JFrame
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JButton regresarButton;
     // End of variables declaration//GEN-END:variables
 }
