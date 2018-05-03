@@ -48,7 +48,7 @@ public class Menu extends javax.swing.JFrame
             }
         });
         getContentPane().add(regresarButton);
-        regresarButton.setBounds(12, 19, 79, 25);
+        regresarButton.setBounds(12, 19, 100, 25);
 
         entradaButton.setText("Nuevos Ingresos");
         entradaButton.addActionListener(new java.awt.event.ActionListener() {
@@ -57,7 +57,7 @@ public class Menu extends javax.swing.JFrame
             }
         });
         getContentPane().add(entradaButton);
-        entradaButton.setBounds(310, 220, 120, 25);
+        entradaButton.setBounds(300, 220, 130, 25);
 
         vistaButton.setText("Historiales");
         vistaButton.addActionListener(new java.awt.event.ActionListener() {
@@ -66,7 +66,7 @@ public class Menu extends javax.swing.JFrame
             }
         });
         getContentPane().add(vistaButton);
-        vistaButton.setBounds(310, 280, 120, 25);
+        vistaButton.setBounds(300, 280, 130, 25);
 
         jLabel4.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));

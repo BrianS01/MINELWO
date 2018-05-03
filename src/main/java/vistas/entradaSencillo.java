@@ -60,7 +60,7 @@ public class EntradaSencillo extends javax.swing.JFrame
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(300, 330, 100, 25);
+        jButton1.setBounds(300, 340, 100, 25);
 
         jTextField1.setText("Nuevo Sencillo");
         jTextField1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -74,13 +74,13 @@ public class EntradaSencillo extends javax.swing.JFrame
             }
         });
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(350, 270, 140, 20);
+        jTextField1.setBounds(350, 270, 140, 30);
 
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Nombre Sencillo");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(240, 270, 90, 20);
+        jLabel6.setBounds(240, 270, 90, 30);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Interprete", "Item 2", "Item 3", "Item 4" }));
         getContentPane().add(jComboBox1);
