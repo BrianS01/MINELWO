@@ -46,7 +46,7 @@ public class MenuVista extends javax.swing.JFrame
             }
         });
         getContentPane().add(regresarButton);
-        regresarButton.setBounds(12, 11, 90, 25);
+        regresarButton.setBounds(12, 11, 100, 25);
 
         jLabel4.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -75,7 +75,7 @@ public class MenuVista extends javax.swing.JFrame
     }// </editor-fold>//GEN-END:initComponents
 
     private void regresarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarButtonActionPerformed
-        Menu ventana = new Menu();
+        MenuEntrada ventana = new MenuEntrada();
         ventana.setVisible(true);
         dispose();
     }//GEN-LAST:event_regresarButtonActionPerformed

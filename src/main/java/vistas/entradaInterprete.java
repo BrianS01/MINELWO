@@ -49,7 +49,7 @@ public class EntradaInterprete extends javax.swing.JFrame
             }
         });
         getContentPane().add(regresarButton);
-        regresarButton.setBounds(12, 11, 79, 25);
+        regresarButton.setBounds(12, 11, 100, 25);
 
         jButton1.setText("INGRESAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -106,12 +106,6 @@ public class EntradaInterprete extends javax.swing.JFrame
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void regresarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarButtonActionPerformed
-        MenuEntrada ventana = new MenuEntrada();
-        ventana.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_regresarButtonActionPerformed
-
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
@@ -125,6 +119,12 @@ public class EntradaInterprete extends javax.swing.JFrame
         ventana.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void regresarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarButtonActionPerformed
+        MenuEntrada ventana = new MenuEntrada();
+        ventana.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_regresarButtonActionPerformed
 
     /**
      * @param args the command line arguments

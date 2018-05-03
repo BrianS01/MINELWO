@@ -32,7 +32,7 @@ public class Login extends javax.swing.JFrame
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        regresarButton = new javax.swing.JButton();
+        regresarButton1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jPasswordField1 = new javax.swing.JPasswordField();
         ingresarButton = new javax.swing.JButton();
@@ -54,14 +54,14 @@ public class Login extends javax.swing.JFrame
         getContentPane().add(jLabel2);
         jLabel2.setBounds(270, 220, 70, 15);
 
-        regresarButton.setText("Regresar");
-        regresarButton.addActionListener(new java.awt.event.ActionListener() {
+        regresarButton1.setText("Regresar");
+        regresarButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 regresarButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(regresarButton);
-        regresarButton.setBounds(12, 11, 79, 25);
+        getContentPane().add(regresarButton1);
+        regresarButton1.setBounds(12, 11, 100, 25);
 
         jLabel3.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -118,12 +118,6 @@ public class Login extends javax.swing.JFrame
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void regresarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarButtonActionPerformed
-        Inicio ventana = new Inicio();
-        ventana.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_regresarButtonActionPerformed
-
     private void ingresarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ingresarButtonActionPerformed
         Menu ventana = new Menu();
         ventana.setVisible(true);
@@ -141,6 +135,12 @@ public class Login extends javax.swing.JFrame
     private void jPasswordField1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPasswordField1MouseClicked
         jPasswordField1.setText("");
     }//GEN-LAST:event_jPasswordField1MouseClicked
+
+    private void regresarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarButtonActionPerformed
+        Inicio ventana = new Inicio();
+        ventana.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_regresarButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -188,5 +188,6 @@ public class Login extends javax.swing.JFrame
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JButton regresarButton;
+    private javax.swing.JButton regresarButton1;
     // End of variables declaration//GEN-END:variables
 }
