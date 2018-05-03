@@ -57,7 +57,7 @@ public class Menu extends javax.swing.JFrame
             }
         });
         getContentPane().add(entradaButton);
-        entradaButton.setBounds(310, 130, 120, 25);
+        entradaButton.setBounds(310, 220, 120, 25);
 
         vistaButton.setText("Historiales");
         vistaButton.addActionListener(new java.awt.event.ActionListener() {
@@ -66,14 +66,14 @@ public class Menu extends javax.swing.JFrame
             }
         });
         getContentPane().add(vistaButton);
-        vistaButton.setBounds(310, 190, 120, 25);
+        vistaButton.setBounds(310, 280, 120, 25);
 
         jLabel4.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("MENU");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(1, 62, 730, 30);
+        jLabel4.setBounds(0, 110, 730, 30);
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
