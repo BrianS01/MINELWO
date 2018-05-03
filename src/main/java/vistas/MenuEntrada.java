@@ -59,7 +59,7 @@ public class MenuEntrada extends javax.swing.JFrame
             }
         });
         getContentPane().add(albumButton);
-        albumButton.setBounds(240, 190, 80, 25);
+        albumButton.setBounds(240, 270, 80, 25);
 
         cancionButton.setText("Canción");
         cancionButton.addActionListener(new java.awt.event.ActionListener() {
@@ -77,7 +77,7 @@ public class MenuEntrada extends javax.swing.JFrame
             }
         });
         getContentPane().add(interpreteButton);
-        interpreteButton.setBounds(240, 270, 80, 25);
+        interpreteButton.setBounds(240, 190, 80, 25);
 
         sencilloButton.setText("Sencillo");
         sencilloButton.addActionListener(new java.awt.event.ActionListener() {
