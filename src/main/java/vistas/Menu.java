@@ -33,6 +33,7 @@ public class Menu extends javax.swing.JFrame
         regresarButton = new javax.swing.JButton();
         entradaButton = new javax.swing.JButton();
         vistaButton = new javax.swing.JButton();
+        ventasButton = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -67,6 +68,15 @@ public class Menu extends javax.swing.JFrame
         });
         getContentPane().add(vistaButton);
         vistaButton.setBounds(300, 280, 130, 25);
+
+        ventasButton.setText("Ventas");
+        ventasButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ventasButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(ventasButton);
+        ventasButton.setBounds(300, 340, 130, 25);
 
         jLabel4.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -111,6 +121,10 @@ public class Menu extends javax.swing.JFrame
         ventana.setVisible(true);
         dispose();
     }//GEN-LAST:event_vistaButtonActionPerformed
+
+    private void ventasButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ventasButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ventasButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -157,6 +171,7 @@ public class Menu extends javax.swing.JFrame
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JButton regresarButton;
+    private javax.swing.JButton ventasButton;
     private javax.swing.JButton vistaButton;
     // End of variables declaration//GEN-END:variables
 }
