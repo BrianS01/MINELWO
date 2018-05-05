@@ -123,7 +123,9 @@ public class Menu extends javax.swing.JFrame
     }//GEN-LAST:event_vistaButtonActionPerformed
 
     private void ventasButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ventasButtonActionPerformed
-        // TODO add your handling code here:
+        MenuVenta ventana = new MenuVenta();
+        ventana.setVisible(true);
+        dispose();
     }//GEN-LAST:event_ventasButtonActionPerformed
 
     /**
