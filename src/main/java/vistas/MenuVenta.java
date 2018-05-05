@@ -35,6 +35,8 @@ public class MenuVenta extends javax.swing.JFrame
     private void initComponents() {
 
         regresarButton = new javax.swing.JButton();
+        albumButton = new javax.swing.JButton();
+        sencilloButton = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -51,6 +53,14 @@ public class MenuVenta extends javax.swing.JFrame
         });
         getContentPane().add(regresarButton);
         regresarButton.setBounds(12, 19, 100, 25);
+
+        albumButton.setText("ALBUM");
+        getContentPane().add(albumButton);
+        albumButton.setBounds(310, 300, 100, 25);
+
+        sencilloButton.setText("SENCILLO");
+        getContentPane().add(sencilloButton);
+        sencilloButton.setBounds(310, 230, 100, 25);
 
         jLabel4.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -123,10 +133,12 @@ public class MenuVenta extends javax.swing.JFrame
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton albumButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JButton regresarButton;
+    private javax.swing.JButton sencilloButton;
     // End of variables declaration//GEN-END:variables
 }
