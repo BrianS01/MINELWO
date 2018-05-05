@@ -55,9 +55,9 @@ public class MenuVenta extends javax.swing.JFrame
         jLabel4.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("MENU");
+        jLabel4.setText("VENTAS");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(0, 110, 730, 30);
+        jLabel4.setBounds(0, 80, 730, 30);
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -79,7 +79,7 @@ public class MenuVenta extends javax.swing.JFrame
     }// </editor-fold>//GEN-END:initComponents
 
     private void regresarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarButtonActionPerformed
-        Inicio ventana = new Inicio();
+        Menu ventana = new Menu();
         ventana.setVisible(true);
         dispose();
     }//GEN-LAST:event_regresarButtonActionPerformed
