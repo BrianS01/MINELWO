@@ -139,7 +139,7 @@ public class MenuEntrada extends javax.swing.JFrame
     }//GEN-LAST:event_interpreteButtonActionPerformed
 
     private void sencilloButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sencilloButtonActionPerformed
-        EntradaSencillo ventana = new EntradaSencillo();
+        IngresoSencillo ventana = new IngresoSencillo();
         ventana.setVisible(true);
         dispose();
     }//GEN-LAST:event_sencilloButtonActionPerformed

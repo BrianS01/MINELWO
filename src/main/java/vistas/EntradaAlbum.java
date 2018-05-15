@@ -9,12 +9,12 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 import javax.swing.ImageIcon;
 
-public class EntradaSencillo extends javax.swing.JFrame
+public class EntradaAlbum extends javax.swing.JFrame
 {
-    public EntradaSencillo()
+    public EntradaAlbum()
     {
         initComponents();
-        this.setTitle("MUNDULERY ~ Entrada Sencillo");
+        this.setTitle("MUNDULERY ~ Entrada Album");
         this.setMinimumSize(new Dimension(748, 540));
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setIconImage(new ImageIcon(getClass().getResource("/icono.png")).getImage());
@@ -37,8 +37,8 @@ public class EntradaSencillo extends javax.swing.JFrame
         jComboBox1 = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -62,29 +62,24 @@ public class EntradaSencillo extends javax.swing.JFrame
         getContentPane().add(jButton1);
         jButton1.setBounds(300, 340, 100, 25);
 
-        jTextField1.setText("Nuevo Sencillo");
+        jTextField1.setText("Nuevo Album");
         jTextField1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTextField1MouseClicked(evt);
             }
         });
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(350, 270, 140, 30);
+        jTextField1.setBounds(350, 270, 160, 30);
 
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Nombre Sencillo");
+        jLabel6.setText("Nombre Album");
         getContentPane().add(jLabel6);
         jLabel6.setBounds(240, 270, 90, 30);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Interprete", "Item 2", "Item 3", "Item 4" }));
         getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(350, 210, 140, 24);
+        jComboBox1.setBounds(350, 210, 160, 24);
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -95,21 +90,21 @@ public class EntradaSencillo extends javax.swing.JFrame
         jLabel4.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Entrada Nuevo SENCILLO");
+        jLabel4.setText("Entrada Nuevo ALBUM");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(0, 70, 730, 30);
 
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Copyright © 2018 by MUNDULERY");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(0, 460, 730, 15);
-
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("All rights reserved");
+        jLabel2.setText("Copyright © 2018 by MUNDULERY");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(-1, 470, 730, 15);
+        jLabel2.setBounds(0, 460, 730, 15);
+
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("All rights reserved");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(-1, 470, 730, 15);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fondo.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -118,25 +113,21 @@ public class EntradaSencillo extends javax.swing.JFrame
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void regresarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarButtonActionPerformed
+        MenuEntrada ventana = new MenuEntrada();
+        ventana.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_regresarButtonActionPerformed
+
     private void jTextField1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField1MouseClicked
         jTextField1.setText("");
     }//GEN-LAST:event_jTextField1MouseClicked
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         MenuEntrada ventana = new MenuEntrada();
         ventana.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void regresarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarButtonActionPerformed
-        MenuEntrada ventana = new MenuEntrada();
-        ventana.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_regresarButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -156,14 +147,28 @@ public class EntradaSencillo extends javax.swing.JFrame
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(EntradaSencillo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EntradaAlbum.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(EntradaSencillo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EntradaAlbum.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(EntradaSencillo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EntradaAlbum.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(EntradaSencillo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EntradaAlbum.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
@@ -172,7 +177,7 @@ public class EntradaSencillo extends javax.swing.JFrame
         {
             public void run()
             {
-                new EntradaSencillo().setVisible(true);
+                new EntradaAlbum().setVisible(true);
             }
         });
     }
