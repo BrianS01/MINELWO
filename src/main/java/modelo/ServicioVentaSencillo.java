@@ -3,12 +3,8 @@ package modelo;
 import vo.Venta;
 import java.util.List;
 
-/**
- *
- * @author cristian
- */
-public class ServicioVentaSencillo {
-    
+public class ServicioVentaSencillo
+{   
     private static AdministradorInterprete administradorInterprete;
     private static AdministradorSencillo administradorSencillo; 
     private Venta miVenta;  

@@ -3,12 +3,8 @@ package vo;
 import java.awt.List;
 import java.util.Date;
 
-/**
- *
- * @author cristian
- */
-public class Interprete {
-
+public class Interprete
+{
     private String nombreInterprete;
     private Date fecha; 
     

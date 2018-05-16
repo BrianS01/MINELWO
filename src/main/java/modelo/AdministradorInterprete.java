@@ -4,12 +4,8 @@ import vo.Interprete;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author cristian
- */
-public class AdministradorInterprete {
-
+public class AdministradorInterprete
+{
     private Interprete interprete;
     private static AdministradorInterprete administradorInterprete;
     private List<Interprete> interpretes;   
@@ -64,7 +60,5 @@ public class AdministradorInterprete {
     public void setInterpretes(List<Interprete> interpretes) {
         this.interpretes = interpretes;
     }
-
    
-    
 }

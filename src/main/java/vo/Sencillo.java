@@ -3,8 +3,8 @@ package vo;
 
 import java.util.List;
 
-
-public class Sencillo {
+public class Sencillo
+{
     private int idCancion; 
     private String nombreCancion; 
     private String nombreInterprete;
