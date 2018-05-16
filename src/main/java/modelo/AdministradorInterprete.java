@@ -64,7 +64,5 @@ public class AdministradorInterprete {
     public void setInterpretes(List<Interprete> interpretes) {
         this.interpretes = interpretes;
     }
-
    
-    
 }
