@@ -5,10 +5,6 @@ import vo.Sencillo;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author cristian
- */
 public class AdministradorSencillo
 {
     private AdministradorInterprete misInterpretes;
