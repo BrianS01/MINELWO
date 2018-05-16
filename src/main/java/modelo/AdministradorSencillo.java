@@ -9,8 +9,8 @@ import java.util.List;
  *
  * @author cristian
  */
-public class AdministradorSencillo {
-    
+public class AdministradorSencillo
+{
     private AdministradorInterprete misInterpretes;
     private Sencillo miSencillo;
     private List<Sencillo> listaDeSencillos;
