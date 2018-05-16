@@ -2,10 +2,6 @@ package vo;
 
 import java.util.Date;
 
-/**
- *
- * @author cristian
- */
 public class Venta
 {
     private int valorVenta; 
