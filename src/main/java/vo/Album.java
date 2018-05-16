@@ -5,10 +5,6 @@
  */
 package vo;
 
-/**
- *
- * @author cristian
- */
 public class Album
 {
     private int idAlbum; 
