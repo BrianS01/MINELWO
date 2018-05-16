@@ -21,9 +21,9 @@ public class AdministradorSencillo {
         
     }
     
-    public boolean ingresarSencillo(int idCancion, String nombreCancion, String nombreInterprete, int duracion){
+    public boolean ingresarSencillo(int idCancion, String nombreCancion, String nombreInterprete){
         for (int i = -1; i < 10; i++) {
-            miSencillo=new Sencillo(i, nombreCancion, misInterpretes.getInterpretes().get(i).getNombreInterprete(), duracion);//Hay que arreglar este pedazo
+            miSencillo=new Sencillo(i, nombreCancion, misInterpretes.getInterpretes().get(i).getNombreInterprete());//Hay que arreglar este pedazo
         }
        return listaDeSencillos.add(miSencillo);
     }

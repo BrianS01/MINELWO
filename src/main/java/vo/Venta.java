@@ -1,5 +1,7 @@
 package vo;
 
+import java.util.Date;
+
 /**
  *
  * @author cristian
@@ -7,17 +9,13 @@ package vo;
 public class Venta {
 
     private int valorVenta; 
-    private int dia; 
-    private String mes; 
-    private int year;
+    private Date fecha; 
     private int posicionVenta; 
     private int posicionLista; 
 
-    public Venta(int valorVenta, int dia, String mes, int year, int posicionVenta, int posicionLista) {
+    public Venta(int valorVenta, Date fecha, int posicionVenta, int posicionLista) {
         this.valorVenta = valorVenta;
-        this.dia = dia;
-        this.mes = mes;
-        this.year = year;
+        this.fecha=fecha; 
         this.posicionVenta = posicionVenta;
         this.posicionLista = posicionLista;
     }
@@ -28,30 +26,6 @@ public class Venta {
 
     public void setValorVenta(int valorVenta) {
         this.valorVenta = valorVenta;
-    }
-
-    public int getDia() {
-        return dia;
-    }
-
-    public void setDia(int dia) {
-        this.dia = dia;
-    }
-
-    public String getMes() {
-        return mes;
-    }
-
-    public void setMes(String mes) {
-        this.mes = mes;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
     }
 
     public int getPosicionVenta() {

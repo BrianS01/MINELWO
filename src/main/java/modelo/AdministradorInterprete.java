@@ -12,41 +12,11 @@ public class AdministradorInterprete {
 
     private Interprete interprete;
     private static AdministradorInterprete administradorInterprete;
-    private List<Interprete> interpretes;
-    private List<Integer> dia;
-    private List<String> mes; 
-    private List<Integer> year;  //El año ira desde 1979 hasta 2018.   
+    private List<Interprete> interpretes;   
     private List<Interprete> fechas; 
     
     public AdministradorInterprete() {
-        interpretes = new ArrayList<>();
-        
-        int year_temp=1979;
-        //fechas.add(interprete.getDia(), interprete.getMes(), interprete.getYear());
-        
-        for (int i = 0; i < 30; i++) {
-            dia.add(i+1);
-        }
-        mes.add("Enero");
-        mes.add("Febrero");
-        mes.add("Marzo");
-        mes.add("Abril");
-        mes.add("Mayo");
-        mes.add("Junio");
-        mes.add("Julio");
-        mes.add("Agosto");
-        mes.add("Septiembre");
-        mes.add("Octubre");
-        mes.add("Noviembre");
-        mes.add("Diciembre");
-
-        
-        for (int i = 0; i < 38; i++) {
-            year.add(year_temp+i);
-            if(year_temp==2019){
-                break;
-            }
-        }
+        interpretes = new ArrayList<>();      
     }
 
     public boolean ingresarInterprete(String nombreInterprete) {

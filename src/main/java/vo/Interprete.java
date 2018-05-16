@@ -10,19 +10,16 @@ import java.util.Date;
 public class Interprete {
 
     private String nombreInterprete;
-    private int dia; 
-    private String mes;
-    private int year; 
+    private Date fecha; 
     
 
     public Interprete(String nombreInterprete) {
         this.nombreInterprete = nombreInterprete;
     }
 
-    public Interprete(int dia, String mes, int year) {
-        this.dia=dia;
-        this.mes=mes;
-        this.year=year;
+    public Interprete(String nombreInterprete, Date fecha) {
+        this.nombreInterprete = nombreInterprete;
+        this.fecha = fecha;
     }
 
     public String getNombreInterprete() {
@@ -33,30 +30,13 @@ public class Interprete {
         this.nombreInterprete = nombreInterprete;
     }
 
-    public int getDia() {
-        return dia;
+    public Date getFecha() {
+        return fecha;
     }
 
-    public void setDia(int dia) {
-        this.dia = dia;
-    }
-
-    public String getMes() {
-        return mes;
-    }
-
-    public void setMes(String mes) {
-        this.mes = mes;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
     }
 
     
-
 }
