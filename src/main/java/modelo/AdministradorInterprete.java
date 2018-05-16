@@ -4,10 +4,6 @@ import vo.Interprete;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author cristian
- */
 public class AdministradorInterprete {
 
     private Interprete interprete;
