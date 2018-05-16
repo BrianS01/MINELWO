@@ -20,11 +20,9 @@ public class AdministradorSencillo {
         listaDeSencillos=new ArrayList<>();
         
     }
-    
-    public boolean ingresarSencillo(int idCancion, String nombreCancion, String nombreInterprete){
-        for (int i = -1; i < 10; i++) {
-            miSencillo=new Sencillo(i, nombreCancion, misInterpretes.getInterpretes().get(i).getNombreInterprete());//Hay que arreglar este pedazo
-        }
+    //el id es necesario porque lo puedo necesitar para mostrar en la vista. 
+    public boolean ingresarSencillo(String nombreCancion, String nombreInterprete){//No cambiar este método
+            miSencillo=new Sencillo(nombreCancion, nombreInterprete);//Hay que arreglar este pedazo       
        return listaDeSencillos.add(miSencillo);
     }
   

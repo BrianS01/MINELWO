@@ -27,56 +27,34 @@ public class AdministradorSencilloTest {
     private static List<Sencillo> listaDeSencillos;
     private static AdministradorSencillo administradorSencillo;
     private static AdministradorInterprete administradorInterprete;
-    private static List<ClaseDePruebaSencillo> listaDePruebaSencillos;
-    private static List<Interprete> interpretes;
-    private static List<String> nombresDeInterpretes;
+    
+    
     
     
     @BeforeClass
     public static void inicializar() {
         listaDeSencillos=new ArrayList<>();
         administradorSencillo=new AdministradorSencillo();
-        listaDePruebaSencillos=new ArrayList<>();
-        nombresDeInterpretes=new ArrayList<>();
         
-        for (int i = 0; i < 10; i++) {
-            
-        nombresDeInterpretes.add("Henry falcon");
-            nombresDeInterpretes.add("Henry Steven");
-            nombresDeInterpretes.add("Marta Stuart");
-            nombresDeInterpretes.add("Sterling");
-            nombresDeInterpretes.add("g001");
-            nombresDeInterpretes.add("wisin");
-            nombresDeInterpretes.add("yandel");
-            nombresDeInterpretes.add("aquiles brinco");
-        }
-        for (int i = 0; i < 10; i++) {
-            //listaDePruebaSencillos.add(0, "nena",administradorInterprete.getInterpretes().get(0).getNombreInterprete(), 5);
-            
-        }
+       
+      //Sencillo sencillo = new Sencillo("nENA","pablo");
+      listaDeSencillos.add(new Sencillo("cancion", "Jose"));
+      listaDeSencillos.add(new Sencillo("miVida", "Jorge"));  
+       listaDeSencillos.add(new Sencillo("miVida1", "Jorgesito"));  
     }
     
     @Test
-    public void ingresarUnSencilloCaso1() {
-        boolean valorEsperado=true;
-        for (String nombre : nombresDeInterpretes ) {
-            administradorInterprete.ingresarInterprete(nombre);
-        }
-        
-   // administradorSencillo.ingresarSencillo(0, "nunca te volvere a ver",administradorInterprete.getInterpretes().get(0).getNombreInterprete(), 3);
-      boolean ingresoSencillo=administradorSencillo.ingresarSencillo(0, "nena",administradorInterprete.getInterpretes().get(0).getNombreInterprete(), 5 );
-      
-      Assert.assertEquals(valorEsperado, ingresoSencillo);
+    public void ingresarUnSencilloCaso1() {        
+       Assert.assertTrue(administradorSencillo.ingresarSencillo("nena","Pablo"));
     }
     
+    @Test
     public void ingresarVariosSencillosCaso2(){
-        
-        for (String nombre : nombresDeInterpretes ) {
-            administradorInterprete.ingresarInterprete(nombre);
-        }
-        
-        
+        for(Sencillo sencillo : listaDeSencillos){
+            Assert.assertTrue(administradorSencillo.ingresarSencillo(sencillo.getNombreCancion(), sencillo.getNombreInterprete()));
+        }        
     }
+    
     
     @Before
     public void setUp() {

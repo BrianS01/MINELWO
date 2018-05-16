@@ -9,11 +9,19 @@ public class Sencillo {
     private String nombreCancion; 
     private String nombreInterprete;
 
-    public Sencillo(int idCancion, String nombreCancion, String nombreInterprete) {
-        this.idCancion = idCancion;
+    public Sencillo(String nombreCancion, String nombreInterprete) {
+        
         this.nombreCancion = nombreCancion;
         this.nombreInterprete=nombreInterprete;
     }
+
+    public Sencillo(int idCancion, String nombreCancion, String nombreInterprete) {
+        this.idCancion = idCancion;
+        this.nombreCancion = nombreCancion;
+        this.nombreInterprete = nombreInterprete;
+    }
+    
+    
     
     public int getIdCancion() {
         return idCancion;
