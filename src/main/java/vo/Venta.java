@@ -6,8 +6,8 @@ import java.util.Date;
  *
  * @author cristian
  */
-public class Venta {
-
+public class Venta
+{
     private int valorVenta; 
     private Date fecha; 
     private int posicionVenta; 
