@@ -4,12 +4,8 @@ import vo.Album;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author cristian
- */
-public class AdministradorAlbum {
-
+public class AdministradorAlbum
+{
     private AdministradorInterprete misInterpretes;
     private Album mialbum;
     private List<Album> listadeAlbunes;
