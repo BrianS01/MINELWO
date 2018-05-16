@@ -4,8 +4,8 @@ import vo.Interprete;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdministradorInterprete {
-
+public class AdministradorInterprete
+{
     private Interprete interprete;
     private static AdministradorInterprete administradorInterprete;
     private List<Interprete> interpretes;   
