@@ -3,7 +3,6 @@ package vo;
 
 import java.util.List;
 
-
 public class Sencillo
 {
     private int idCancion; 
