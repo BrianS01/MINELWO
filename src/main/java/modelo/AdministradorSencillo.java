@@ -17,8 +17,8 @@ public class AdministradorSencillo
         
     }
     //el id es necesario porque lo puedo necesitar para mostrar en la vista. 
-    public boolean ingresarSencillo(String nombreCancion, String nombreInterprete){//No cambiar este método
-            miSencillo=new Sencillo(nombreCancion, nombreInterprete);//Hay que arreglar este pedazo       
+    public boolean ingresarSencillo(String nombreCancion){//No cambiar este método
+            miSencillo=new Sencillo(nombreCancion);//Hay que arreglar este pedazo       
        return listaDeSencillos.add(miSencillo);
     }
   

@@ -9,16 +9,16 @@ public class Sencillo
     private String nombreCancion; 
     private String nombreInterprete;
 
-    public Sencillo(String nombreCancion, String nombreInterprete) {
+    public Sencillo(String nombreCancion) {
         
         this.nombreCancion = nombreCancion;
-        this.nombreInterprete=nombreInterprete;
+        
     }
 
-    public Sencillo(int idCancion, String nombreCancion, String nombreInterprete) {
+    public Sencillo(int idCancion, String nombreCancion) {
         this.idCancion = idCancion;
         this.nombreCancion = nombreCancion;
-        this.nombreInterprete = nombreInterprete;
+        
     }
     
     
@@ -39,11 +39,4 @@ public class Sencillo
         this.nombreCancion = nombreCancion;
     }
 
-    public String getNombreInterprete() {
-        return nombreInterprete;
-    }
-
-    public void setNombreInterprete(String nombreInterprete) {
-        this.nombreInterprete = nombreInterprete;
-    }
 }

@@ -38,20 +38,20 @@ public class AdministradorSencilloTest {
         
        
       //Sencillo sencillo = new Sencillo("nENA","pablo");
-      listaDeSencillos.add(new Sencillo("cancion", "Jose"));
-      listaDeSencillos.add(new Sencillo("miVida", "Jorge"));  
-       listaDeSencillos.add(new Sencillo("miVida1", "Jorgesito"));  
+      listaDeSencillos.add(new Sencillo("cancion"));
+      listaDeSencillos.add(new Sencillo("miVida"));  
+       listaDeSencillos.add(new Sencillo("miVida1"));  
     }
     
     @Test
     public void ingresarUnSencilloCaso1() {        
-       Assert.assertTrue(administradorSencillo.ingresarSencillo("nena","Pablo"));
+       Assert.assertTrue(administradorSencillo.ingresarSencillo("nena"));
     }
     
     @Test
     public void ingresarVariosSencillosCaso2(){
         for(Sencillo sencillo : listaDeSencillos){
-            Assert.assertTrue(administradorSencillo.ingresarSencillo(sencillo.getNombreCancion(), sencillo.getNombreInterprete()));
+            Assert.assertTrue(administradorSencillo.ingresarSencillo(sencillo.getNombreCancion()));
         }        
     }
     
