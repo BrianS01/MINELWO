@@ -84,11 +84,12 @@ public class AdministradorInterprete {
             
             while(rs.next()){
                 interprete=new Interprete(nombreInterprete);
+                  
              //   interpretes.add(interprete);
             }
         } catch (SQLException ex) {
             Logger.getLogger(AdministradorInterprete.class.getName()).log(Level.SEVERE, null, ex);
-        }finally{
+        } finally{
             try {  
                 if (rs != null) {
                     rs.close();
@@ -108,7 +109,7 @@ public class AdministradorInterprete {
         
         return interpretes.add(interprete);
     }
-
+    
     public static AdministradorInterprete getInstance() {
         if (administradorInterprete == null) {
             return new AdministradorInterprete();
@@ -122,17 +123,46 @@ public class AdministradorInterprete {
               
             }
         }*/
+    
+    //Falta revisar este método
     public boolean eliminarInterprete(String nombreInterprete) {
         boolean eliminado = false;
-        /* for (int i = 0; i < interpretes.size(); i++) {
+        PreparedStatement ps =null;
+        ResultSet rs = null;
+        try {
+            conn=conexion.obtener();
+            //Falta revisar está línea del mysql.
+            String sql="DELETE FROM mundulery.interprete where nombreInterprete=(nombreInterprete)";
+            ps=conn.prepareStatement(sql);
+            rs=ps.executeQuery();
+            
+            while(rs.next()){
+          for (int i = 0; i < interpretes.size(); i++) {
             if(nombreInterprete.equals(interpretes.get(i).getNombreInterprete())){
                 interpretes.remove(i).getNombreInterprete();
                 eliminado=true;
             }
-            else{
-                eliminado=false;
+          }
+         }
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(AdministradorInterprete.class.getName()).log(Level.SEVERE, null, ex);
+        } finally{
+          try {  
+                if (rs != null) {
+                    rs.close();
+                }
+                if (ps != null) {
+                    ps.close();
+                }
+                if (conn != null) {
+                    conn.close();
+                }  
+            } catch (SQLException ex) {
+                Logger.getLogger(AdministradorInterprete.class.getName()).log(Level.SEVERE, null, ex);
             }
-        }*/
+        }
+        
         return eliminado;
     }
 

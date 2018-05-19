@@ -1,15 +1,15 @@
 package modelo;
 
-import vo.Venta;
+import vo.VentaSencillo;
 import java.util.List;
 
 public class ServicioVentaSencillo
 {   
     private static AdministradorInterprete administradorInterprete;
     private static AdministradorSencillo administradorSencillo; 
-    private Venta miVenta;  
+    private VentaSencillo miVenta;  
     
-    public String ventaSencillo(String nombreInterprete, String nombreSencillo, int valorVenta,List<Venta> fechas  ){
+    public String ventaSencillo(String nombreInterprete, String nombreSencillo, int valorVenta,List<VentaSencillo> fechas  ){
      //   miVenta=new Venta(valorVenta, valorVenta, nombreSencillo, valorVenta, valorVenta, valorVenta);
         return "";
     }

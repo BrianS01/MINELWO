@@ -1,20 +1,44 @@
 package modelo;
 
+import BasesDeDatos.Conexion;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import vo.Album;
 import java.util.ArrayList;
 import java.util.List;
 
 public class AdministradorAlbum
 {
-    private AdministradorInterprete misInterpretes;
-    private Album mialbum;
-    private List<Album> listadeAlbunes;
+    private Album miAlbum; 
     private static AdministradorAlbum administradorAlbum; 
+    private Connection conn;
+    private Conexion conexion;
+    private List<Album> albumes=new ArrayList<>();
+    
     
     public AdministradorAlbum(){
-        listadeAlbunes=new ArrayList<>();
+        conexion = new Conexion();
     }
     
+    public List<Album> obtenerAlbumes(){
+        PreparedStatement ps=null; 
+        ResultSet rs=null;
+        try {
+            conn= conexion.obtener();
+            String sql="SELECT idAlbum, nombreAlbum FROM album";
+            ps = conn.prepareStatement(sql);
+            rs= ps.executeQuery();
+            
+            Album album;
+            
+        } catch (Exception e) {
+        }
+        
+        
+        return albumes;
+    }
+    /*
     public boolean ingresarAlbum(int idAlbum, String nombreAlbum, String nombreInterprete){
         for (int i = 0; i < 10; i++) {
 //            mialbum=new Album(i, nombreAlbum, misInterpretes.getInterpretes().get(i).getNombreInterprete());
@@ -51,5 +75,5 @@ public class AdministradorAlbum
     public void setAlbunes(List<Album> listadeAlbunes){
         this.listadeAlbunes=listadeAlbunes;
     }
-    
+    */
 }

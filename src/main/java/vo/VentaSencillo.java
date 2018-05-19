@@ -2,14 +2,14 @@ package vo;
 
 import java.util.Date;
 
-public class Venta
+public class VentaSencillo
 {
     private int valorVenta; 
     private Date fecha; 
     private int posicionVenta; 
     private int posicionLista; 
 
-    public Venta(int valorVenta, Date fecha, int posicionVenta, int posicionLista) {
+    public VentaSencillo(int valorVenta, Date fecha, int posicionVenta, int posicionLista) {
         this.valorVenta = valorVenta;
         this.fecha=fecha; 
         this.posicionVenta = posicionVenta;

@@ -9,12 +9,11 @@ public class Album
 {
     private int idAlbum; 
     private String nombreAlbum; 
-    private String nombreInterprete;
+    
 
-    public Album(int idAlbum, String nombreAlbum, String nombreInterprete) {
+    public Album(int idAlbum, String nombreAlbum) {
         this.idAlbum = idAlbum;
         this.nombreAlbum = nombreAlbum;
-        this.nombreInterprete = nombreInterprete;
     }
 
     public int getIdAlbum() {
@@ -32,14 +31,5 @@ public class Album
     public void setNombreAlbum(String nombreAlbum) {
         this.nombreAlbum = nombreAlbum;
     }
-
-    public String getNombreInterprete() {
-        return nombreInterprete;
-    }
-
-    public void setNombreInterprete(String nombreInterprete) {
-        this.nombreInterprete = nombreInterprete;
-    }
-    
-    
+ 
 }
