@@ -17,7 +17,7 @@ public class AdministradorAlbum
     
     public boolean ingresarAlbum(int idAlbum, String nombreAlbum, String nombreInterprete){
         for (int i = 0; i < 10; i++) {
-            mialbum=new Album(i, nombreAlbum, misInterpretes.getInterpretes().get(i).getNombreInterprete());
+//            mialbum=new Album(i, nombreAlbum, misInterpretes.getInterpretes().get(i).getNombreInterprete());
             //misInterpretes.getInterpretes().get(i+1).getNombreInterprete()   
         }
         return listadeAlbunes.add(mialbum);

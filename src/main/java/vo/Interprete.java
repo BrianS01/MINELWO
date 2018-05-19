@@ -5,17 +5,18 @@ import java.util.Date;
 
 public class Interprete
 {
+    private int id;
     private String nombreInterprete;
-    private Date fecha; 
+     
     
+
+    public Interprete(String nombreInterprete, int id) {
+        this.nombreInterprete = nombreInterprete;
+        this.id = id;
+    }
 
     public Interprete(String nombreInterprete) {
         this.nombreInterprete = nombreInterprete;
-    }
-
-    public Interprete(String nombreInterprete, Date fecha) {
-        this.nombreInterprete = nombreInterprete;
-        this.fecha = fecha;
     }
 
     public String getNombreInterprete() {
@@ -25,13 +26,13 @@ public class Interprete
     public void setNombreInterprete(String nombreInterprete) {
         this.nombreInterprete = nombreInterprete;
     }
-
-    public Date getFecha() {
-        return fecha;
+    
+    public int getId() {
+        return id;
     }
 
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
+    public void setId(int id) {
+        this.id = id;
     }
 
     
