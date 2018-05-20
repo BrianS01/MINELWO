@@ -60,12 +60,14 @@ public class AdministradorSencillo
         return sencillos;
     }
     
-   /* 
-    public boolean ingresarSencillo(String nombreCancion){
-            miSencillo=new Sencillo(nombreCancion);       
-       return listaDeSencillos.add(miSencillo);
+    
+    public boolean ingresarSencillo(String nombreSencillo){
+        
+   //         miSencillo=new Sencillo(nombreCancion);       
+    //   return listaDeSencillos.add(miSencillo);
+    return true; 
     }
-  
+  /*
     public static AdministradorSencillo getInstance() {
         if (administradorSencillo == null) {
             return new AdministradorSencillo();
