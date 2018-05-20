@@ -5,38 +5,34 @@ import java.util.List;
 
 public class Sencillo
 {
-    private int idCancion; 
-    private String nombreCancion; 
-    private String nombreInterprete;
-
-    public Sencillo(String nombreCancion) {
-        
-        this.nombreCancion = nombreCancion;
-        
-    }
-
-    public Sencillo(int idCancion, String nombreCancion) {
-        this.idCancion = idCancion;
-        this.nombreCancion = nombreCancion;
-        
-    }
+    private int idSencillo; 
+    private String nombreSencillo; 
     
+
+    public Sencillo(String nombreCancion) {    
+        this.nombreSencillo = nombreCancion;
+    }
+
+    public Sencillo(int idSencillo, String nombreSencillo) {
+        this.idSencillo = idSencillo;
+        this.nombreSencillo = nombreSencillo;
+    }
+
+    public int getIdSencillo() {
+        return idSencillo;
+    }
+
+    public void setIdSencillo(int idSencillo) {
+        this.idSencillo = idSencillo;
+    }
+
+    public String getNombreSencillo() {
+        return nombreSencillo;
+    }
+
+    public void setNombreSencillo(String nombreSencillo) {
+        this.nombreSencillo = nombreSencillo;
+    }
+
     
-    
-    public int getIdCancion() {
-        return idCancion;
-    }
-
-    public void setIdCancion(int idCancion) {
-        this.idCancion = idCancion;
-    }
-
-    public String getNombreCancion() {
-        return nombreCancion;
-    }
-
-    public void setNombreCancion(String nombreCancion) {
-        this.nombreCancion = nombreCancion;
-    }
-
 }
