@@ -15,6 +15,10 @@ public class Album
         this.idAlbum = idAlbum;
         this.nombreAlbum = nombreAlbum;
     }
+    
+    public Album(String nombreAlbum){
+        this.nombreAlbum=nombreAlbum;
+    }
 
     public int getIdAlbum() {
         return idAlbum;

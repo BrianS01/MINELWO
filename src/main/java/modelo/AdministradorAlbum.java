@@ -13,7 +13,7 @@ import java.util.logging.Level;
 
 public class AdministradorAlbum
 {
-    private Album miAlbum; 
+    private Album album; 
     private static AdministradorAlbum administradorAlbum; 
     private Connection conn;
     private Conexion conexion;
@@ -65,16 +65,43 @@ public class AdministradorAlbum
     }
     
     public boolean ingresarAlbum(String nombreAlbum){
+        PreparedStatement ps=null;
+        ResultSet rs=null;
+        try {
+            conn=conexion.obtener();
+            String sql="INSERT INTO mundulery.album VALUES (nombreAlbum)";
+            ps=conn.prepareStatement(sql);
+            rs=ps.executeQuery();
+            
+            //Preguntar Album album?
+            while(rs.next()){
+                album =new Album(nombreAlbum);
+            }
+        } catch (SQLException e) {
+            //Falta arreglar
+    //       Logger.getLogger(AdministradorAlbum.class.getName()).log(Level.SEVERE, null, ex);
+     
+        }finally{
+            try{ 
+            if (rs != null) {
+                    rs.close();
+                }
+                if (ps != null) {
+                    ps.close();
+                }
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException ex) {
+            //    Logger.getLogger(AdministradorInterprete.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
         
-      //  for (int i = 0; i < 10; i++) {
-//            mialbum=new Album(i, nombreAlbum, misInterpretes.getInterpretes().get(i).getNombreInterprete());
-            //misInterpretes.getInterpretes().get(i+1).getNombreInterprete()   
-       // }
-       // return listadeAlbunes.add(mialbum);
-       return true; 
+     return albumes.add(album);
+     
     }
     
-    /*
+    
     public static AdministradorAlbum getInstance(){
         if(administradorAlbum == null){
             return new AdministradorAlbum();
@@ -83,25 +110,58 @@ public class AdministradorAlbum
     }
     
     public boolean eliminarAlbum(String nombreAlbum){
-        boolean eliminado=false; 
-        for (int i = 0; i < listadeAlbunes.size(); i++) {
-            if(nombreAlbum.equals(listadeAlbunes.get(i).getNombreAlbum())){
-                listadeAlbunes.remove(i).getNombreAlbum();
+        boolean eliminado=false;
+        PreparedStatement ps=null;
+        ResultSet rs=null;
+        try {
+            conn=conexion.obtener();
+            //Falta revisar sql.
+            String sql="DELETE FROM mundulery.album where nombreAlbum=(nombreAlbum)";
+            ps=conn.prepareStatement(sql);
+            rs=ps.executeQuery();
+            
+            //Falta revisar este método
+            while(rs.next()){
+                for (int i = 0; i < albumes.size(); i++) {
+                if(nombreAlbum.equals(albumes.get(i).getNombreAlbum())){
+                albumes.remove(i).getNombreAlbum();
                 eliminado=true;
             }
             else{
                 eliminado=false; 
+            }    
+                }
+    
             }
+        } catch (SQLException e) {
+            //Preguntar
+        //    Logger.getLogger(AdministradorAlbum.class.getName()).log(Level.SEVERE, null, ex);
+        } finally{
+           try {  
+                if (rs != null) {
+                    rs.close();
+                }
+                if (ps != null) {
+                    ps.close();
+                }
+                if (conn != null) {
+                    conn.close();
+                }  
+            } catch (SQLException ex) {
+               //Falta revisar 
+    //    Logger.getLogger(AdministradorAlbum.class.getName()).log(Level.SEVERE, null, ex);
+            } 
         }
-    return eliminado;
+        
+        return eliminado;
     }
     
     public List<Album> getAlbunes(){
-        return listadeAlbunes;
+        return albumes;
     }
     
-    public void setAlbunes(List<Album> listadeAlbunes){
-        this.listadeAlbunes=listadeAlbunes;
+    public void setAlbunes(List<Album> albumes){
+        this.albumes=albumes;
     }
-    */
+    
 }
