@@ -19,8 +19,9 @@ public class AdministradorSencillo
     private Conexion conexion;
     private List<Sencillo> sencillos=new ArrayList<>();
     
-    public AdministradorSencillo(){
-    conexion= new Conexion();
+    public AdministradorSencillo()
+    {
+        conexion = new Conexion();
     }
     
     public List<Sencillo> obtenerSencillos(){
