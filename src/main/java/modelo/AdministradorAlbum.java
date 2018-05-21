@@ -95,12 +95,17 @@ public class AdministradorAlbum
             while(rs.next()){
                 album =new Album(nombreAlbum);
             }
-        } catch (SQLException e) {
+        }
+        catch (SQLException e)
+        {
             //Falta arreglar
-    //       Logger.getLogger(AdministradorAlbum.class.getName()).log(Level.SEVERE, null, ex);
-     
-        }finally{
-            try{ 
+            //Logger.getLogger(AdministradorAlbum.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        finally
+        {
+            try
+            {
+                
             if (rs != null) {
                     rs.close();
                 }
