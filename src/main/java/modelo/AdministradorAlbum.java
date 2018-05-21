@@ -1,7 +1,6 @@
 package modelo;
 
 import BasesDeDatos.Conexion;
-import com.sun.istack.internal.logging.Logger;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -9,7 +8,6 @@ import java.sql.SQLException;
 import vo.Album;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
 
 public class AdministradorAlbum
 {
@@ -20,43 +18,59 @@ public class AdministradorAlbum
     private List<Album> albumes=new ArrayList<>();
     
     
-    public AdministradorAlbum(){
+    public AdministradorAlbum()
+    {
         conexion = new Conexion();
     }
     
-    public List<Album> obtenerAlbumes(){
+    
+    public List<Album> obtenerAlbumes()
+    {
         PreparedStatement ps=null; 
         ResultSet rs=null;
-        try {
+        try
+        {
             conn= conexion.obtener();
             String sql="SELECT idAlbum, nombreAlbum FROM album";
             ps = conn.prepareStatement(sql);
             rs= ps.executeQuery();
-            
             Album album;
             
-            while(rs.next()){
+            while(rs.next())
+            {
                 album=new Album(rs.getInt(1), rs.getString(2));
                 albumes.add(album);
             }
-        } catch (SQLException ex) {
+        }
+        catch (SQLException ex)
+        {
             //Logger.getLogger(AdministradorInterprete.class.getName()).log(Level.SEVERE, null, ex);
             
           //  Logger.getLogger(AdministradorAlbum.class.getName().log(Level.SEVERE, null, ex));
-        } finally{
-            try {  
-                if (rs != null) {
+        }
+        finally
+        {
+            try
+            {  
+                if (rs != null)
+                {
                     rs.close();
                 }
-                if (ps != null) {
+                
+                if (ps != null)
+                {
                     ps.close();
                 }
-                if (conn != null) {
+                
+                if (conn != null)
+                {
                     conn.close();
                 }
                 
-            } catch (SQLException ex) {
-       //         Logger.getLogger(AdministradorAlbum.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            catch (SQLException ex)
+            {
+                //Logger.getLogger(AdministradorAlbum.class.getName()).log(Level.SEVERE, null, ex);
             }
     
         }
