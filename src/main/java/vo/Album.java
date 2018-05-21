@@ -35,11 +35,13 @@ public class Album
         this.idAlbum = idAlbum;
     }
 
+    
     public String getNombreAlbum()
     {
         return nombreAlbum;
     }
 
+    
     public void setNombreAlbum(String nombreAlbum)
     {
         this.nombreAlbum = nombreAlbum;
