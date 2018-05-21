@@ -78,10 +78,14 @@ public class AdministradorAlbum
         return albumes;
     }
     
-    public boolean ingresarAlbum(String nombreAlbum){
+    
+    public boolean ingresarAlbum(String nombreAlbum)
+    {
         PreparedStatement ps=null;
         ResultSet rs=null;
-        try {
+        
+        try
+        {
             conn=conexion.obtener();
             String sql="INSERT INTO mundulery.album VALUES (nombreAlbum)";
             ps=conn.prepareStatement(sql);
