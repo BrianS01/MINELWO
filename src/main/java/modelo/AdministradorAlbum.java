@@ -9,6 +9,7 @@ import vo.Album;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class AdministradorAlbum
 {
@@ -39,9 +40,7 @@ public class AdministradorAlbum
                 albumes.add(album);
             }
         } catch (SQLException ex) {
-            //Logger.getLogger(AdministradorInterprete.class.getName()).log(Level.SEVERE, null, ex);
-            
-          //  Logger.getLogger(AdministradorAlbum.class.getName().log(Level.SEVERE, null, ex));
+              Logger.getLogger(AdministradorAlbum.class.getName()).log(Level.SEVERE, null, ex);
         } finally{
             try {  
                 if (rs != null) {
@@ -55,7 +54,7 @@ public class AdministradorAlbum
                 }
                 
             } catch (SQLException ex) {
-       //         Logger.getLogger(AdministradorAlbum.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(AdministradorAlbum.class.getName()).log(Level.SEVERE, null, ex);
             }
     
         }
@@ -76,9 +75,9 @@ public class AdministradorAlbum
             while(rs.next()){
                 album =new Album(nombreAlbum);
             }
-        } catch (SQLException e) {
-            //Falta arreglar
-    //       Logger.getLogger(AdministradorAlbum.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            
+           Logger.getLogger(AdministradorAlbum.class.getName()).log(Level.SEVERE, null, ex);
      
         }finally{
             try{ 
@@ -92,7 +91,7 @@ public class AdministradorAlbum
                     conn.close();
                 }
             } catch (SQLException ex) {
-            //    Logger.getLogger(AdministradorInterprete.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(AdministradorAlbum.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         
@@ -132,11 +131,18 @@ public class AdministradorAlbum
                 }
     
             }
-        } catch (SQLException e) {
-            //Preguntar
-        //    Logger.getLogger(AdministradorAlbum.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+           
+            Logger.getLogger(AdministradorAlbum.class.getName()).log(Level.SEVERE, null, ex);
         } finally{
-           try {  
+            datos(rs, ps, conn); 
+        }
+        
+        return eliminado;
+    }
+    
+    public void datos(ResultSet rs,PreparedStatement ps,Connection conn){
+        try {  
                 if (rs != null) {
                     rs.close();
                 }
@@ -147,12 +153,9 @@ public class AdministradorAlbum
                     conn.close();
                 }  
             } catch (SQLException ex) {
-               //Falta revisar 
-    //    Logger.getLogger(AdministradorAlbum.class.getName()).log(Level.SEVERE, null, ex);
+                
+    Logger.getLogger(AdministradorAlbum.class.getName()).log(Level.SEVERE, null, ex);
             } 
-        }
-        
-        return eliminado;
     }
     
     public List<Album> getAlbunes(){

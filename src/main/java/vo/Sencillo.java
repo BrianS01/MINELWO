@@ -9,8 +9,8 @@ public class Sencillo
     private String nombreSencillo; 
     
 
-    public Sencillo(String nombreCancion) {    
-        this.nombreSencillo = nombreCancion;
+    public Sencillo(String nombreSencillo) {    
+        this.nombreSencillo = nombreSencillo;
     }
 
     public Sencillo(int idSencillo, String nombreSencillo) {

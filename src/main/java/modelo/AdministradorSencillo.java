@@ -61,12 +61,43 @@ public class AdministradorSencillo
     
     
     public boolean ingresarSencillo(String nombreSencillo){
-        
+        PreparedStatement ps=null;
+        ResultSet rs= null; 
+        try {
+            conn= conexion.obtener();
+            String sql="INSERT INTO mundulery.sencillo VALUES(nombreSencillo)";
+            ps= conn.prepareStatement(sql);
+            rs=ps.executeQuery();
+            
+            Sencillo sencillo; 
+            
+            while(rs.next()){
+                sencillo=new Sencillo(nombreSencillo);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(AdministradorSencillo.class.getName()).log(Level.SEVERE, null, ex);
+        } finally{
+            try {
+               if (rs != null) {
+                    rs.close();
+                }
+                if (ps != null) {
+                    ps.close();
+                }
+                if (conn != null) {
+                    conn.close();
+                } 
+            } catch (SQLException ex) {
+                Logger.getLogger(AdministradorSencillo.class.getName()).log(Level.SEVERE, null, ex);
+            }
+ 
+        }
    //         miSencillo=new Sencillo(nombreCancion);       
     //   return listaDeSencillos.add(miSencillo);
-    return true; 
+    return sencillos.add(sencillo); 
     }
-  /*
+    
+  
     public static AdministradorSencillo getInstance() {
         if (administradorSencillo == null) {
             return new AdministradorSencillo();
@@ -75,7 +106,10 @@ public class AdministradorSencillo
     }
     
     public boolean eliminarSencillo(String nombreCancion){
-        boolean eliminado= false; 
+        
+        return true;
+    }
+  /*      boolean eliminado= false; 
         for (int i = 0; i < listaDeSencillos.size(); i++) {
             if(nombreCancion.equals(listaDeSencillos.get(i).getNombreCancion())){
                 listaDeSencillos.remove(i).getNombreCancion();
