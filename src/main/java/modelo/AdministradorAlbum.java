@@ -105,38 +105,49 @@ public class AdministradorAlbum
         {
             try
             {
-                
-            if (rs != null) {
+                if (rs != null)
+                {
                     rs.close();
                 }
-                if (ps != null) {
+                
+                if (ps != null)
+                {
                     ps.close();
                 }
-                if (conn != null) {
+                
+                if (conn != null)
+                {
                     conn.close();
                 }
-            } catch (SQLException ex) {
+            }
+            catch (SQLException ex)
+            {
             //    Logger.getLogger(AdministradorInterprete.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         
-     return albumes.add(album);
-     
+        return albumes.add(album);
     }
     
     
-    public static AdministradorAlbum getInstance(){
-        if(administradorAlbum == null){
+    public static AdministradorAlbum getInstance()
+    {
+        if(administradorAlbum == null)
+        {
             return new AdministradorAlbum();
         }
+        
         return administradorAlbum;
     }
     
-    public boolean eliminarAlbum(String nombreAlbum){
+    public boolean eliminarAlbum(String nombreAlbum)
+    {
         boolean eliminado=false;
         PreparedStatement ps=null;
         ResultSet rs=null;
-        try {
+        
+        try
+        {
             conn=conexion.obtener();
             //Falta revisar sql.
             String sql="DELETE FROM mundulery.album where nombreAlbum=(nombreAlbum)";
@@ -144,47 +155,64 @@ public class AdministradorAlbum
             rs=ps.executeQuery();
             
             //Falta revisar este método
-            while(rs.next()){
-                for (int i = 0; i < albumes.size(); i++) {
-                if(nombreAlbum.equals(albumes.get(i).getNombreAlbum())){
-                albumes.remove(i).getNombreAlbum();
-                eliminado=true;
-            }
-            else{
-                eliminado=false; 
-            }    
+            while(rs.next())
+            {
+                for (int i = 0; i < albumes.size(); i++)
+                {
+                    if(nombreAlbum.equals(albumes.get(i).getNombreAlbum()))
+                    {
+                        albumes.remove(i).getNombreAlbum();
+                        eliminado=true;
+                    }
+                    else
+                    {
+                        eliminado=false; 
+                    }    
                 }
-    
             }
-        } catch (SQLException e) {
+        }
+        catch(SQLException e)
+        {
             //Preguntar
-        //    Logger.getLogger(AdministradorAlbum.class.getName()).log(Level.SEVERE, null, ex);
-        } finally{
-           try {  
-                if (rs != null) {
+            //Logger.getLogger(AdministradorAlbum.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        finally
+        {
+           try
+           {  
+                if (rs != null)
+                {
                     rs.close();
                 }
-                if (ps != null) {
+                
+                if (ps != null)
+                {
                     ps.close();
                 }
-                if (conn != null) {
+                
+                if (conn != null)
+                {
                     conn.close();
                 }  
-            } catch (SQLException ex) {
+            }
+            catch (SQLException ex)
+            {
                //Falta revisar 
-    //    Logger.getLogger(AdministradorAlbum.class.getName()).log(Level.SEVERE, null, ex);
+               //Logger.getLogger(AdministradorAlbum.class.getName()).log(Level.SEVERE, null, ex);
             } 
         }
         
         return eliminado;
     }
     
-    public List<Album> getAlbunes(){
+    
+    public List<Album> getAlbunes()
+    {
         return albumes;
     }
     
-    public void setAlbunes(List<Album> albumes){
+    public void setAlbunes(List<Album> albumes)
+    {
         this.albumes=albumes;
     }
-    
 }
