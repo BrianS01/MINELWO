@@ -24,36 +24,51 @@ public class AdministradorSencillo
         conexion = new Conexion();
     }
     
-    public List<Sencillo> obtenerSencillos(){
+    public List<Sencillo> obtenerSencillos()
+    {
         PreparedStatement ps=null;
         ResultSet rs=null;
-        try {
+        
+        try
+        {
             conn=conexion.obtener();
             String sql="SELECT idSencillo, nombreSencillo From sencillo";
             ps=conn.prepareStatement(sql);
             rs=ps.executeQuery();
-            
             Sencillo sencillo;
             
-            while(rs.next()){
+            while(rs.next())
+            {
                 sencillo=new Sencillo(rs.getInt(1), rs.getString(2));
                 sencillos.add(sencillo);
             }           
-        } catch (SQLException ex) {
+        }
+        catch (SQLException ex)
+        {
             Logger.getLogger(AdministradorSencillo.class.getName()).log(Level.SEVERE, null, ex);
-        } finally{
-            try {
-                if (rs != null) {
+        }
+        finally
+        {
+            try
+            {
+                if (rs != null)
+                {
                     rs.close();
                 }
-                if (ps != null) {
+                
+                if (ps != null) 
+                {
                     ps.close();
                 }
-                if (conn != null) {
+                
+                if (conn != null)
+                {
                     conn.close();
                 }
-            } catch (SQLException ex) {
-              Logger.getLogger(AdministradorSencillo.class.getName()).log(Level.SEVERE, null, ex);  
+            }
+            catch (SQLException ex)
+            {
+                Logger.getLogger(AdministradorSencillo.class.getName()).log(Level.SEVERE, null, ex);  
             }
         }
         
@@ -61,14 +76,15 @@ public class AdministradorSencillo
     }
     
     
-    public boolean ingresarSencillo(String nombreSencillo){
-        
-   //         miSencillo=new Sencillo(nombreCancion);       
-    //   return listaDeSencillos.add(miSencillo);
-    return true; 
+    public boolean ingresarSencillo(String nombreSencillo)
+    {
+        //miSencillo=new Sencillo(nombreCancion);
+        //return listaDeSencillos.add(miSencillo);
+        return true; 
     }
-  /*
-    public static AdministradorSencillo getInstance() {
+    /*
+    public static AdministradorSencillo getInstance()
+    {
         if (administradorSencillo == null) {
             return new AdministradorSencillo();
         }
@@ -98,5 +114,4 @@ public class AdministradorSencillo
     }
     */
    // private String insertarSencillo()
-    
 }
