@@ -6,6 +6,7 @@ public class Conexion
 {
     private Connection cnx = null;
 
+    
     public Connection obtener()
     {
         if (cnx == null)
