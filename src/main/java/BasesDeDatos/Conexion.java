@@ -1,15 +1,17 @@
-package BasesDeDatos;
+﻿package BasesDeDatos;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class Conexion {
-
+public class Conexion
+{
     private Connection cnx = null;
 
-    public Connection obtener() {
-        if (cnx == null) {
+    public Connection obtener()
+	{
+        if (cnx == null)
+		{
             try {
                 Class.forName("com.mysql.jdbc.Driver");
                 cnx = DriverManager.getConnection("jdbc:mysql://localhost/mundulery", "root", "nogamenolife");
