@@ -11,29 +11,39 @@ public class Album
     private String nombreAlbum; 
     
 
-    public Album(int idAlbum, String nombreAlbum) {
+    public Album(int idAlbum, String nombreAlbum)
+    {
         this.idAlbum = idAlbum;
         this.nombreAlbum = nombreAlbum;
     }
     
-    public Album(String nombreAlbum){
+    
+    public Album(String nombreAlbum)
+    {
         this.nombreAlbum=nombreAlbum;
     }
 
-    public int getIdAlbum() {
+    
+    public int getIdAlbum()
+    {
         return idAlbum;
     }
 
-    public void setIdAlbum(int idAlbum) {
+    
+    public void setIdAlbum(int idAlbum)
+    {
         this.idAlbum = idAlbum;
     }
 
-    public String getNombreAlbum() {
+    
+    public String getNombreAlbum()
+    {
         return nombreAlbum;
     }
 
-    public void setNombreAlbum(String nombreAlbum) {
+    
+    public void setNombreAlbum(String nombreAlbum)
+    {
         this.nombreAlbum = nombreAlbum;
     }
- 
 }
