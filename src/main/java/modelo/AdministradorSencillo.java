@@ -105,31 +105,58 @@ public class AdministradorSencillo
         return administradorSencillo;
     }
     
-    public boolean eliminarSencillo(String nombreCancion){
+    public boolean eliminarSencillo(String nombreSencillo){
+        boolean eliminado=false; 
+        PreparedStatement ps= null; 
+        ResultSet rs=null; 
         
-        return true;
-    }
-  /*      boolean eliminado= false; 
-        for (int i = 0; i < listaDeSencillos.size(); i++) {
-            if(nombreCancion.equals(listaDeSencillos.get(i).getNombreCancion())){
-                listaDeSencillos.remove(i).getNombreCancion();
+        try {
+            conn=conexion.obtener();
+            String sql="DELETE FROM mundulery.sencillo where nombreSencillo=(nombreSencillo)";
+            ps= conn.prepareStatement(sql);
+            rs=ps.executeQuery();
+            
+            while(rs.next()){
+              for (int i = 0; i < sencillos.size(); i++) {
+            if(nombreSencillo.equals(sencillos.get(i).getNombreSencillo())){
+                sencillos.remove(i).getNombreSencillo();
                 eliminado= true; 
             }
             else{
                 eliminado=false; 
+            }
+        }  
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(AdministradorSencillo.class.getName()).log(Level.SEVERE, null, ex);
+        }finally{
+            try {
+                if (rs != null)
+                {
+                    rs.close();
+                }
+                
+                if (ps != null)
+                {
+                    ps.close();
+                }
+                
+                if (conn != null)
+                {
+                    conn.close();
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(AdministradorSencillo.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         return eliminado;
     }
     
     public List<Sencillo> getSencillos() {
-        return listaDeSencillos;
+        return sencillos;
     }
     
-    public void setSencillos(List<Sencillo> listaDeSencillos){
-       this.listaDeSencillos=listaDeSencillos;
+    public void setSencillos(List<Sencillo> sencillos){
+       this.sencillos=sencillos;
     }
-    */
-   // private String insertarSencillo()
-    
 }
