@@ -103,11 +103,11 @@ public class AdministradorInterprete {
     //Este main es para hacer pruebas, comentaree la línea del método si va a borrar algo del main. 
     public static void main(String... args) {
         AdministradorInterprete ad = new AdministradorInterprete();
-        //  List<Interprete> interpretes = ad.obtenerInterpretes();
+       //   List<Interprete> interpretes = ad.obtenerInterpretes();
 
         System.out.println(ad.eliminarInterprete("CARLOS"));
-        /*
-        for (Interprete miInterprete : interpretes) {
+        
+        /*for (Interprete miInterprete : interpretes) {
             System.out.println(miInterprete.getNombreInterprete());
         }*/
     }

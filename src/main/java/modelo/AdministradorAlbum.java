@@ -62,18 +62,32 @@ public class AdministradorAlbum
         return albumes;
     }
     
+    public static void main(String... args) {
+       AdministradorAlbum ad = new AdministradorAlbum();
+        List<Album> albumes = ad.obtenerAlbumes();
+        
+        
+
+        //System.out.println(ad.ingresarAlbum("Los villancicos"));
+        
+        for (Album miAlbum : albumes) {
+            System.out.println(miAlbum.getNombreAlbum());
+        }
+    }
+    
     public boolean ingresarAlbum(String nombreAlbum){
+        boolean isInserto=false;
         PreparedStatement ps=null;
-        ResultSet rs=null;
+        int rs=0;
         try {
             conn=conexion.obtener();
-            String sql="INSERT INTO mundulery.album VALUES (nombreAlbum)";
+            String sql="insert into mundulery.album (nombreAlbum) values (?)";
             ps=conn.prepareStatement(sql);
-            rs=ps.executeQuery();
+            ps.setString(1, nombreAlbum);
+            rs =ps.executeUpdate();
             
-            //Preguntar Album album?
-            while(rs.next()){
-                album =new Album(nombreAlbum);
+            if(rs>0){
+                isInserto=true;
             }
         } catch (SQLException ex) {
             
@@ -81,9 +95,6 @@ public class AdministradorAlbum
      
         }finally{
             try{ 
-            if (rs != null) {
-                    rs.close();
-                }
                 if (ps != null) {
                     ps.close();
                 }
@@ -95,7 +106,7 @@ public class AdministradorAlbum
             }
         }
         
-     return albumes.add(album);
+     return isInserto;
      
     }
     
