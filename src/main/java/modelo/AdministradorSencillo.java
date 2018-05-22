@@ -159,4 +159,7 @@ public class AdministradorSencillo
     public void setSencillos(List<Sencillo> sencillos){
        this.sencillos=sencillos;
     }
+    
+    
+    
 }
