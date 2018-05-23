@@ -205,24 +205,32 @@ public class AdministradorAlbum
                 rs.close();
             }
             
-            if (ps != null) {
+            if (ps != null)
+            {
                 ps.close();
             }
-            if (conn != null) {
+            
+            if (conn != null)
+            {
                 conn.close();
             }
-        } catch (SQLException ex) {
-
+            
+        }
+        catch (SQLException ex)
+        {
             Logger.getLogger(AdministradorAlbum.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
-    public List<Album> getAlbunes(){
+    
+    public List<Album> getAlbunes()
+    {
         return albumes;
     }
     
-    public void setAlbunes(List<Album> albumes){
+    
+    public void setAlbunes(List<Album> albumes)
+    {
         this.albumes=albumes;
     }
-    
 }
