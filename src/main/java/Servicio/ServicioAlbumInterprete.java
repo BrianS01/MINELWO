@@ -11,6 +11,7 @@ public class ServicioAlbumInterprete
     public static AdministradorInterprete administradorInterprete;
     public static AdministradorSencillo administradorSencillo;
     
+    
     public List<Interprete> obtenerInterprete()
     {
         //Traer la información de interprete.
