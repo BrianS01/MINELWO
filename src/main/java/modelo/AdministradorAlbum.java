@@ -76,44 +76,53 @@ public class AdministradorAlbum
         return albumes;
     }
     
-    public static void main(String... args) {
+    
+    public static void main(String... args)
+    {
        AdministradorAlbum ad = new AdministradorAlbum();
         List<Album> albumes = ad.obtenerAlbumes();
-        
-        
-
         //System.out.println(ad.ingresarAlbum("Los villancicos"));
         
-        for (Album miAlbum : albumes) {
+        for (Album miAlbum : albumes)
+        {
             System.out.println(miAlbum.getNombreAlbum());
         }
     }
     
-    public boolean ingresarAlbum(String nombreAlbum, int idInterprete){
+    
+    public boolean ingresarAlbum(String nombreAlbum, int idInterprete)
+    {
         boolean isInserto=false;
         PreparedStatement ps=null;
         int rs=0;
-        try {
+        
+        try
+        {
             servicioAlbumInterprete.obtenerInterprete();
             conn=conexion.obtener();
-           // String sql1="SELECT idInterprete FROM interprete where nombreInterprete = ?";
+            // String sql1="SELECT idInterprete FROM interprete where nombreInterprete = ?";
             
-           String sql="insert into mundulery.album (nombreAlbum, idInterprete) values (?,?)";
+            String sql="insert into mundulery.album (nombreAlbum, idInterprete) values (?,?)";
             ps=conn.prepareStatement(sql);
             ps.setString(1, nombreAlbum);
             ps.setInt(2, idInterprete);
             rs =ps.executeUpdate();
             
-            if(rs>0){
+            if(rs>0)
+            {
                 isInserto=true;
             }
-        } catch (SQLException ex) {
-            
+        }
+        catch (SQLException ex)
+        {
            Logger.getLogger(AdministradorAlbum.class.getName()).log(Level.SEVERE, null, ex);
-     
-        }finally{
-            try{ 
-                if (ps != null) {
+        }
+        finally
+        {
+            try
+            { 
+                if (ps != null)
+                {
                     ps.close();
                 }
                 if (conn != null) {
