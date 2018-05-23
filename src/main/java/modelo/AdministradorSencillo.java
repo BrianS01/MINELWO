@@ -23,25 +23,33 @@ public class AdministradorSencillo
     conexion= new Conexion();
     }
     
-    public List<Sencillo> obtenerSencillos(){
+    public List<Sencillo> obtenerSencillos()
+    {
         PreparedStatement ps=null;
         ResultSet rs=null;
-        try {
+        
+        try
+        {
             conn=conexion.obtener();
             String sql="SELECT idSencillo, nombreSencillo From sencillo";
             ps=conn.prepareStatement(sql);
             rs=ps.executeQuery();
-            
             Sencillo sencillo;
             
-            while(rs.next()){
+            while(rs.next())
+            {
                 sencillo=new Sencillo(rs.getInt(1), rs.getString(2));
                 sencillos.add(sencillo);
             }           
-        } catch (SQLException ex) {
+        }
+        catch (SQLException ex)
+        {
             Logger.getLogger(AdministradorSencillo.class.getName()).log(Level.SEVERE, null, ex);
-        } finally{
-            try {
+        }
+        finally
+        {
+            try
+            {
                 if (rs != null) {
                     rs.close();
                 }
@@ -127,10 +135,15 @@ public class AdministradorSencillo
             }
         }  
             }
-        } catch (SQLException ex) {
+        }
+        catch (SQLException ex)
+        {
             Logger.getLogger(AdministradorSencillo.class.getName()).log(Level.SEVERE, null, ex);
-        }finally{
-            try {
+        }
+        finally
+        {
+            try
+            {
                 if (rs != null)
                 {
                     rs.close();
@@ -145,21 +158,24 @@ public class AdministradorSencillo
                 {
                     conn.close();
                 }
-            } catch (SQLException ex) {
+            }
+            catch (SQLException ex)
+            {
                 Logger.getLogger(AdministradorSencillo.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+        
         return eliminado;
     }
     
-    public List<Sencillo> getSencillos() {
+    public List<Sencillo> getSencillos()
+    {
         return sencillos;
     }
     
-    public void setSencillos(List<Sencillo> sencillos){
+    
+    public void setSencillos(List<Sencillo> sencillos)
+    {
        this.sencillos=sencillos;
     }
-    
-    
-    
 }
