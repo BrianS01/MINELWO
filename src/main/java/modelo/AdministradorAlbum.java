@@ -182,31 +182,39 @@ public class AdministradorAlbum
                     }    
                 }
             }
-        } catch (SQLException ex) {
-           
+        }
+        catch (SQLException ex)
+        {
             Logger.getLogger(AdministradorAlbum.class.getName()).log(Level.SEVERE, null, ex);
-        } finally{
+        }
+        finally
+        {
             datos(rs, ps, conn); 
         }
         
         return eliminado;
     }
     
-    public void datos(ResultSet rs,PreparedStatement ps,Connection conn){
-        try {  
-                if (rs != null) {
-                    rs.close();
-                }
-                if (ps != null) {
-                    ps.close();
-                }
-                if (conn != null) {
-                    conn.close();
-                }  
-            } catch (SQLException ex) {
-                
-    Logger.getLogger(AdministradorAlbum.class.getName()).log(Level.SEVERE, null, ex);
-            } 
+    
+    public void datos(ResultSet rs,PreparedStatement ps,Connection conn)
+    {
+        try
+        {
+            if (rs != null)
+            {
+                rs.close();
+            }
+            
+            if (ps != null) {
+                ps.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
+        } catch (SQLException ex) {
+
+            Logger.getLogger(AdministradorAlbum.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     public List<Album> getAlbunes(){
