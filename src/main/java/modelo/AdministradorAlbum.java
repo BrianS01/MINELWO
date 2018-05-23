@@ -22,13 +22,14 @@ public class AdministradorAlbum
     private List<Album> albumes=new ArrayList<>();
     
     
-    public AdministradorAlbum(){
+    public AdministradorAlbum()
+    {
         conexion = new Conexion();
     }
     
     
-    
-    public List<Album> obtenerAlbumes(){
+    public List<Album> obtenerAlbumes()
+    {
         PreparedStatement ps=null; 
         ResultSet rs=null;
         try {
