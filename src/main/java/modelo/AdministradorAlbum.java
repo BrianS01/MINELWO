@@ -125,16 +125,19 @@ public class AdministradorAlbum
                 {
                     ps.close();
                 }
-                if (conn != null) {
+                
+                if (conn != null)
+                {
                     conn.close();
                 }
-            } catch (SQLException ex) {
+            }
+            catch (SQLException ex)
+            {
                 Logger.getLogger(AdministradorAlbum.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         
-     return isInserto;
-     
+        return isInserto;
     }
     
     
