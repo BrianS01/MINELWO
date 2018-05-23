@@ -61,6 +61,45 @@ public class AdministradorInterprete {
         return interpretes;
     }
 
+    public List<Interprete> obtenerIdInterprete() {
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        interpretes = new ArrayList<>();;
+        try {
+            conn = conexion.obtener();
+            String sql = "SELECT idInterprete FROM interprete";
+            ps = conn.prepareStatement(sql);
+            rs = ps.executeQuery();
+            Interprete interprete;
+
+            while (rs.next()) {
+                interprete = new Interprete(rs.getInt(2));
+                interpretes.add(interprete);
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(AdministradorInterprete.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+
+                if (ps != null) {
+                    ps.close();
+                }
+
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(AdministradorInterprete.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+
+        return interpretes;
+    }
+    
     public Interprete obtenerInterpreteXnombre(String nombreInterprete) {
         PreparedStatement ps = null;
         ResultSet rs = null;
@@ -103,13 +142,13 @@ public class AdministradorInterprete {
     //Este main es para hacer pruebas, comentaree la línea del método si va a borrar algo del main. 
     public static void main(String... args) {
         AdministradorInterprete ad = new AdministradorInterprete();
-       //   List<Interprete> interpretes = ad.obtenerInterpretes();
+         List<Interprete> interpretes = ad.obtenerInterpretes();
 
-        System.out.println(ad.eliminarInterprete("CARLOS"));
+     //   System.out.println(ad.ingresarInterprete("CARLOS1"));
         
-        /*for (Interprete miInterprete : interpretes) {
+        for (Interprete miInterprete : interpretes) {
             System.out.println(miInterprete.getNombreInterprete());
-        }*/
+        }
     }
 
     public boolean ingresarInterprete(String nombreInterprete) {
@@ -157,7 +196,7 @@ public class AdministradorInterprete {
               
             }
         }*/
-    //Falta revisar este método
+    //Este método no lo vamos a utilizar. 
     public boolean eliminarInterprete(String nombreInterprete) {
         boolean isElimino = false;
         PreparedStatement ps = null;

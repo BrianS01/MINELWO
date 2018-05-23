@@ -19,6 +19,10 @@ public class Interprete
         this.nombreInterprete = nombreInterprete;
     }
 
+    public Interprete(int id) {
+        this.id = id;
+    }
+
     public String getNombreInterprete() {
         return nombreInterprete;
     }

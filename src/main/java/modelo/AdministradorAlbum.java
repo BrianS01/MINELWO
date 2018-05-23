@@ -1,6 +1,7 @@
 package modelo;
 
 import BasesDeDatos.Conexion;
+import Servicio.ServicioAlbumInterprete;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -15,6 +16,7 @@ public class AdministradorAlbum
 {
     private Album album; 
     private static AdministradorAlbum administradorAlbum; 
+    private static ServicioAlbumInterprete servicioAlbumInterprete;
     private Connection conn;
     private Conexion conexion;
     private List<Album> albumes=new ArrayList<>();
@@ -23,6 +25,8 @@ public class AdministradorAlbum
     public AdministradorAlbum(){
         conexion = new Conexion();
     }
+    
+    
     
     public List<Album> obtenerAlbumes(){
         PreparedStatement ps=null; 
@@ -75,15 +79,19 @@ public class AdministradorAlbum
         }
     }
     
-    public boolean ingresarAlbum(String nombreAlbum){
+    public boolean ingresarAlbum(String nombreAlbum, int idInterprete){
         boolean isInserto=false;
         PreparedStatement ps=null;
         int rs=0;
         try {
+            servicioAlbumInterprete.obtenerInterprete();
             conn=conexion.obtener();
-            String sql="insert into mundulery.album (nombreAlbum) values (?)";
+           // String sql1="SELECT idInterprete FROM interprete where nombreInterprete = ?";
+            
+           String sql="insert into mundulery.album (nombreAlbum, idInterprete) values (?,?)";
             ps=conn.prepareStatement(sql);
             ps.setString(1, nombreAlbum);
+            ps.setInt(2, idInterprete);
             rs =ps.executeUpdate();
             
             if(rs>0){
