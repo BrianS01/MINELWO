@@ -6,20 +6,20 @@ import modelo.AdministradorInterprete;
 import modelo.AdministradorSencillo;
 import vo.Interprete;
 
-/**
- *
- * @author cristian
- */
-public class ServicioAlbumInterprete {
+public class ServicioAlbumInterprete
+{
     public static AdministradorInterprete administradorInterprete;
     public static AdministradorSencillo administradorSencillo;
     
-    public List<Interprete> obtenerInterprete(){
+    public List<Interprete> obtenerInterprete()
+    {
         //Traer la información de interprete.
-      return administradorInterprete.obtenerInterpretes();//idInterprete, nombreInterprete
+        return administradorInterprete.obtenerInterpretes();//idInterprete, nombreInterprete
     }
-    private List<Interprete> obtenerIdInterprete (){
-        return administradorInterprete.obtenerIdInterprete();
-}
     
+    
+    private List<Interprete> obtenerIdInterprete ()
+    {
+        return administradorInterprete.obtenerIdInterprete();
+    } 
 }
