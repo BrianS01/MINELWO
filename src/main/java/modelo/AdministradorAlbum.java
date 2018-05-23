@@ -141,18 +141,25 @@ public class AdministradorAlbum
     }
     
     
-    public static AdministradorAlbum getInstance(){
-        if(administradorAlbum == null){
+    public static AdministradorAlbum getInstance()
+    {
+        if(administradorAlbum == null)
+        {
             return new AdministradorAlbum();
         }
+        
         return administradorAlbum;
     }
     
-    public boolean eliminarAlbum(String nombreAlbum){
+    
+    public boolean eliminarAlbum(String nombreAlbum)
+    {
         boolean eliminado=false;
         PreparedStatement ps=null;
         ResultSet rs=null;
-        try {
+        
+        try
+        {
             conn=conexion.obtener();
             //Falta revisar sql.
             String sql="DELETE FROM mundulery.album where nombreAlbum=(nombreAlbum)";
@@ -160,13 +167,16 @@ public class AdministradorAlbum
             rs=ps.executeQuery();
             
             //Falta revisar este método
-            while(rs.next()){
-                for (int i = 0; i < albumes.size(); i++) {
-                if(nombreAlbum.equals(albumes.get(i).getNombreAlbum())){
-                albumes.remove(i).getNombreAlbum();
-                eliminado=true;
-            }
-            else{
+            while(rs.next())
+            {
+                for (int i = 0; i < albumes.size(); i++)
+                {
+                    if(nombreAlbum.equals(albumes.get(i).getNombreAlbum())){
+                    albumes.remove(i).getNombreAlbum();
+                    eliminado=true;
+                }
+                else
+                {
                 eliminado=false; 
             }    
                 }
