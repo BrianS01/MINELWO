@@ -171,16 +171,16 @@ public class AdministradorAlbum
             {
                 for (int i = 0; i < albumes.size(); i++)
                 {
-                    if(nombreAlbum.equals(albumes.get(i).getNombreAlbum())){
-                    albumes.remove(i).getNombreAlbum();
-                    eliminado=true;
+                    if(nombreAlbum.equals(albumes.get(i).getNombreAlbum()))
+                    {
+                        albumes.remove(i).getNombreAlbum();
+                        eliminado=true;
+                    }
+                    else
+                    {
+                        eliminado=false; 
+                    }    
                 }
-                else
-                {
-                eliminado=false; 
-            }    
-                }
-    
             }
         } catch (SQLException ex) {
            
