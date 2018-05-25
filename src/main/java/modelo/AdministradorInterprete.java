@@ -196,42 +196,60 @@ public class AdministradorInterprete
         }
     }
 
-    public boolean ingresarInterprete(String nombreInterprete) {
+    public boolean ingresarInterprete(String nombreInterprete)
+    {
         boolean isInserto = false;
         PreparedStatement ps = null;
         int rs = 0;
-        try {
+        
+        try
+        {
             conn = conexion.obtener();
             String sql = "insert into mundulery.interprete (nombreInterprete) values (?)";
             ps = conn.prepareStatement(sql);
             ps.setString(1, nombreInterprete);
             rs = ps.executeUpdate();
 
-            if (rs > 0) {
+            if (rs > 0)
+            {
                 isInserto = true;
             }
-        } catch (SQLException ex) {
+        }
+        catch (SQLException ex)
+        {
             Logger.getLogger(AdministradorInterprete.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            try {
-                if (ps != null) {
+        }
+        finally
+        {
+            try
+            {
+                if (ps != null)
+                {
                     ps.close();
                 }
 
-                if (conn != null) {
+                if (conn != null)
+                {
                     conn.close();
                 }
-            } catch (SQLException ex) {
+            }
+            catch (SQLException ex)
+            {
                 Logger.getLogger(AdministradorInterprete.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+        
         return isInserto;
     }
 
-    public static AdministradorInterprete getInstance() {
-        if (administradorInterprete == null) {
+    
+    public static AdministradorInterprete getInstance()
+    {
+        if (administradorInterprete == null)
+        {
             return new AdministradorInterprete();
         }
+        
         return administradorInterprete;
     }
 
@@ -242,12 +260,14 @@ public class AdministradorInterprete
             }
         }*/
     //Este método no lo vamos a utilizar. 
-    public boolean eliminarInterprete(String nombreInterprete) {
+    public boolean eliminarInterprete(String nombreInterprete)
+    {
         boolean isElimino = false;
         PreparedStatement ps = null;
         int rs = 0;
 
-        try {
+        try
+        {
             Interprete interprete = obtenerInterpreteXnombre(nombreInterprete);//con este método llama al idInterprete.
 
             conn = conexion.obtener();
@@ -267,21 +287,31 @@ public class AdministradorInterprete
             ps.setInt(1, interprete.getId()); // el primer valor se refiere al parámetro del interrogante. 
             rs = ps.executeUpdate();
 
-            if (rs > 0) {
+            if (rs > 0)
+            {
                 isElimino = true;
             }
-        } catch (SQLException ex) {
+        }
+        catch (SQLException ex)
+        {
             Logger.getLogger(AdministradorInterprete.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            try {
-                if (ps != null) {
+        }
+        finally
+        {
+            try
+            {
+                if (ps != null)
+                {
                     ps.close();
                 }
 
-                if (conn != null) {
+                if (conn != null)
+                {
                     conn.close();
                 }
-            } catch (SQLException ex) {
+            }
+            catch (SQLException ex)
+            {
                 Logger.getLogger(AdministradorInterprete.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
