@@ -18,22 +18,28 @@ public class AdministradorInterprete
     private Conexion conexion;
     private List<Interprete> interpretes;
 
-    public AdministradorInterprete() {
+    
+    public AdministradorInterprete()
+    {
         conexion = new Conexion();
     }
 
-    public List<Interprete> obtenerInterpretes() {
+    public List<Interprete> obtenerInterpretes()
+    {
         PreparedStatement ps = null;
         ResultSet rs = null;
-        interpretes = new ArrayList<>();;
-        try {
+        interpretes = new ArrayList<>();
+        
+        try
+        {
             conn = conexion.obtener();
             String sql = "SELECT nombreInterprete, idInterprete FROM interprete";
             ps = conn.prepareStatement(sql);
             rs = ps.executeQuery();
             Interprete interprete;
 
-            while (rs.next()) {
+            while (rs.next())
+            {
                 interprete = new Interprete(rs.getString(1), rs.getInt(2));
                 interpretes.add(interprete);
             }
