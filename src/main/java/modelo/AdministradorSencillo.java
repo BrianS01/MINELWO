@@ -78,14 +78,15 @@ public class AdministradorSencillo
             conn= conexion.obtener();
             String sql="INSERT INTO mundulery.sencillo VALUES(nombreSencillo)";
             ps= conn.prepareStatement(sql);
-            rs=ps.executeQuery();
-            
             Sencillo sencillo; 
             
-            while(rs.next()){
+            while(rs.next())
+            {
                 sencillo=new Sencillo(nombreSencillo);
             }
-        } catch (SQLException ex) {
+        }
+        catch (SQLException ex)
+        {
             Logger.getLogger(AdministradorSencillo.class.getName()).log(Level.SEVERE, null, ex);
         } finally{
             try {
