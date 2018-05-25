@@ -93,16 +93,23 @@ public class AdministradorSencillo
         {
             try
             {
-               if (rs != null) {
+                if (rs != null)
+                {
                     rs.close();
                 }
-                if (ps != null) {
+                
+                if (ps != null)
+                {
                     ps.close();
                 }
-                if (conn != null) {
+                
+                if (conn != null)
+                {
                     conn.close();
                 } 
-            } catch (SQLException ex) {
+            }
+            catch (SQLException ex)
+            {
                 Logger.getLogger(AdministradorSencillo.class.getName()).log(Level.SEVERE, null, ex);
             }
  
