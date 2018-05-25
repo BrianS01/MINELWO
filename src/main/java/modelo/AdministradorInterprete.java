@@ -96,10 +96,12 @@ public class AdministradorInterprete
                 interprete = new Interprete(rs.getInt(2));
                 interpretes.add(interprete);
             }
-
-        } catch (SQLException ex) {
+        }
+        catch (SQLException ex)
+        {
             Logger.getLogger(AdministradorInterprete.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
+        }
+        finally {
             try {
                 if (rs != null) {
                     rs.close();
