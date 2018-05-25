@@ -112,11 +112,9 @@ public class AdministradorSencillo
             {
                 Logger.getLogger(AdministradorSencillo.class.getName()).log(Level.SEVERE, null, ex);
             }
- 
         }
-   //         miSencillo=new Sencillo(nombreCancion);       
-    //   return listaDeSencillos.add(miSencillo);
-    return sencillos.add(sencillo); 
+        
+        return sencillos.add(sencillo); 
     }
     
   
