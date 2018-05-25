@@ -5,6 +5,7 @@ package Servicio;
  *
  * @author cristian
  */
-public class ServicioVentaAlbum {
+public class ServicioVentaAlbum
+{
     
 }
