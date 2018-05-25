@@ -151,10 +151,11 @@ public class AdministradorSencillo
                         sencillos.remove(i).getNombreSencillo();
                         eliminado= true; 
                     }
-                    else{
-                eliminado=false; 
-            }
-        }  
+                    else
+                    {
+                        eliminado=false; 
+                    }
+                }  
             }
         }
         catch (SQLException ex)
@@ -188,6 +189,7 @@ public class AdministradorSencillo
         
         return eliminado;
     }
+    
     
     public List<Sencillo> getSencillos()
     {
