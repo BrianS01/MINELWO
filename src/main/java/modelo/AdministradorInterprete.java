@@ -76,18 +76,23 @@ public class AdministradorInterprete
         return interpretes;
     }
 
-    public List<Interprete> obtenerIdInterprete() {
+    
+    public List<Interprete> obtenerIdInterprete()
+    {
         PreparedStatement ps = null;
         ResultSet rs = null;
-        interpretes = new ArrayList<>();;
-        try {
+        interpretes = new ArrayList<>();
+        
+        try
+        {
             conn = conexion.obtener();
             String sql = "SELECT idInterprete FROM interprete";
             ps = conn.prepareStatement(sql);
             rs = ps.executeQuery();
             Interprete interprete;
 
-            while (rs.next()) {
+            while (rs.next())
+            {
                 interprete = new Interprete(rs.getInt(2));
                 interpretes.add(interprete);
             }
