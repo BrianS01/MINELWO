@@ -119,7 +119,9 @@ public class AdministradorInterprete
                 {
                     conn.close();
                 }
-            } catch (SQLException ex) {
+            }
+            catch (SQLException ex)
+            {
                 Logger.getLogger(AdministradorInterprete.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
@@ -127,38 +129,51 @@ public class AdministradorInterprete
         return interpretes;
     }
     
-    public Interprete obtenerInterpreteXnombre(String nombreInterprete) {
+    
+    public Interprete obtenerInterpreteXnombre(String nombreInterprete)
+    {
         PreparedStatement ps = null;
         ResultSet rs = null;
         interpretes = new ArrayList<>();
         Interprete interprete = null;
-        try {
+        
+        try
+        {
             conn = conexion.obtener();
             String sql = "SELECT idInterprete FROM interprete where nombreInterprete = ?";
             ps = conn.prepareStatement(sql);
             ps.setString(1, nombreInterprete);
             rs = ps.executeQuery();
 
-            while (rs.next()) {
+            while (rs.next())
+            {
                 interprete = new Interprete(nombreInterprete, rs.getInt(1));
             }
-
-        } catch (SQLException ex) {
+        } catch (SQLException ex)
+        {
             Logger.getLogger(AdministradorInterprete.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            try {
-                if (rs != null) {
+        }
+        finally
+        {
+            try
+            {
+                if (rs != null)
+                {
                     rs.close();
                 }
 
-                if (ps != null) {
+                if (ps != null)
+                {
                     ps.close();
                 }
 
-                if (conn != null) {
+                if (conn != null)
+                {
                     conn.close();
                 }
-            } catch (SQLException ex) {
+            }
+            catch (SQLException ex)
+            {
                 Logger.getLogger(AdministradorInterprete.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
@@ -166,14 +181,17 @@ public class AdministradorInterprete
         return interprete;
     }
 
+    
     //Este main es para hacer pruebas, comentaree la línea del método si va a borrar algo del main. 
-    public static void main(String... args) {
+    public static void main(String... args)
+    {
         AdministradorInterprete ad = new AdministradorInterprete();
-         List<Interprete> interpretes = ad.obtenerInterpretes();
+        List<Interprete> interpretes = ad.obtenerInterpretes();
 
      //   System.out.println(ad.ingresarInterprete("CARLOS1"));
         
-        for (Interprete miInterprete : interpretes) {
+        for (Interprete miInterprete : interpretes)
+        {
             System.out.println(miInterprete.getNombreInterprete());
         }
     }
