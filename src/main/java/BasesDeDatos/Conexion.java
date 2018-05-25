@@ -4,8 +4,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class Conexion {
-
+public class Conexion
+{
     private Connection cnx = null;
 
     public Connection obtener() throws SQLException
