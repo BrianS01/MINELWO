@@ -48,9 +48,12 @@ public class AdministradorInterprete
         {
             Logger.getLogger(AdministradorInterprete.class.getName()).log(Level.SEVERE, null, ex);
         }
-        finally {
-            try {
-                if (rs != null) {
+        finally
+        {
+            try
+            {
+                if (rs != null)
+                {
                     rs.close();
                 }
 
