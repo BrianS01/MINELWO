@@ -57,14 +57,18 @@ public class AdministradorInterprete
                     rs.close();
                 }
 
-                if (ps != null) {
+                if (ps != null)
+                {
                     ps.close();
                 }
 
-                if (conn != null) {
+                if (conn != null)
+                {
                     conn.close();
                 }
-            } catch (SQLException ex) {
+            }
+            catch (SQLException ex)
+            {
                 Logger.getLogger(AdministradorInterprete.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
