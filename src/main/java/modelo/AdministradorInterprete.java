@@ -11,8 +11,8 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class AdministradorInterprete {
-
+public class AdministradorInterprete
+{
     private static AdministradorInterprete administradorInterprete;
     private Connection conn;
     private Conexion conexion;
