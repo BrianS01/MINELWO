@@ -88,8 +88,11 @@ public class AdministradorSencillo
         catch (SQLException ex)
         {
             Logger.getLogger(AdministradorSencillo.class.getName()).log(Level.SEVERE, null, ex);
-        } finally{
-            try {
+        }
+        finally
+        {
+            try
+            {
                if (rs != null) {
                     rs.close();
                 }
