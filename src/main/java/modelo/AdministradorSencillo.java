@@ -128,24 +128,30 @@ public class AdministradorSencillo
         return administradorSencillo;
     }
     
-    public boolean eliminarSencillo(String nombreSencillo){
+    
+    public boolean eliminarSencillo(String nombreSencillo)
+    {
         boolean eliminado=false; 
         PreparedStatement ps= null; 
         ResultSet rs=null; 
         
-        try {
+        try
+        {
             conn=conexion.obtener();
             String sql="DELETE FROM mundulery.sencillo where nombreSencillo=(nombreSencillo)";
             ps= conn.prepareStatement(sql);
             rs=ps.executeQuery();
             
-            while(rs.next()){
-              for (int i = 0; i < sencillos.size(); i++) {
-            if(nombreSencillo.equals(sencillos.get(i).getNombreSencillo())){
-                sencillos.remove(i).getNombreSencillo();
-                eliminado= true; 
-            }
-            else{
+            while(rs.next())
+            {
+                for (int i = 0; i < sencillos.size(); i++)
+                {
+                    if(nombreSencillo.equals(sencillos.get(i).getNombreSencillo()))
+                    {
+                        sencillos.remove(i).getNombreSencillo();
+                        eliminado= true; 
+                    }
+                    else{
                 eliminado=false; 
             }
         }  
