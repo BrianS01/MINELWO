@@ -118,10 +118,13 @@ public class AdministradorSencillo
     }
     
   
-    public static AdministradorSencillo getInstance() {
-        if (administradorSencillo == null) {
+    public static AdministradorSencillo getInstance()
+    {
+        if (administradorSencillo == null)
+        {
             return new AdministradorSencillo();
         }
+        
         return administradorSencillo;
     }
     
