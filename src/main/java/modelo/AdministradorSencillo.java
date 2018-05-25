@@ -68,10 +68,13 @@ public class AdministradorSencillo
     }
     
     
-    public boolean ingresarSencillo(String nombreSencillo){
+    public boolean ingresarSencillo(String nombreSencillo)
+    {
         PreparedStatement ps=null;
         ResultSet rs= null; 
-        try {
+        
+        try
+        {
             conn= conexion.obtener();
             String sql="INSERT INTO mundulery.sencillo VALUES(nombreSencillo)";
             ps= conn.prepareStatement(sql);
