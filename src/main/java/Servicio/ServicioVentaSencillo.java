@@ -4,7 +4,8 @@ package Servicio;
  *
  * @author cristian
  */
-public class ServicioVentaSencillo {
+public class ServicioVentaSencillo
+{
 
    // private static 
 }
