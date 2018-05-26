@@ -19,7 +19,8 @@ import static org.junit.Assert.*;
  *
  * @author cristian
  */
-public class AdministradorAlbumTest {
+public class AdministradorAlbumTest
+{
     private static List<Album> listaDeAlbunes;
     private static AdministradorAlbum administradorAlbum;
     private static List<ClaseDePruebaAlbum> listaDePruebaAlbum;
