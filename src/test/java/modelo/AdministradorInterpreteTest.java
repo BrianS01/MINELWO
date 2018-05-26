@@ -14,12 +14,14 @@ public class AdministradorInterpreteTest
     private static List<String> nombresDeInterpretes;
    
     @BeforeClass
-    public static void inicializar(){
+    public static void inicializar()
+    {
         interpretes=new ArrayList<>();
         administradorInterprete=new AdministradorInterprete();
         nombresDeInterpretes=new ArrayList<>();
         
-            for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++)
+        {
             nombresDeInterpretes.add("Henry falcon");
             nombresDeInterpretes.add("Henry Steven");
             nombresDeInterpretes.add("Marta Stuart");
