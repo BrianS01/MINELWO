@@ -1,10 +1,6 @@
 
 package modelo;
 
-/**
- *
- * @author cristian
- */
 public class ClaseDePruebaAlbum
 {
     
