@@ -36,11 +36,13 @@ public class ClaseDePruebaAlbum
         this.nombreAlbum = nombreAlbum;
     }
 
-    public String getNombreInterprete() {
+    public String getNombreInterprete()
+    {
         return nombreInterprete;
     }
 
-    public void setNombreInterprete(String nombreInterprete) {
+    public void setNombreInterprete(String nombreInterprete)
+    {
         this.nombreInterprete = nombreInterprete;
     }
     
