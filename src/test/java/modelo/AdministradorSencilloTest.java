@@ -30,21 +30,22 @@ public class AdministradorSencilloTest
     
     
     @BeforeClass
-    public static void inicializar() {
+    public static void inicializar()
+    {
         listaDeSencillos=new ArrayList<>();
         administradorSencillo=new AdministradorSencillo();
-        
-       
-      //Sencillo sencillo = new Sencillo("nENA","pablo");
-      listaDeSencillos.add(new Sencillo("cancion"));
-      listaDeSencillos.add(new Sencillo("miVida"));  
-       listaDeSencillos.add(new Sencillo("miVida1"));  
+        //Sencillo sencillo = new Sencillo("nENA","pablo");
+        listaDeSencillos.add(new Sencillo("cancion"));
+        listaDeSencillos.add(new Sencillo("miVida"));  
+        listaDeSencillos.add(new Sencillo("miVida1"));  
     }
+    
     
     @Test
     public void ingresarUnSencilloCaso1() {        
        Assert.assertTrue(administradorSencillo.ingresarSencillo("nena"));
     }
+    
     
     @Test
     public void ingresarVariosSencillosCaso2(){
@@ -57,6 +58,7 @@ public class AdministradorSencilloTest
     @Before
     public void setUp() {
     }
+    
     
     @After
     public void tearDown() {
