@@ -26,11 +26,13 @@ public class ClaseDePruebaAlbum
         this.idAlbum = idAlbum;
     }
 
-    public String getNombreAlbum() {
+    public String getNombreAlbum()
+    {
         return nombreAlbum;
     }
 
-    public void setNombreAlbum(String nombreAlbum) {
+    public void setNombreAlbum(String nombreAlbum)
+    {
         this.nombreAlbum = nombreAlbum;
     }
 
