@@ -16,7 +16,8 @@ import static org.junit.Assert.*;
  *
  * @author cristian
  */
-public class AdministradorInterpreteTest {
+public class AdministradorInterpreteTest
+{
 
     private static List<Interprete> interpretes;
     private static AdministradorInterprete administradorInterprete;
