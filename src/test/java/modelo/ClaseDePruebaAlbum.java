@@ -8,17 +8,21 @@ public class ClaseDePruebaAlbum
     private String nombreAlbum; 
     private String nombreInterprete;
 
-    public ClaseDePruebaAlbum(int idAlbum, String nombreAlbum, String nombreInterprete) {
+    public ClaseDePruebaAlbum(int idAlbum, String nombreAlbum, String nombreInterprete)
+    {
         this.idAlbum = idAlbum;
         this.nombreAlbum = nombreAlbum;
         this.nombreInterprete = nombreInterprete;
     }
+    
 
-    public int getIdAlbum() {
+    public int getIdAlbum()
+    {
         return idAlbum;
     }
 
-    public void setIdAlbum(int idAlbum) {
+    public void setIdAlbum(int idAlbum)
+    {
         this.idAlbum = idAlbum;
     }
 
