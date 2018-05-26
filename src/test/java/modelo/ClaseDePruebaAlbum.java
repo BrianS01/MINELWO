@@ -5,7 +5,8 @@ package modelo;
  *
  * @author cristian
  */
-public class ClaseDePruebaAlbum {
+public class ClaseDePruebaAlbum
+{
     
     private int idAlbum; 
     private String nombreAlbum; 
