@@ -12,32 +12,31 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
 
-/**
- *
- * @author cristian
- */
 public class AdministradorAlbumTest
 {
     private static List<Album> listaDeAlbunes;
     private static AdministradorAlbum administradorAlbum;
     private static List<ClaseDePruebaAlbum> listaDePruebaAlbum;
     
+    
     @BeforeClass
-    public static void inicializar() {
+    public static void inicializar()
+    {
     listaDeAlbunes=new ArrayList<>();
     administradorAlbum=new AdministradorAlbum();
     listaDePruebaAlbum=new ArrayList<>();
     
-        for (int i = 0; i < 10; i++) {
-          //  listaDePruebaAlbum.add(e)
+        for (int i = 0; i < 10; i++)
+        {
+            //listaDePruebaAlbum.add(e)
         }
     }
     
+    
     @AfterClass
-    public static void tearDownClass() {
+    public static void tearDownClass()
+    {
     }
     
     @Before
