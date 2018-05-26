@@ -27,8 +27,6 @@ public class AdministradorSencilloTest
     private static AdministradorInterprete administradorInterprete;
     
     
-    
-    
     @BeforeClass
     public static void inicializar()
     {
@@ -42,26 +40,31 @@ public class AdministradorSencilloTest
     
     
     @Test
-    public void ingresarUnSencilloCaso1() {        
-       Assert.assertTrue(administradorSencillo.ingresarSencillo("nena"));
+    public void ingresarUnSencilloCaso1()
+    {
+        Assert.assertTrue(administradorSencillo.ingresarSencillo("nena"));
     }
     
     
     @Test
-    public void ingresarVariosSencillosCaso2(){
-        for(Sencillo sencillo : listaDeSencillos){
-       //     Assert.assertTrue(administradorSencillo.ingresarSencillo(sencillo.getNombreCancion()));
+    public void ingresarVariosSencillosCaso2()
+    {
+        for(Sencillo sencillo : listaDeSencillos)
+        {
+            //Assert.assertTrue(administradorSencillo.ingresarSencillo(sencillo.getNombreCancion()));
         }        
     }
     
     
     @Before
-    public void setUp() {
+    public void setUp()
+    {
     }
     
     
     @After
-    public void tearDown() {
+    public void tearDown()
+    {
     }
 
     // TODO add test methods here.
