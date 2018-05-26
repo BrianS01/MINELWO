@@ -33,11 +33,13 @@ public class AdministradorInterpreteTest
         }
     }
     
+    
     @Test
-    public void ingresarInterpreteCaso1(){
+    public void ingresarInterpreteCaso1()
+    {
         String nombreInterprete="Cristian Espinosa";
         administradorInterprete.ingresarInterprete(nombreInterprete);
-    //    Assert.assertEquals("Cristian Espinosa", administradorInterprete.getInterpretes().get(0).getNombreInterprete());
+        //Assert.assertEquals("Cristian Espinosa", administradorInterprete.getInterpretes().get(0).getNombreInterprete());
     }
     /*
     @Test
