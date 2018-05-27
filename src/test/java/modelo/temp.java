@@ -87,6 +87,7 @@ public class temp
         }
     }
 
+    
     public void eliminarInterpretesCaso5()
     {
         //mirar como crear un forma de eliminar un interprete de la lista 
