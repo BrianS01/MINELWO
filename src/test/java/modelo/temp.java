@@ -85,10 +85,10 @@ public class temp
             //lista ya creada en administradorInterprete
             System.out.println(""+i.getNombreInterprete());
         }
-          
     }
 
-    public void eliminarInterpretesCaso5() {
+    public void eliminarInterpretesCaso5()
+    {
         //mirar como crear un forma de eliminar un interprete de la lista 
         //de interpretes
     }
