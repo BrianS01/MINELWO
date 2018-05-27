@@ -65,8 +65,10 @@ public class AdministradorSencillo
                 {
                     conn.close();
                 }
-            } catch (SQLException ex) {
-              Logger.getLogger(AdministradorSencillo.class.getName()).log(Level.SEVERE, null, ex);  
+            }
+            catch (SQLException ex)
+            {
+                Logger.getLogger(AdministradorSencillo.class.getName()).log(Level.SEVERE, null, ex);  
             }
         }
         
