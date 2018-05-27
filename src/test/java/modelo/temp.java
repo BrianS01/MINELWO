@@ -69,6 +69,7 @@ public class temp
         Assert.assertEquals(cantidadEsperada, cantidadInterpretes);
     }
     
+    
     @Test
     public void ingresarInterpreterProbarEnriqueCaso4()
     {
