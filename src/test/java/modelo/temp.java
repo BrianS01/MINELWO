@@ -39,16 +39,17 @@ public class temp
     }
 
     @Test
-    public void ingresarInterpreteCaso1() {
+    public void ingresarInterpreteCaso1()
+    {
         String nombreInterprete = "Cristian Espinosa";
         Interprete interprete = new Interprete(nombreInterprete);
         interpretes.add(interprete);
-        Assert.assertEquals("Cristian Espinosa", interpretes.get(0)
-                .getNombreInterprete());
+        Assert.assertEquals("Cristian Espinosa", interpretes.get(0).getNombreInterprete());
     }
 
     @Test
-    public void ingresarInterpreteCaso2() {
+    public void ingresarInterpreteCaso2()
+    {
         String nombreInterprete = "Cristian Espinosa";
         administradorInterprete.ingresarInterprete(nombreInterprete);
         Assert.assertEquals("Cristian Espinosa", administradorInterprete
