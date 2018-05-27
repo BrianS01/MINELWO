@@ -80,10 +80,11 @@ public class temp
             System.out.println(""+i.getNombreInterprete());
         }
     
-         for (Interprete i : administradorInterprete.getInterpretes()) {
-        //lista ya creada en administradorInterprete
-             System.out.println(""+i.getNombreInterprete());
-         }
+        for (Interprete i : administradorInterprete.getInterpretes())
+        {
+            //lista ya creada en administradorInterprete
+            System.out.println(""+i.getNombreInterprete());
+        }
           
     }
 
