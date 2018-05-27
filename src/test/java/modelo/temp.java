@@ -33,7 +33,8 @@ public class temp
     }
 
     @After
-    public void metodo2() {
+    public void metodo2()
+    {
         System.out.println("After Despues de cada metodo");
     }
 
