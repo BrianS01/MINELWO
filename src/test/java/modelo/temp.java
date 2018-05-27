@@ -27,7 +27,8 @@ public class temp
     }
 
     @Before
-    public void metodo1() {
+    public void metodo1()
+    {
         System.out.println("Before Antes de cada metodo");
     }
 
