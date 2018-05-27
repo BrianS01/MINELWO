@@ -149,7 +149,8 @@ public class AdministradorInterprete
             {
                 interprete = new Interprete(nombreInterprete, rs.getInt(1));
             }
-        } catch (SQLException ex)
+        }
+        catch (SQLException ex)
         {
             Logger.getLogger(AdministradorInterprete.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -187,8 +188,7 @@ public class AdministradorInterprete
     {
         AdministradorInterprete ad = new AdministradorInterprete();
         List<Interprete> interpretes = ad.obtenerInterpretes();
-
-     //   System.out.println(ad.ingresarInterprete("CARLOS1"));
+        //System.out.println(ad.ingresarInterprete("CARLOS1"));
         
         for (Interprete miInterprete : interpretes)
         {
