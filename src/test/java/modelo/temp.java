@@ -21,7 +21,8 @@ public class temp
     }
 
     @AfterClass
-    public static void metodo3() {
+    public static void metodo3()
+    
         System.out.println("After class Al terminar el uso de la clase una "
                 + "sola vez");
     }
