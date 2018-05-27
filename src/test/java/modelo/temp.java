@@ -52,12 +52,12 @@ public class temp
     {
         String nombreInterprete = "Cristian Espinosa";
         administradorInterprete.ingresarInterprete(nombreInterprete);
-        Assert.assertEquals("Cristian Espinosa", administradorInterprete
-                .getInterpretes().get(0).getNombreInterprete());
+        Assert.assertEquals("Cristian Espinosa", administradorInterprete.getInterpretes().get(0).getNombreInterprete());
     }
 
     @Test
-    public void ingresarVariosInterpretesCaso3() {
+    public void ingresarVariosInterpretesCaso3()
+    {
 
         Integer cantidadEsperada = 101;
 
