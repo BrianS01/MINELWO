@@ -5,10 +5,6 @@
  */
 package Controlador;
 
-/**
- *
- * @author cristian
- */
 public class ControladorAlbum
 {
     
