@@ -58,16 +58,14 @@ public class temp
     @Test
     public void ingresarVariosInterpretesCaso3()
     {
-
         Integer cantidadEsperada = 101;
 
-        for (String nombre : nombresDeInterpretes) {
+        for (String nombre : nombresDeInterpretes)
+        {
             administradorInterprete.ingresarInterprete(nombre);
         }
 
-        Integer cantidadInterpretes = administradorInterprete.getInterpretes()
-                .size();
-
+        Integer cantidadInterpretes = administradorInterprete.getInterpretes().size();
         Assert.assertEquals(cantidadEsperada, cantidadInterpretes);
     }
     
