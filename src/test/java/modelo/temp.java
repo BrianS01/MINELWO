@@ -9,7 +9,8 @@ public class temp
 {
     /*
     @BeforeClass
-    public static void metodo4() {
+    public static void metodo4()
+    {
         interpretes = new ArrayList<>();
         administradorInterprete = new AdministradorInterprete();
         nombresDeInterpretes = new ArrayList<>();
