@@ -32,6 +32,7 @@ public class AdministradorAlbum
     {
         PreparedStatement ps=null; 
         ResultSet rs=null;
+        
         try
         {
             conn= conexion.obtener();
@@ -58,10 +59,12 @@ public class AdministradorAlbum
                 {
                     rs.close();
                 }
+                
                 if (ps != null)
                 {
                     ps.close();
                 }
+                
                 if (conn != null)
                 {
                     conn.close();
