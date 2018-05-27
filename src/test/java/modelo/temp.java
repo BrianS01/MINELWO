@@ -93,7 +93,8 @@ public class temp
         //de interpretes
     }
     
-        public void eliminarInterpretesCaso6() {
+    public void eliminarInterpretesCaso6()
+    {
         //Probar el metodo eliminarInterprete de AdministradorInterprete 
     }
     */
