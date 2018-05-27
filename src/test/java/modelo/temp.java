@@ -74,9 +74,12 @@ public class temp
     {
         //Assert.assertTrue(administradorInterprete.getInterpretes().get(20)
         //.getNombreInterprete().equals("Enrique 20"));
-         for (Interprete i : interpretes) {//para hacer pruebas
-             System.out.println(""+i.getNombreInterprete());
-         }
+    
+        for (Interprete i : interpretes)//para hacer pruebas
+        {
+            System.out.println(""+i.getNombreInterprete());
+        }
+    
          for (Interprete i : administradorInterprete.getInterpretes()) {
         //lista ya creada en administradorInterprete
              System.out.println(""+i.getNombreInterprete());
