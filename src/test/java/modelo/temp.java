@@ -55,6 +55,7 @@ public class temp
         Assert.assertEquals("Cristian Espinosa", administradorInterprete.getInterpretes().get(0).getNombreInterprete());
     }
 
+    
     @Test
     public void ingresarVariosInterpretesCaso3()
     {
