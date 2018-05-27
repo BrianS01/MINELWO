@@ -69,9 +69,9 @@ public class temp
         Assert.assertEquals(cantidadEsperada, cantidadInterpretes);
     }
     
-       @Test
-    public void ingresarInterpreterProbarEnriqueCaso4() {           
-        //
+    @Test
+    public void ingresarInterpreterProbarEnriqueCaso4()
+    {
         //Assert.assertTrue(administradorInterprete.getInterpretes().get(20)
         //.getNombreInterprete().equals("Enrique 20"));
          for (Interprete i : interpretes) {//para hacer pruebas
