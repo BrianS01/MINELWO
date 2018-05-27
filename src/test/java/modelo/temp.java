@@ -14,7 +14,8 @@ public class temp
         interpretes = new ArrayList<>();
         administradorInterprete = new AdministradorInterprete();
         nombresDeInterpretes = new ArrayList<>();
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 100; i++)
+        {
             nombresDeInterpretes.add("Henry " + (i + 1));
         }
     }
