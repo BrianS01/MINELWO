@@ -6,6 +6,4 @@ package Servicio;
  */
 public class ServicioVentaSencillo
 {
-
-   // private static 
 }
