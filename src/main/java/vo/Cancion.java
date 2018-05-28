@@ -30,6 +30,7 @@ public class Cancion
         this.idCancion = idCancion;
     }
 
+    
     public String getNombreCancion()
     {
         return nombreCancion;
@@ -40,8 +41,4 @@ public class Cancion
     {
         this.nombreCancion = nombreCancion;
     }
-
-    
-    
-    
 }
