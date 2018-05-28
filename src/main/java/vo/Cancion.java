@@ -1,9 +1,5 @@
 package vo;
 
-/**
- *
- * @author cristian
- */
 public class Cancion {
 
     private int idCancion;
