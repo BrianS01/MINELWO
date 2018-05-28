@@ -1,14 +1,10 @@
 package vo;
 
-import java.awt.List;
-import java.util.Date;
-
 public class Interprete
 {
     private int id;
     private String nombreInterprete;
      
-    
 
     public Interprete(String nombreInterprete, int id) {
         this.nombreInterprete = nombreInterprete;
