@@ -30,11 +30,14 @@ public class Cancion
         this.idCancion = idCancion;
     }
 
-    public String getNombreCancion() {
+    public String getNombreCancion()
+    {
         return nombreCancion;
     }
 
-    public void setNombreCancion(String nombreCancion) {
+    
+    public void setNombreCancion(String nombreCancion)
+    {
         this.nombreCancion = nombreCancion;
     }
 
