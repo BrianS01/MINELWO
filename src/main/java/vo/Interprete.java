@@ -24,6 +24,7 @@ public class Interprete
         this.id = id;
     }
 
+    
     public String getNombreInterprete()
     {
         return nombreInterprete;
