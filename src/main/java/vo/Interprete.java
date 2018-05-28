@@ -17,7 +17,8 @@ public class Interprete
         this.nombreInterprete = nombreInterprete;
     }
 
-    public Interprete(int id) {
+    public Interprete(int id)
+    {
         this.id = id;
     }
 
