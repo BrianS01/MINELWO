@@ -4,10 +4,6 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 import javax.swing.ImageIcon;
 
-/**
- *
- * @author BRIAN
- */
 public class MenuVenta extends javax.swing.JFrame
 {
     public MenuVenta()
