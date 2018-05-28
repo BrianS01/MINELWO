@@ -6,7 +6,8 @@ public class Interprete
     private String nombreInterprete;
      
 
-    public Interprete(String nombreInterprete, int id) {
+    public Interprete(String nombreInterprete, int id)
+    {
         this.nombreInterprete = nombreInterprete;
         this.id = id;
     }
