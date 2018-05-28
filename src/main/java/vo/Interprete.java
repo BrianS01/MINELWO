@@ -41,6 +41,4 @@ public class Interprete
     {
         this.id = id;
     }
-
-    
 }
