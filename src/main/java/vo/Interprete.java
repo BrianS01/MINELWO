@@ -32,7 +32,8 @@ public class Interprete
         this.nombreInterprete = nombreInterprete;
     }
     
-    public int getId() {
+    public int getId()
+    {
         return id;
     }
 
