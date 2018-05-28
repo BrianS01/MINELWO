@@ -27,7 +27,8 @@ public class Interprete
         return nombreInterprete;
     }
 
-    public void setNombreInterprete(String nombreInterprete) {
+    public void setNombreInterprete(String nombreInterprete)
+    {
         this.nombreInterprete = nombreInterprete;
     }
     
