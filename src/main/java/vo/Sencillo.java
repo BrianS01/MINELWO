@@ -6,7 +6,8 @@ public class Sencillo
     private String nombreSencillo; 
     
 
-    public Sencillo(String nombreSencillo) {    
+    public Sencillo(String nombreSencillo)
+    {    
         this.nombreSencillo = nombreSencillo;
     }
 
