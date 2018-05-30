@@ -30,7 +30,8 @@ public class Sencillo
         return idSencillo;
     }
 
-    public void setIdSencillo(int idSencillo) {
+    public void setIdSencillo(int idSencillo)
+    {
         this.idSencillo = idSencillo;
     }
 
