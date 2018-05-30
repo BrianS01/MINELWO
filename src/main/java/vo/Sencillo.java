@@ -25,7 +25,8 @@ public class Sencillo
         this.nombreSencillo = nombreSencillo;
     }
 
-    public int getIdSencillo() {
+    public int getIdSencillo()
+    {
         return idSencillo;
     }
 
