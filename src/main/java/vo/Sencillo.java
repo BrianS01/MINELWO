@@ -40,6 +40,7 @@ public class Sencillo
         return nombreSencillo;
     }
 
+    
     public void setNombreSencillo(String nombreSencillo)
     {
         this.nombreSencillo = nombreSencillo;
