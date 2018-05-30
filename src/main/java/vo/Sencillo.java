@@ -19,7 +19,7 @@ public class Sencillo
         this.nombreSencillo = nombreSencillo;
     }
 
-    public Sencillo(int idSencillo, String nombreSencillo) {
+    public Sencillo(int idSencillo, String nombreSencillo){
         this.idSencillo = idSencillo;
         this.nombreSencillo = nombreSencillo;
     }
