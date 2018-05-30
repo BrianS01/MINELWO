@@ -35,7 +35,8 @@ public class Sencillo
         this.idSencillo = idSencillo;
     }
 
-    public String getNombreSencillo() {
+    public String getNombreSencillo()
+    {
         return nombreSencillo;
     }
 
