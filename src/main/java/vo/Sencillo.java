@@ -42,7 +42,5 @@ public class Sencillo
 
     public void setNombreSencillo(String nombreSencillo) {
         this.nombreSencillo = nombreSencillo;
-    }
-
-    
+    } 
 }
