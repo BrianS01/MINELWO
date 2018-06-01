@@ -5,14 +5,20 @@
  */
 package vistas;
 
+import Controlador.ControladorNuevosIngresos;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import javax.swing.ImageIcon;
 
 public class EntradaInterprete extends javax.swing.JFrame
 {
+    private ControladorNuevosIngresos controladorInterprete;
+    
+    
+    
     public EntradaInterprete()
     {
+        controladorInterprete= new ControladorNuevosIngresos();
         initComponents();
         this.setTitle("MUNDULERY ~ Entrada Interprete");
         this.setMinimumSize(new Dimension(748, 540));
@@ -49,7 +55,7 @@ public class EntradaInterprete extends javax.swing.JFrame
             }
         });
         getContentPane().add(regresarButton);
-        regresarButton.setBounds(12, 11, 100, 25);
+        regresarButton.setBounds(12, 11, 100, 23);
 
         jButton1.setText("INGRESAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -58,7 +64,7 @@ public class EntradaInterprete extends javax.swing.JFrame
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(300, 280, 100, 25);
+        jButton1.setBounds(300, 280, 100, 23);
 
         jTextField1.setText("Nuevo Interprete");
         jTextField1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -91,13 +97,13 @@ public class EntradaInterprete extends javax.swing.JFrame
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Copyright © 2018 by MUNDULERY");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(0, 460, 730, 15);
+        jLabel3.setBounds(0, 460, 730, 14);
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("All rights reserved");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(-1, 470, 730, 15);
+        jLabel2.setBounds(-1, 470, 730, 14);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fondo.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -107,7 +113,7 @@ public class EntradaInterprete extends javax.swing.JFrame
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jTextField1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField1MouseClicked
@@ -115,9 +121,8 @@ public class EntradaInterprete extends javax.swing.JFrame
     }//GEN-LAST:event_jTextField1MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        MenuEntrada ventana = new MenuEntrada();
-        ventana.setVisible(true);
-        dispose();
+        controladorInterprete.ingresarInterprete(jTextField1.getText());
+        jTextField1.setText("");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void regresarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarButtonActionPerformed
@@ -175,4 +180,5 @@ public class EntradaInterprete extends javax.swing.JFrame
     private javax.swing.JTextField jTextField1;
     private javax.swing.JButton regresarButton;
     // End of variables declaration//GEN-END:variables
+    
 }

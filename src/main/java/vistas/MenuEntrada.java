@@ -121,7 +121,7 @@ public class MenuEntrada extends javax.swing.JFrame
     }//GEN-LAST:event_regresarButtonActionPerformed
 
     private void albumButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_albumButtonActionPerformed
-        EntradaAlbum ventana = new EntradaAlbum();
+        IngresarAlbum ventana = new IngresarAlbum();
         ventana.setVisible(true);
         dispose();
     }//GEN-LAST:event_albumButtonActionPerformed

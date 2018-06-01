@@ -3,42 +3,50 @@ package vo;
 import java.util.Date;
 
 public class VentaSencillo
-{
-    private int valorVenta; 
+{   
+    private int id;
+    private int cantidad; 
     private Date fecha; 
-    private int posicionVenta; 
-    private int posicionLista; 
+    private int idSencillo; 
 
-    public VentaSencillo(int valorVenta, Date fecha, int posicionVenta, int posicionLista) {
-        this.valorVenta = valorVenta;
+    public VentaSencillo(int cantidadVentas, Date fecha, int idSencillo) {
+        this.cantidad = cantidad;
         this.fecha=fecha; 
-        this.posicionVenta = posicionVenta;
-        this.posicionLista = posicionLista;
+        this.idSencillo=idSencillo;
     }
 
+    public VentaSencillo(int id, int cantidadVentas, Date fecha, int idSencillo) {
+        this.id = id;
+        this.cantidad = cantidad;
+        this.fecha = fecha;
+        this.idSencillo=idSencillo;
+    }
+
+    public int getIdSencillo() {
+        return idSencillo;
+    }
+
+    public void setIdSencillo(int idSencillo) {
+        this.idSencillo = idSencillo;
+    }
+    
+    
+
     public int getValorVenta() {
-        return valorVenta;
+        return cantidad;
     }
 
     public void setValorVenta(int valorVenta) {
-        this.valorVenta = valorVenta;
+        this.cantidad = valorVenta;
     }
 
-    public int getPosicionVenta() {
-        return posicionVenta;
+    public Date getFecha() {
+        return fecha;
     }
 
-    public void setPosicionVenta(int posicionVenta) {
-        this.posicionVenta = posicionVenta;
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
     }
-
-    public int getPosicionLista() {
-        return posicionLista;
-    }
-
-    public void setPosicionLista(int posicionLista) {
-        this.posicionLista = posicionLista;
-    }
-    
+ 
     
 }

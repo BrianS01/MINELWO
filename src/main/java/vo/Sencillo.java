@@ -7,15 +7,16 @@ public class Sencillo
 {
     private int idSencillo; 
     private String nombreSencillo; 
-    
+    private int idInterprete;
 
     public Sencillo(String nombreSencillo) {    
         this.nombreSencillo = nombreSencillo;
     }
 
-    public Sencillo(int idSencillo, String nombreSencillo) {
+    public Sencillo(int idSencillo, String nombreSencillo, int idInterprete) {
         this.idSencillo = idSencillo;
         this.nombreSencillo = nombreSencillo;
+        this.idInterprete=idInterprete;
     }
 
     public int getIdSencillo() {
@@ -33,6 +34,15 @@ public class Sencillo
     public void setNombreSencillo(String nombreSencillo) {
         this.nombreSencillo = nombreSencillo;
     }
+
+    public int getIdInterprete() {
+        return idInterprete;
+    }
+
+    public void setIdInterprete(int idInterprete) {
+        this.idInterprete = idInterprete;
+    }
+    
 
     
 }

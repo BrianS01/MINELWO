@@ -1,3 +1,4 @@
+
 package modelo;
 
 import BasesDeDatos.Conexion;
@@ -5,37 +6,78 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import vo.Interprete;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import vo.Cancion;
+import vo.Interprete;
 
-public class AdministradorInterprete {
+/**
+ *
+ * @author cristian
+ */
+public class AdministradorCancion {
     
-    private static AdministradorInterprete administradorInterprete;
+    private static AdministradorCancion administradorCancion;
     private Connection conn;
     private Conexion conexion;
-    private List<Interprete> interpretes;
+    private List<Cancion> canciones;
 
-    public AdministradorInterprete() {
+    public AdministradorCancion() {
         conexion = new Conexion();
     }
 
-    public List<Interprete> obtenerInterpretes() {
+    public boolean eliminarInterprete(int idCancion) {
+        boolean isElimino = false;
+        PreparedStatement ps = null;
+        int rs = 0;
+
+        try{
+            conn = conexion.obtener();
+
+
+            String sql = "DELETE FROM mundulery.cancion WHERE idCancion = ?";
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1, idCancion); // el primer valor se refiere al parámetro del interrogante. 
+            ps.executeUpdate();    
+
+            if (rs > 0) {
+                isElimino = true;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(AdministradorInterprete.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                if (ps != null) {
+                    ps.close();
+                }
+
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(AdministradorInterprete.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+
+        return isElimino;
+    }
+    
+    public List<Cancion> obtenerCanciones() {
         PreparedStatement ps = null;
         ResultSet rs = null;
-        interpretes = new ArrayList<>();
+        canciones = new ArrayList<>();;
         try {
             conn = conexion.obtener();
-            String sql = "SELECT nombreInterprete, idInterprete FROM interprete";
+            String sql = "SELECT idCancion, nombreCancion, idAlbum FROM cancion";
             ps = conn.prepareStatement(sql);
             rs = ps.executeQuery();
-            Interprete interprete;
+            Cancion cancion;
 
             while (rs.next()) {
-                interprete = new Interprete(rs.getString(1), rs.getInt(2));
-                interpretes.add(interprete);
+                cancion = new Cancion(rs.getInt(1), rs.getString(2), rs.getInt(3));
+                canciones.add(cancion);
             }
 
         } catch (SQLException ex) {
@@ -58,14 +100,14 @@ public class AdministradorInterprete {
             }
         }
 
-        return interpretes;
+        return canciones;
     }
  
     
     public Interprete obtenerInterpreteXnombre(String nombreInterprete) {
         PreparedStatement ps = null;
         ResultSet rs = null;
-        interpretes = new ArrayList<>();
+    //    interpretes = new ArrayList<>();
         Interprete interprete = null;
         try {
             conn = conexion.obtener();
@@ -104,24 +146,25 @@ public class AdministradorInterprete {
     //Este main es para hacer pruebas, comentaree la línea del método si va a borrar algo del main. 
     public static void main(String... args) {
         AdministradorInterprete ad = new AdministradorInterprete();
-         ad.eliminarInterprete("Pedro");
+         List<Interprete> interpretes = ad.obtenerInterpretes();
 
      //   System.out.println(ad.ingresarInterprete("CARLOS1"));
         
-      /*  for (Interprete miInterprete : interpretes) {
+        for (Interprete miInterprete : interpretes) {
             System.out.println(miInterprete.getNombreInterprete());
-        }*/
+        }
     }
 
-    public boolean ingresarInterprete(String nombreInterprete) {
+    public boolean ingresarCancion(String nombreCancion, int idAlbum) {
         boolean isInserto = false;
         PreparedStatement ps = null;
         int rs = 0;
         try {
             conn = conexion.obtener();
-            String sql = "insert into mundulery.interprete (nombreInterprete) values (?)";
+            String sql = "insert into mundulery.cancion (nombreCancion, idAlbum) values (?,?)";
             ps = conn.prepareStatement(sql);
-            ps.setString(1, nombreInterprete);
+            ps.setString(1, nombreCancion);
+            ps.setInt(2, idAlbum);
             rs = ps.executeUpdate();
 
             if (rs > 0) {
@@ -145,64 +188,10 @@ public class AdministradorInterprete {
         return isInserto;
     }
 
-    public static AdministradorInterprete getInstance() {
-        if (administradorInterprete == null) {
-            return new AdministradorInterprete();
+    public static AdministradorCancion getInstance() {
+        if (administradorCancion == null) {
+            return new AdministradorCancion();
         }
-        return administradorInterprete;
-    }
-
-    //  private List<Interprete> eliminarInterprete(String nombreInterprete) {
-    /*  for (Interprete interprete1 : interpretes) {
-            if(nombreInterprete.equals(interprete1.getNombreInterprete())){
-              
-            }
-        }*/
-     
-    public boolean eliminarInterprete(String nombreInterprete) {
-        boolean isElimino = false;
-        PreparedStatement ps = null;
-        int rs = 0;
-
-        try {
-            Interprete interprete = obtenerInterpreteXnombre(nombreInterprete);//con este método llama al idInterprete.
-
-            conn = conexion.obtener();
-            //Falta revisar está línea del mysql.
-            String sql = "DELETE FROM mundulery.album WHERE idInterprete = ?";
-            ps = conn.prepareStatement(sql);
-            ps.setInt(1, interprete.getId()); // el primer valor se refiere al parámetro del interrogante. 
-            ps.executeUpdate();
-
-            sql = "DELETE FROM mundulery.sencillo WHERE idInterprete = ?";
-            ps = conn.prepareStatement(sql);
-            ps.setInt(1, interprete.getId()); // el primer valor se refiere al parámetro del interrogante. 
-            ps.executeUpdate();
-
-            sql = "DELETE FROM mundulery.interprete  WHERE idInterprete = ?";
-            ps = conn.prepareStatement(sql);
-            ps.setInt(1, interprete.getId()); // el primer valor se refiere al parámetro del interrogante. 
-            rs = ps.executeUpdate();
-
-            if (rs > 0) {
-                isElimino = true;
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(AdministradorInterprete.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            try {
-                if (ps != null) {
-                    ps.close();
-                }
-
-                if (conn != null) {
-                    conn.close();
-                }
-            } catch (SQLException ex) {
-                Logger.getLogger(AdministradorInterprete.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-
-        return isElimino;
+        return administradorCancion;
     }
 }

@@ -5,22 +5,33 @@
  */
 package vistas;
 
+import Controlador.ControladorNuevosIngresos;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import javax.swing.ImageIcon;
+import vo.Interprete;
+import vo.Sencillo;
 
 public class IngresoSencillo extends javax.swing.JFrame
 {
+    ControladorNuevosIngresos controladorNuevosIngresos;
     public IngresoSencillo()
     {
+        
+        controladorNuevosIngresos=new ControladorNuevosIngresos();
         initComponents();
+        inicializarComboBox();
         this.setTitle("MUNDULERY ~ Entrada Sencillo");
         this.setMinimumSize(new Dimension(748, 540));
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setIconImage(new ImageIcon(getClass().getResource("/icono.png")).getImage());
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     }
-
+    public void inicializarComboBox(){
+       for(Interprete interprete: controladorNuevosIngresos.obtenerInterpretes()){
+             jComboBox1.addItem(interprete.getNombreInterprete());
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -51,7 +62,7 @@ public class IngresoSencillo extends javax.swing.JFrame
             }
         });
         getContentPane().add(regresarButton);
-        regresarButton.setBounds(12, 11, 100, 25);
+        regresarButton.setBounds(12, 11, 100, 23);
 
         jButton1.setText("INGRESAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -60,7 +71,7 @@ public class IngresoSencillo extends javax.swing.JFrame
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(300, 340, 100, 25);
+        jButton1.setBounds(300, 340, 100, 23);
 
         jTextField1.setText("Nuevo Sencillo");
         jTextField1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -82,9 +93,8 @@ public class IngresoSencillo extends javax.swing.JFrame
         getContentPane().add(jLabel6);
         jLabel6.setBounds(240, 270, 90, 30);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Interprete", "Item 2", "Item 3", "Item 4" }));
         getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(350, 210, 140, 24);
+        jComboBox1.setBounds(350, 210, 140, 20);
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -103,13 +113,13 @@ public class IngresoSencillo extends javax.swing.JFrame
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Copyright © 2018 by MUNDULERY");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(0, 460, 730, 15);
+        jLabel3.setBounds(0, 460, 730, 14);
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("All rights reserved");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(-1, 470, 730, 15);
+        jLabel2.setBounds(-1, 470, 730, 14);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fondo.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -127,9 +137,9 @@ public class IngresoSencillo extends javax.swing.JFrame
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        MenuEntrada ventana = new MenuEntrada();
-        ventana.setVisible(true);
-        dispose();
+      // controladorNuevosIngresos.ingresarSencillo(jTextField1.getText(), jComboBox1.getSelectedItem().toString());
+      controladorNuevosIngresos.ingresarSencillos(jTextField1.getText(), jComboBox1.getSelectedItem().toString());
+      jTextField1.setText("");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void regresarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarButtonActionPerformed

@@ -29,15 +29,16 @@ public class AdministradorInterpreteTest {
         nombresDeInterpretes=new ArrayList<>();
         
             for (int i = 0; i < 10; i++) {
-            nombresDeInterpretes.add("Henry falcon");
-            nombresDeInterpretes.add("Henry Steven");
-            nombresDeInterpretes.add("Marta Stuart");
-            nombresDeInterpretes.add("Sterling");
-            nombresDeInterpretes.add("g001");
-            nombresDeInterpretes.add("wisin");
+       //     nombresDeInterpretes.add("Henry falcon");
+       //     nombresDeInterpretes.add("Henry Steven");
+        //    nombresDeInterpretes.add("Marta Stuart");
+        //    nombresDeInterpretes.add("Sterling");
+        //    nombresDeInterpretes.add("g001");
+       //     nombresDeInterpretes.add("wisin");
             nombresDeInterpretes.add("yandel");
             nombresDeInterpretes.add("aquiles brinco");
         }
+            
     }
     
     @Test
@@ -46,6 +47,32 @@ public class AdministradorInterpreteTest {
         administradorInterprete.ingresarInterprete(nombreInterprete);
     //    Assert.assertEquals("Cristian Espinosa", administradorInterprete.getInterpretes().get(0).getNombreInterprete());
     }
+    
+    
+    @Test
+    public void ingresarVariosInterpretesCaso2(){
+        String nombreInterprete="Bryan Steling";
+        String nombreInterprete1="Juan Rodrigez";
+        String nombreInterprete2="Laura acuña";
+        boolean a=administradorInterprete.ingresarInterprete(nombreInterprete);
+        boolean b=administradorInterprete.ingresarInterprete(nombreInterprete1);
+        boolean c=administradorInterprete.ingresarInterprete(nombreInterprete2);
+        
+        Assert.assertEquals(true, true);
+        
+    }
+    
+    @Test
+    public void eliminarUnInterpreteCaso3(){
+        String nombreInterprete="tadeoSaco";
+        boolean elimino=administradorInterprete.eliminarInterprete(nombreInterprete);
+        Assert.assertEquals(true, elimino);
+    }
+    
+    
+    
+    
+    
     /*
     @Test
     public void ingresarVariosInterpretesCaso2(){

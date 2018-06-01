@@ -52,15 +52,25 @@ public class MenuVenta extends javax.swing.JFrame
             }
         });
         getContentPane().add(regresarButton);
-        regresarButton.setBounds(12, 19, 100, 25);
+        regresarButton.setBounds(12, 19, 100, 23);
 
         albumButton.setText("ALBUM");
+        albumButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                albumButtonActionPerformed(evt);
+            }
+        });
         getContentPane().add(albumButton);
-        albumButton.setBounds(310, 300, 100, 25);
+        albumButton.setBounds(310, 300, 100, 23);
 
         sencilloButton.setText("SENCILLO");
+        sencilloButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sencilloButtonActionPerformed(evt);
+            }
+        });
         getContentPane().add(sencilloButton);
-        sencilloButton.setBounds(310, 230, 100, 25);
+        sencilloButton.setBounds(310, 230, 100, 23);
 
         jLabel4.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -73,13 +83,13 @@ public class MenuVenta extends javax.swing.JFrame
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Copyright © 2018 by MUNDULERY");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(0, 460, 730, 15);
+        jLabel3.setBounds(0, 460, 730, 14);
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("All rights reserved");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(-1, 470, 730, 15);
+        jLabel2.setBounds(-1, 470, 730, 14);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fondo.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -93,6 +103,16 @@ public class MenuVenta extends javax.swing.JFrame
         ventana.setVisible(true);
         dispose();
     }//GEN-LAST:event_regresarButtonActionPerformed
+
+    private void sencilloButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sencilloButtonActionPerformed
+        ventaSencillo.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_sencilloButtonActionPerformed
+
+    private void albumButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_albumButtonActionPerformed
+        ventaAlbum.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_albumButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -141,4 +161,6 @@ public class MenuVenta extends javax.swing.JFrame
     private javax.swing.JButton regresarButton;
     private javax.swing.JButton sencilloButton;
     // End of variables declaration//GEN-END:variables
+    private VentaSencillo ventaSencillo; 
+    private VentaAlbum ventaAlbum; 
 }

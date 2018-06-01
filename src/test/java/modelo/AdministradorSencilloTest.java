@@ -26,7 +26,7 @@ public class AdministradorSencilloTest {
     
     private static List<Sencillo> listaDeSencillos;
     private static AdministradorSencillo administradorSencillo;
-    private static AdministradorInterprete administradorInterprete;
+    private static List<String> nombresDeSencillos;
     
     
     
@@ -35,25 +35,9 @@ public class AdministradorSencilloTest {
     public static void inicializar() {
         listaDeSencillos=new ArrayList<>();
         administradorSencillo=new AdministradorSencillo();
-        
-       
-      //Sencillo sencillo = new Sencillo("nENA","pablo");
-      listaDeSencillos.add(new Sencillo("cancion"));
-      listaDeSencillos.add(new Sencillo("miVida"));  
-       listaDeSencillos.add(new Sencillo("miVida1"));  
+        nombresDeSencillos=new ArrayList<>();  
     }
     
-    @Test
-    public void ingresarUnSencilloCaso1() {        
-       Assert.assertTrue(administradorSencillo.ingresarSencillo("nena"));
-    }
-    
-    @Test
-    public void ingresarVariosSencillosCaso2(){
-        for(Sencillo sencillo : listaDeSencillos){
-       //     Assert.assertTrue(administradorSencillo.ingresarSencillo(sencillo.getNombreCancion()));
-        }        
-    }
     
     
     @Before

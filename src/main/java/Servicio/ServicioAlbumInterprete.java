@@ -2,6 +2,7 @@
 package Servicio;
 
 import java.util.List;
+import modelo.AdministradorAlbum;
 import modelo.AdministradorInterprete;
 import modelo.AdministradorSencillo;
 import vo.Interprete;
@@ -11,15 +12,12 @@ import vo.Interprete;
  * @author cristian
  */
 public class ServicioAlbumInterprete {
-    public static AdministradorInterprete administradorInterprete;
-    public static AdministradorSencillo administradorSencillo;
+    public static AdministradorAlbum administradorAlbum;
     
-    public List<Interprete> obtenerInterprete(){
-        //Traer la información de interprete.
-      return administradorInterprete.obtenerInterpretes();//idInterprete, nombreInterprete
+    public boolean ingresarAlbum(String nombreAlbum, int idInterprete){
+        return administradorAlbum.ingresarAlbum(nombreAlbum, idInterprete);
     }
-    private List<Interprete> obtenerIdInterprete (){
-        return administradorInterprete.obtenerIdInterprete();
-}
+    
+   
     
 }

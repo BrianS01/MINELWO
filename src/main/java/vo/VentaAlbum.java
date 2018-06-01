@@ -7,27 +7,30 @@ import java.util.Date;
  * @author cristian
  */
 public class VentaAlbum {
-    private int idVentaSencillo;
+    private int id;
     private int cantidad; 
     private Date fecha; 
+    private int idAlbum; 
 
-    public VentaAlbum(int idVentaSencillo, int cantidad, Date fecha) {
-        this.idVentaSencillo = idVentaSencillo;
-        this.cantidad = cantidad;
+    public VentaAlbum(int id, Date fecha, int cantidad, int idAlbum) {
+        this.id = id;
         this.fecha = fecha;
-    }
-
-    public VentaAlbum(int cantidad, Date fecha) {
         this.cantidad = cantidad;
+        this.idAlbum=idAlbum; 
+    }
+
+    public VentaAlbum(Date fecha, int cantidad, int idAlbum) {
         this.fecha = fecha;
+        this.cantidad = cantidad;
+        this.idAlbum=idAlbum;
     }
 
-    public int getIdVentaSencillo() {
-        return idVentaSencillo;
+    public int getId() {
+        return id;
     }
 
-    public void setIdVentaSencillo(int idVentaSencillo) {
-        this.idVentaSencillo = idVentaSencillo;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getCantidad() {
@@ -38,6 +41,16 @@ public class VentaAlbum {
         this.cantidad = cantidad;
     }
 
+    public int getIdAlbum() {
+        return idAlbum;
+    }
+
+    public void setIdAlbum(int idAlbum) {
+        this.idAlbum = idAlbum;
+    }
+
+    
+    
     public Date getFecha() {
         return fecha;
     }

@@ -5,15 +5,23 @@
  */
 package vistas;
 
+import Controlador.ControladorNuevosIngresos;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import javax.swing.ImageIcon;
+import vo.Album;
+import vo.Cancion;
 
 public class EntradaCancion extends javax.swing.JFrame
 {
+    
+    ControladorNuevosIngresos controladorNuevosIngresos;
+    
     public EntradaCancion()
     {
+        controladorNuevosIngresos = new ControladorNuevosIngresos();
         initComponents();
+        inicializarComboBox();
         this.setTitle("MUNDULERY ~ Entrada Cancion");
         this.setMinimumSize(new Dimension(748, 540));
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
@@ -21,6 +29,11 @@ public class EntradaCancion extends javax.swing.JFrame
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     }
 
+    public void inicializarComboBox(){
+        for(Album album: controladorNuevosIngresos.obtenerAlbumes()){
+             jComboBox1.addItem(album.getNombreAlbum());
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -56,7 +69,7 @@ public class EntradaCancion extends javax.swing.JFrame
             }
         });
         getContentPane().add(regresarButton);
-        regresarButton.setBounds(12, 11, 100, 25);
+        regresarButton.setBounds(12, 11, 100, 23);
 
         jButton1.setText("INGRESAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -65,7 +78,7 @@ public class EntradaCancion extends javax.swing.JFrame
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(300, 350, 100, 25);
+        jButton1.setBounds(300, 350, 100, 23);
 
         jTextField1.setText("Nuevo Cancion");
         jTextField1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -87,9 +100,13 @@ public class EntradaCancion extends javax.swing.JFrame
         getContentPane().add(jLabel6);
         jLabel6.setBounds(240, 270, 100, 30);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Album", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(350, 210, 140, 24);
+        jComboBox1.setBounds(350, 210, 140, 20);
 
         jLabel7.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
@@ -108,13 +125,13 @@ public class EntradaCancion extends javax.swing.JFrame
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Copyright © 2018 by MUNDULERY");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(0, 460, 730, 15);
+        jLabel4.setBounds(0, 460, 730, 14);
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("All rights reserved");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(-1, 470, 730, 15);
+        jLabel2.setBounds(-1, 470, 730, 14);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fondo.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -132,9 +149,8 @@ public class EntradaCancion extends javax.swing.JFrame
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        MenuEntrada ventana = new MenuEntrada();
-        ventana.setVisible(true);
-        dispose();
+        controladorNuevosIngresos.ingresarCancion(jTextField1.getText(), jComboBox1.getSelectedItem().toString());
+        jTextField1.setText("");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void regresarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarButtonActionPerformed
@@ -142,6 +158,10 @@ public class EntradaCancion extends javax.swing.JFrame
         ventana.setVisible(true);
         dispose();
     }//GEN-LAST:event_regresarButtonActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     /**
      * @param args the command line arguments

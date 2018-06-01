@@ -5,15 +5,33 @@
  */
 package vistas;
 
+import BasesDeDatos.Conexion;
+import Controlador.ControladorNuevosIngresos;
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
+import modelo.AdministradorInterprete;
+import vo.Interprete;
 
-public class EntradaAlbum extends javax.swing.JFrame
+public class IngresarAlbum extends javax.swing.JFrame
 {
-    public EntradaAlbum()
+    ControladorNuevosIngresos controladorNuevosIngresos;
+    
+    public IngresarAlbum()
     {
+        controladorNuevosIngresos = new ControladorNuevosIngresos();
         initComponents();
+        inicializarComboBox();
         this.setTitle("MUNDULERY ~ Entrada Album");
         this.setMinimumSize(new Dimension(748, 540));
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
@@ -21,6 +39,11 @@ public class EntradaAlbum extends javax.swing.JFrame
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     }
 
+    public void inicializarComboBox(){
+        for(Interprete interprete: controladorNuevosIngresos.obtenerInterpretes()){
+             jComboBox1.addItem(interprete.getNombreInterprete());
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -51,7 +74,7 @@ public class EntradaAlbum extends javax.swing.JFrame
             }
         });
         getContentPane().add(regresarButton);
-        regresarButton.setBounds(12, 11, 100, 25);
+        regresarButton.setBounds(12, 11, 100, 23);
 
         jButton1.setText("INGRESAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -60,7 +83,7 @@ public class EntradaAlbum extends javax.swing.JFrame
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(300, 340, 100, 25);
+        jButton1.setBounds(300, 340, 100, 23);
 
         jTextField1.setText("Nuevo Album");
         jTextField1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -77,9 +100,13 @@ public class EntradaAlbum extends javax.swing.JFrame
         getContentPane().add(jLabel6);
         jLabel6.setBounds(240, 270, 90, 30);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Interprete", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(350, 210, 160, 24);
+        jComboBox1.setBounds(350, 210, 160, 20);
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -98,13 +125,13 @@ public class EntradaAlbum extends javax.swing.JFrame
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Copyright © 2018 by MUNDULERY");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 460, 730, 15);
+        jLabel2.setBounds(0, 460, 730, 14);
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("All rights reserved");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(-1, 470, 730, 15);
+        jLabel3.setBounds(-1, 470, 730, 14);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fondo.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -124,11 +151,15 @@ public class EntradaAlbum extends javax.swing.JFrame
     }//GEN-LAST:event_jTextField1MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        MenuEntrada ventana = new MenuEntrada();
-        ventana.setVisible(true);
-        dispose();
+        controladorNuevosIngresos.ingresarAlbum(jTextField1.getText(), jComboBox1.getSelectedItem().toString());
+        jTextField1.setText("");//
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+  
+    
     /**
      * @param args the command line arguments
      */
@@ -147,13 +178,13 @@ public class EntradaAlbum extends javax.swing.JFrame
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(EntradaAlbum.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(IngresarAlbum.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(EntradaAlbum.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(IngresarAlbum.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(EntradaAlbum.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(IngresarAlbum.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(EntradaAlbum.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(IngresarAlbum.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
 
         /* Create and display the form */
@@ -161,7 +192,7 @@ public class EntradaAlbum extends javax.swing.JFrame
         {
             public void run()
             {
-                new EntradaAlbum().setVisible(true);
+                new IngresarAlbum().setVisible(true);
             }
         });
     }
