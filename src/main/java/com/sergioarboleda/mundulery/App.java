@@ -1,9 +1,13 @@
+/*
+ *  PROYECTO TERCER CORTE
+ *   co-Author ::: Cristian Espinosa
+ *   co-Author ::: Brian Sterling
+ *     Program ::: Ingenieria de Software II
+ *  Credential ::: SIST0076-G01:SIVII
+ */
+
 package com.sergioarboleda.mundulery;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
