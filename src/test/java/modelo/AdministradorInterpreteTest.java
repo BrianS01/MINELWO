@@ -1,33 +1,34 @@
+/*
+ *  PROYECTO TERCER CORTE
+ *   co-Author ::: Cristian Espinosa
+ *   co-Author ::: Brian Sterling
+ *     Program ::: Ingenieria de Software II
+ *  Credential ::: SIST0076-G01:SIVII
+ */
+
 package modelo;
 
-
-import vo.Interprete;
 import java.util.ArrayList;
 import java.util.List;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Assert;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
+import vo.Interprete;
 
-/**
- *
- * @author cristian
- */
-public class AdministradorInterpreteTest {
+public class AdministradorInterpreteTest
+{
 
     private static List<Interprete> interpretes;
     private static AdministradorInterprete administradorInterprete;
     private static List<String> nombresDeInterpretes;
    
     @BeforeClass
-    public static void inicializar(){
+    public static void inicializar()
+    {
         interpretes=new ArrayList<>();
         administradorInterprete=new AdministradorInterprete();
         nombresDeInterpretes=new ArrayList<>();
         
+<<<<<<< HEAD
             for (int i = 0; i < 10; i++) {
        //     nombresDeInterpretes.add("Henry falcon");
        //     nombresDeInterpretes.add("Henry Steven");
@@ -35,17 +36,29 @@ public class AdministradorInterpreteTest {
         //    nombresDeInterpretes.add("Sterling");
         //    nombresDeInterpretes.add("g001");
        //     nombresDeInterpretes.add("wisin");
+=======
+        for (int i = 0; i < 10; i++)
+        {
+            nombresDeInterpretes.add("Henry falcon");
+            nombresDeInterpretes.add("Henry Steven");
+            nombresDeInterpretes.add("Marta Stuart");
+            nombresDeInterpretes.add("Sterling");
+            nombresDeInterpretes.add("g001");
+            nombresDeInterpretes.add("wisin");
+>>>>>>> 8bcb80fa1ff5b4c302e1a9c048ba3beb77356f02
             nombresDeInterpretes.add("yandel");
             nombresDeInterpretes.add("aquiles brinco");
         }
             
     }
     
+    
     @Test
-    public void ingresarInterpreteCaso1(){
+    public void ingresarInterpreteCaso1()
+    {
         String nombreInterprete="Cristian Espinosa";
         administradorInterprete.ingresarInterprete(nombreInterprete);
-    //    Assert.assertEquals("Cristian Espinosa", administradorInterprete.getInterpretes().get(0).getNombreInterprete());
+        //Assert.assertEquals("Cristian Espinosa", administradorInterprete.getInterpretes().get(0).getNombreInterprete());
     }
     
     
@@ -104,4 +117,3 @@ public class AdministradorInterpreteTest {
     }
     */
 }
-

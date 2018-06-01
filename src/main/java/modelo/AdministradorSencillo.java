@@ -1,3 +1,11 @@
+/*
+ *  PROYECTO TERCER CORTE
+ *   co-Author ::: Cristian Espinosa
+ *   co-Author ::: Brian Sterling
+ *     Program ::: Ingenieria de Software II
+ *  Credential ::: SIST0076-G01:SIVII
+ */
+
 package modelo;
 
 import BasesDeDatos.Conexion;
@@ -19,10 +27,12 @@ public class AdministradorSencillo
     private Conexion conexion;
     private List<Sencillo> sencillos=new ArrayList<>();
     
-    public AdministradorSencillo(){
-    conexion= new Conexion();
+    public AdministradorSencillo()
+    {
+        conexion= new Conexion();
     }
     
+<<<<<<< HEAD
     public static void main(String[] args) {
         AdministradorSencillo ad=new AdministradorSencillo();
         List<Sencillo> listaDeSencillos = ad.obtenerSencillos();
@@ -35,35 +45,58 @@ public class AdministradorSencillo
     }
     
     public List<Sencillo> obtenerSencillos(){
+=======
+    public List<Sencillo> obtenerSencillos()
+    {
+>>>>>>> 8bcb80fa1ff5b4c302e1a9c048ba3beb77356f02
         PreparedStatement ps=null;
         ResultSet rs=null;
-        try {
+        
+        try
+        {
             conn=conexion.obtener();
             String sql="SELECT idSencillo, nombreSencillo, idInterprete From sencillo";
             ps=conn.prepareStatement(sql);
             rs=ps.executeQuery();
-            
             Sencillo sencillo;
             
+<<<<<<< HEAD
             while(rs.next()){
                 sencillo=new Sencillo(rs.getInt(1), rs.getString(2),rs.getInt(3));
+=======
+            while(rs.next())
+            {
+                sencillo=new Sencillo(rs.getInt(1), rs.getString(2));
+>>>>>>> 8bcb80fa1ff5b4c302e1a9c048ba3beb77356f02
                 sencillos.add(sencillo);
             }           
-        } catch (SQLException ex) {
+        }
+        catch (SQLException ex)
+        {
             Logger.getLogger(AdministradorSencillo.class.getName()).log(Level.SEVERE, null, ex);
-        } finally{
-            try {
-                if (rs != null) {
+        }
+        finally
+        {
+            try
+            {
+                if (rs != null)
+                {
                     rs.close();
                 }
-                if (ps != null) {
+                
+                if (ps != null)
+                {
                     ps.close();
                 }
-                if (conn != null) {
+                
+                if (conn != null)
+                {
                     conn.close();
                 }
-            } catch (SQLException ex) {
-              Logger.getLogger(AdministradorSencillo.class.getName()).log(Level.SEVERE, null, ex);  
+            }
+            catch (SQLException ex)
+            {
+                Logger.getLogger(AdministradorSencillo.class.getName()).log(Level.SEVERE, null, ex);  
             }
         }
         
@@ -103,56 +136,169 @@ public class AdministradorSencillo
         return isElimino;
     }
     
+<<<<<<< HEAD
     public boolean ingresarSencillo(String nombreSencillo, int idInterprete){
         boolean isInserto = false; 
         PreparedStatement ps=null;
         int rs= 0; 
         try {
+=======
+    public boolean ingresarSencillo(String nombreSencillo)
+    {
+        PreparedStatement ps=null;
+        ResultSet rs= null; 
+        
+        try
+        {
+>>>>>>> 8bcb80fa1ff5b4c302e1a9c048ba3beb77356f02
             conn= conexion.obtener();
             String sql="INSERT INTO mundulery.sencillo (nombreSencillo, idInterprete) values(?,?)";
             ps= conn.prepareStatement(sql);
+<<<<<<< HEAD
             ps.setString(1, nombreSencillo);
             ps.setInt(2, idInterprete);
             rs= ps.executeUpdate();
             
             if(rs>0){
                 isInserto=true;
+=======
+            Sencillo sencillo; 
+            
+            while(rs.next())
+            {
+                sencillo=new Sencillo(nombreSencillo);
+>>>>>>> 8bcb80fa1ff5b4c302e1a9c048ba3beb77356f02
             }
-        } catch (SQLException ex) {
+        }
+        catch (SQLException ex)
+        {
             Logger.getLogger(AdministradorSencillo.class.getName()).log(Level.SEVERE, null, ex);
+<<<<<<< HEAD
         } finally{
             try {
                 if (ps != null) {
+=======
+        }
+        finally
+        {
+            try
+            {
+                if (rs != null)
+                {
+                    rs.close();
+                }
+                
+                if (ps != null)
+                {
+>>>>>>> 8bcb80fa1ff5b4c302e1a9c048ba3beb77356f02
                     ps.close();
                 }
-                if (conn != null) {
+                
+                if (conn != null)
+                {
                     conn.close();
                 } 
-            } catch (SQLException ex) {
+            }
+            catch (SQLException ex)
+            {
                 Logger.getLogger(AdministradorSencillo.class.getName()).log(Level.SEVERE, null, ex);
             }
- 
         }
+<<<<<<< HEAD
 
     return isInserto;
+=======
+        
+        return sencillos.add(sencillo); 
+>>>>>>> 8bcb80fa1ff5b4c302e1a9c048ba3beb77356f02
     }
     
   
-    public static AdministradorSencillo getInstance() {
-        if (administradorSencillo == null) {
+    public static AdministradorSencillo getInstance()
+    {
+        if (administradorSencillo == null)
+        {
             return new AdministradorSencillo();
         }
+        
         return administradorSencillo;
     }
     
+<<<<<<< HEAD
     public List<Sencillo> getSencillos() {
+=======
+    
+    public boolean eliminarSencillo(String nombreSencillo)
+    {
+        boolean eliminado=false; 
+        PreparedStatement ps= null; 
+        ResultSet rs=null; 
+        
+        try
+        {
+            conn=conexion.obtener();
+            String sql="DELETE FROM mundulery.sencillo where nombreSencillo=(nombreSencillo)";
+            ps= conn.prepareStatement(sql);
+            rs=ps.executeQuery();
+            
+            while(rs.next())
+            {
+                for (int i = 0; i < sencillos.size(); i++)
+                {
+                    if(nombreSencillo.equals(sencillos.get(i).getNombreSencillo()))
+                    {
+                        sencillos.remove(i).getNombreSencillo();
+                        eliminado= true; 
+                    }
+                    else
+                    {
+                        eliminado=false; 
+                    }
+                }  
+            }
+        }
+        catch (SQLException ex)
+        {
+            Logger.getLogger(AdministradorSencillo.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        finally
+        {
+            try
+            {
+                if (rs != null)
+                {
+                    rs.close();
+                }
+                
+                if (ps != null)
+                {
+                    ps.close();
+                }
+                
+                if (conn != null)
+                {
+                    conn.close();
+                }
+            }
+            catch (SQLException ex)
+            {
+                Logger.getLogger(AdministradorSencillo.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        
+        return eliminado;
+    }
+    
+    
+    public List<Sencillo> getSencillos()
+    {
+>>>>>>> 8bcb80fa1ff5b4c302e1a9c048ba3beb77356f02
         return sencillos;
     }
     
-    public void setSencillos(List<Sencillo> sencillos){
+    
+    public void setSencillos(List<Sencillo> sencillos)
+    {
        this.sencillos=sencillos;
     }
-    
-    
-    
 }
